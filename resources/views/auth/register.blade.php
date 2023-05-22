@@ -1,7 +1,7 @@
 <x-layout>
 
 
-    <form action="{{ route('register') }}" method="POST">
+    <form action="{{ route('register') }}" method="POST" class="p-5">
         @csrf
 
         @if ($errors->any())
@@ -15,6 +15,11 @@
         @endif
 
         <div class="mb-3">
+          <label for="name" class="form-label">Nome Utente</label>
+          <input type="text" name="name" class="form-control" id="name" >
+        </div>
+
+        <div class="mb-3">
           <label for="email" class="form-label">Inserisci indirizzo email</label>
           <input type="email" name="email" class="form-control" id="email" >
         </div>
@@ -26,7 +31,7 @@
 
         <div class="mb-3">
             <label for="password_confirmation" class="form-label">Conferma password</label>
-            <input type="password_confirmation" name="password_confirmation" class="form-control" id="password_confirmation">
+            <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
           </div>
 
         <div class="mb-3 form-check">

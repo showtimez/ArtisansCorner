@@ -13,16 +13,16 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="{{route('article.index')}}">Annunci</a>
                 </li>
                 @auth
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('article.create')}}">Crea Annuncio</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Dropdown link
+                    Ciao {{Auth::user()->name}}
                     </a>
                 <ul class="dropdown-menu">
                     <li>
@@ -33,12 +33,12 @@
                         <a class="dropdown-item" href="#"
                         onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
                     </li>
-                    <form action=""></form>
+                    <form id="form-logout" action="{{route('logout')}}" method="POST" class="d-none">@csrf</form>
                 @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown link
+                        Ciao Ospite
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
