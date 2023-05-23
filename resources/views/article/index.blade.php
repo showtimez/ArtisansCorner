@@ -16,7 +16,7 @@
                 </div>
                     @empty
                     <div class="d-flex justify-content-center">
-                        <h3>Non sono ancora stati annunci.</h3>
+                        <h3>Non sono ancora stati inseriti annunci.</h3>
                     </div>
                     @endforelse
             </div>
