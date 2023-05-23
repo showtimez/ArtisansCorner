@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title> Artisan Corner </title>
+    @livewireStyles
   </head>
   <body>
     <x-navbar />
@@ -16,6 +17,6 @@
 
     <x-footer />
 
-
+    @livewireScripts
   </body>
 </html>

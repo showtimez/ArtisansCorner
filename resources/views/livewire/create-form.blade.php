@@ -1,25 +1,74 @@
-<div>
-    <form wire:submit.prevent="store">
-        @csrf
 
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <h2>Inserisci un Annuncio</h2>
+                <div>
+                    <form class="p-5 border" wire:submit.prevent="store">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        @if (session()->has('articleCreated'))
+                            <div class="alert alert-success text-center">
+                                {{ session('articleCreated') }}
+                            </div>
+                        @endif
+
+                        @csrf
+
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Aggiungi un titolo</label>
+                            <input type="text" wire:model="title" class="form-control" id="title">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descrizione</label>
+                            <textarea wire:model="description" id="description" cols="30" rows="7" class="form-control"></textarea>
+                        </div>
+
+                        @if ($image)
+                            <div class="mt-3 text-center">
+                                Anteprima immagine:<br>
+                                <img width="250" src="{{ $image->temporaryUrl() }}">
+                            </div>
+                        @endif
+
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Inserisci un' immagine</label>
+                            <input type="file" wire:model="image" class="form-control" id="image">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Seleziona una categoria</label>
+                            <select wire:model="category" id="category" class="form-control">
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category }}">{{ $category }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="state" class="form-label">In che condizioni si trova il tuo oggetto?</label>
+                            <input type="text" wire:model="state" class="form-control" id="state">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="price" class="form-label">€</label>
+                            <input type="number" wire:model="price" class="form-control" id="price">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark">Inserisci il tuo annuncio</button>
+                        <a href="{{ route('article.index') }}" class="ms-3 btn btn-outline-dark">Torna indietro</a>
+                    </form>
                 </div>
-            @endif
-
-            <div class="mb-3">
-                <label for="title" class="form-label">Inserisci il Titolo</label>
-                <input type="text" name="title" class="form-control" id="title" >
             </div>
-
-            <div class="mb-3">
-                <label for="password" class="form-label">Inserisci il Titolo</label>
-                <input type="text" name="password" class="form-control" id="password">
-            </div>
-    </form>
-</div>
+        </div>
+    </div>

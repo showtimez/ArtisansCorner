@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Article;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
@@ -9,10 +10,25 @@ use Illuminate\Support\Facades\Auth;
 class CreateForm extends Component
 {
     use WithFileUploads;
+    public $category;
+    public $categories = [], $title, $description, $price, $image, $state;
+    public function updatedImage()
+    {
+        $this->validate([
+            'image' => 'image|max:1024',
+        ]);
+    }
 
-    public $category, $title, $description, $price, $image, $state;
-    
     public function store() {
+
+        $this->validate([
+            'category' => 'required|in:pittura,scultura,fotografia,design,grafica,architettura,musica,fumetti,cartoni,videogames',
+            'image' => 'required|image|max:1024',
+
+        ]);
+
+
+
         $user = Auth::user();
 
         $article = $user->articles()->create([
@@ -22,13 +38,16 @@ class CreateForm extends Component
             'price' => $this->price,
             'image' => $this->image->store('public/media'),
             'state' => $this->state,
+
         ]);
-        session()->flash('libraryCreated', 'Hai inserito una libreria');
+        session()->flash('articleCreated', 'Congratulazioni! Hai inserito un annuncio!');
         $this->reset();
     }
 
     public function render()
     {
+
+        $this->categories = ['pittura', 'scultura', 'fotografia', 'design', 'grafica', 'architettura', 'musica', 'fumetti', 'cartoni', 'videogames'];
         return view('livewire.create-form');
     }
 }
