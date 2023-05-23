@@ -22,6 +22,7 @@ class ArticleController extends Controller
         return view('article.index', compact('articles'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      */
@@ -44,7 +45,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view ('article.show', compact('article'));
     }
 
     /**

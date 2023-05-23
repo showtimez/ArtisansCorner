@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class FrontController extends Controller
 {
     public function homepage() {
-        $articles = Article::take(6)->get()->sortByDesc('created_at');
+        $articles = Article::latest()->take(6)->get();
         return view('welcome', compact('articles'));
     }
 }
