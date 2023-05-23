@@ -12,13 +12,13 @@ class Article extends Model
 
     protected $fillable = [
 
-        'category',
+        
         'title',
         'price',
-        'description',
-        'image',
+        'description',        
         'state',
-        'user_id'
+        'user_id',
+        'category_id'
     ];
     public function user()
     {

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Models\Category;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,34 +12,30 @@ class CreateForm extends Component
 {
     use WithFileUploads;
     public $category;
-    public $categories = [], $title, $description, $price, $image, $state;
-    public function updatedImage()
-    {
-        $this->validate([
-            'image' => 'image|max:1024',
-        ]);
-    }
+    public $title, $description, $price, $state;
+  
 
     public function store() {
 
-        $this->validate([
-            'category' => 'required|in:pittura,scultura,fotografia,design,grafica,architettura,musica,fumetti,cartoni,videogames',
-            'image' => 'required|image|max:1024',
+        
+        // $this->validate([
+        //     'category' => 'required',
+            
 
-        ]);
+        // ]);
 
 
 
         $user = Auth::user();
+        $category = Category::find($this->category);
 
-        $article = $user->articles()->create([
-            'category' => $this->category,
+        $article = $category->articles()->create([
+            
             'title' => $this->title,
             'description' => $this->description,
-            'price' => $this->price,
-            'image' => $this->image->store('public/media'),
+            'price' => $this->price,            
             'state' => $this->state,
-
+            'user_id' => $user->id,
         ]);
         session()->flash('articleCreated', 'Congratulazioni! Hai inserito un annuncio!');
         $this->reset();
@@ -47,7 +44,7 @@ class CreateForm extends Component
     public function render()
     {
 
-        $this->categories = ['pittura', 'scultura', 'fotografia', 'design', 'grafica', 'architettura', 'musica', 'fumetti', 'cartoni', 'videogames'];
+        // $this->categories = ['pittura', 'scultura', 'fotografia', 'design', 'grafica', 'architettura', 'musica', 'fumetti', 'cartoni', 'videogames'];
         return view('livewire.create-form');
     }
 }
