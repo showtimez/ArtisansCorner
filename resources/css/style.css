@@ -152,6 +152,7 @@
   align-items: center;
   text-align: center;
   display: flex;
+  padding: 7px;
 
   color: rgba(244, 247, 248, 0.956);
   cursor: pointer;

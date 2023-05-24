@@ -17,7 +17,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::latest()->get();
 
         return view('article.index', compact('articles'));
     }
@@ -29,7 +29,7 @@ class ArticleController extends Controller
     public function create()
     {
         return view('article.create');
-        
+
     }
 
     /**

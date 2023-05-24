@@ -14,8 +14,8 @@ class FrontController extends Controller
     }
 
     public function show(Category $category){
-      $articles = $category->articles()->get();
-       
+      $articles = $category->articles()->latest()->get();
+
         return view('category', compact('articles', 'category'));
     }
 }
