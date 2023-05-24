@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        {{-- <a class="navbar-brand" href="#">
             <img src="" alt="" width="30" height="24">
-        </a>
+        </a> --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,15 +22,15 @@
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-            
+
                         <li><a class="dropdown-item" href="{{ route('category', compact('category')) }}">{{($category->name)}}</a></li>
-                            
+
                         @endforeach
-                        
+
                     <hr>
                     </ul>
                 </li>
-                
+
                 @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('article.create')}}">Crea Annuncio</a>
@@ -64,10 +64,10 @@
                     </li>
                 </ul>
         @endauth
-        
+
     </ul>
 
-    
+
         </div>
     </div>
 </nav>

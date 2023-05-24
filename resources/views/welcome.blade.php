@@ -22,19 +22,19 @@
 <div class="container-fluid my-5">
   <div class="row justify-content-center">
     <h2 class="display-1 text-center my-5">Gli Ultimi Articoli Inseriti</h2>
-    @foreach ($articles as $article )  
-    <div class="col-12 col-md-4 ">
-      <div class="background-one">
+    @foreach ($articles as $article )
+    <div class="col-12 col-md-4 text-center ">
+      <div class="background-one my-5">
         <div class="link-container">
           <h5 class="link-one display-6">{{$article->title}}</h5>
           <h5 class="link-one">{{$article->price}} £</h5>
           <p class="link-one">{{$article->state}}</p>
-          <a href="#">Categoria: {{$article -> category->name}}</a>          
+          <a href="#">Categoria: {{$article -> category->name}}</a>
           <p class="link.one">Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
           <a href="{{route('article.show', compact('article'))}}" class="btn btn-dark">Visualizza</a>
         </div>
       </div>
-        
+
     </div>
     @endforeach
   </div>

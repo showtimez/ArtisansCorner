@@ -1,4 +1,8 @@
 <x-layout>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+
 
 
     <form action="{{ route('register') }}" method="POST" class="p-5">
@@ -43,6 +47,9 @@
         <a class="small fst-italic" href="{{ route('login') }}">Sei già registrato? Accedi</a>
 
       </form>
+    </div>
+</div>
+</div>
 
 
 </x-layout>
