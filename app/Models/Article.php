@@ -13,10 +13,10 @@ class Article extends Model
 
     protected $fillable = [
 
-        
+
         'title',
         'price',
-        'description',        
+        'description',
         'state',
         'user_id',
         'category_id'
@@ -41,5 +41,5 @@ class Article extends Model
         return Article::where('is_accepted', null)->count();
     }
 
-    
+
 }

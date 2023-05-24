@@ -36,9 +36,9 @@
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Titolo: {{$article->title}}</h5>
-                    <p class="card-text">Prezzo: {{$article->price}}€</p>
                     <p class="card-text">Condizioni: {{$article->state}}</p>
                     <p class="card-text">Descrizione: {{$article->description}}</p>
+                    <p class="card-text">Prezzo: {{$article->price}}€</p>
                     <a href="{{route('homepage')}}" class="btn btn-primary">Torna Indietro </a>
                     <a href="#" class="btn btn-primary">Categoria: {{$article -> category->name}}</a>
                     <p >Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>

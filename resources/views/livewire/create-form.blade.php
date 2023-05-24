@@ -1,10 +1,10 @@
 
-    <div class="container my-5">
+    <div class="container shadow rounded my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <h2>Inserisci un Annuncio</h2>
-                <div class="col-12 col-md-8 d-flex justify-content-center">
-                    <form class="p-5 border" wire:submit.prevent="store">
+                <h2 class="text-center py-4">Inserisci un Annuncio</h2>
+
+                    <form class="p-5" wire:submit.prevent="store">
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -61,9 +61,9 @@
                             <input type="text" wire:model="state" class="form-control" id="state">
                         </div>
 
-                        <div class="mb-3">
-                            <label for="price" class="form-label">€</label>
-                            <input type="number" wire:model="price" class="form-control" id="price">
+                        <div class="col-3 d-flex mb-3 align-items-center">
+                            <label for="price" class="form-label px-2">€</label><input type="number" wire:model="price" class="form-control" id="price">
+
                         </div>
 
                         <button type="submit" class="btn btn-dark">Inserisci il tuo annuncio</button>

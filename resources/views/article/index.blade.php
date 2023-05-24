@@ -9,11 +9,11 @@
                     {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
                     <div class="card-body p-5">
                       <h5 class="card-title">{{$article->title}}</h5>
-                      <p class="card-text">{{$article->description}}</p>
-                      <h4>Prezzo: {{$article->price}}</h4>
                       <p>Stato: {{$article->state}}</p>
+                      <p class="card-text">{{$article->description}}</p>
 
-                      <p>Categoria {{$article->category->name}}</p>
+                      <p class="text-muted">Categoria {{$article->category->name}}</p>
+                      <h4>Prezzo: {{$article->price}}</h4>
                       <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettagli</a>
                     </div>
                 </div>

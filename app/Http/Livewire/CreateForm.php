@@ -13,14 +13,15 @@ class CreateForm extends Component
     use WithFileUploads;
     public $category;
     public $title, $description, $price, $state;
-  
+
 
     public function store() {
 
-        
+
         $this->validate([
             'category' => 'required',
-            
+            'state'
+
 
         ]);
 
@@ -30,10 +31,10 @@ class CreateForm extends Component
         $category = Category::find($this->category);
 
         $article = $category->articles()->create([
-            
+
             'title' => $this->title,
             'description' => $this->description,
-            'price' => $this->price,            
+            'price' => $this->price,
             'state' => $this->state,
             'user_id' => $user->id,
         ]);

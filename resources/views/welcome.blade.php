@@ -19,25 +19,32 @@
 </x-videoHome> --}}
 
 
-<div class="container-fluid my-5">
-  <div class="row justify-content-center">
-    <h2 class="display-1 text-center my-5">Gli Ultimi Articoli Inseriti</h2>
-    @foreach ($articles as $article )
-    <div class="col-12 col-md-4 text-center ">
-      <div class="background-one my-5">
-        <div class="link-container">
-          <h5 class="link-one display-6">{{$article->title}}</h5>
-          <h5 class="link-one">{{$article->price}} £</h5>
-          <p class="link-one">{{$article->state}}</p>
-          <a href="#">Categoria: {{$article -> category->name}}</a>
-          <p class="link.one">Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
-          <a href="{{route('article.show', compact('article'))}}" class="btn btn-dark">Visualizza</a>
-        </div>
-      </div>
+<div class="container">
+    <div class="row justify-content-center ">
+        <h2 class="text-center">Tutti gli annunci</h2>
+        @forelse ($articles as $article)
+        <div class="col-12 col-md-4 d-flex justify-content-center   ">
+            <div class="card mx-5 my-5">
 
+                {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
+                <div class="card-body p-5">
+                  <h5 class="card-title">{{$article->title}}</h5>
+                  <p class="card-text">{{$article->description}}</p>
+                  <p>Stato: {{$article->state}}</p>
+
+                  <p>Categoria {{$article->category->name}}</p>
+                  <h4>Prezzo: {{$article->price}}</h4>
+                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettagli</a>
+                </div>
+            </div>
+        </div>
+                @empty
+                <div class="d-flex justify-content-center">
+                    <h3>Non sono ancora stati inseriti annunci.</h3>
+                </div>
+
+                @endforelse
     </div>
-    @endforeach
-  </div>
 </div>
 
 </x-layout>
