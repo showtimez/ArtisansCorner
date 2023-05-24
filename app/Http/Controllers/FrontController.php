@@ -18,4 +18,7 @@ class FrontController extends Controller
 
         return view('category', compact('articles', 'category'));
     }
+    // public function autenticate(){
+    //     return view('/auth/login-register');
+    // }
 }

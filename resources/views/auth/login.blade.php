@@ -3,7 +3,7 @@
     <div class="container  py-5">
         <div class="forms-container">
             <div class="row justify-content-center">
-          <div class="signin-signup col-12 col-md-6">
+          <div class="col-12 col-md-6">
 
 
                 <form action="{{ route('login') }}" method="POST" class="sign-in-form shadow p-3">

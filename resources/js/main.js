@@ -1,3 +1,7 @@
+
+console.log('funziono');
+
+
 // video homepage
 var video = document.getElementById("myVideo");
 var btn = document.getElementById("myBtn");

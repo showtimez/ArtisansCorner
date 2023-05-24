@@ -15,6 +15,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('article.index')}}">Annunci</a>
                 </li>
+                {{-- <li class="nav-item">
+                    <a class="nav-link" href="{{route('autenticate')}}">Autenticazione</a>
+                </li> --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -23,14 +26,14 @@
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
 
-                        <li><a class="dropdown-item" href="{{ route('category', compact('category')) }}">{{($category->name)}}</a></li>
-                        <hr>
+                        <li><a class="dropdown-item" href="{{ route('category', compact('category')) }}">{{($category->name)}}</a></li><hr>
 
                         @endforeach
-
-                    <hr>
                     </ul>
                 </li>
+
+
+
 
                 @auth
                 <li class="nav-item">
