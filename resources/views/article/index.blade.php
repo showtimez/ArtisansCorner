@@ -6,7 +6,7 @@
                 <div class="card">
                    
                     {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
-                    <div class="card-body ">
+                    <div class="card-body">
                       <h5 class="card-title">{{$article->title}}</h5>
                       <p class="card-text">{{$article->description}}</p>
                       <h4>Prezzo: {{$article->price}}</h4>

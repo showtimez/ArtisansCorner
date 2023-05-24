@@ -1,36 +1,40 @@
 <x-layout>
     <x-header>
-        <div class="content">
-        <h1 id="titoloHome">The Artisan's Corner</h1>
+      <div class="d-flex justify-content-center align-items-center">
+        <h1 class="text-center" id="titoloHome">The Artisan's Corner</h1>
       </div>
+      <video autoplay muted loop id="myVideo">
+        <source src="/media/video1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
     </x-header>
 
-<x-videoHome>
+{{-- <x-videoHome>
     <video autoplay muted loop id="myVideo">
-        <source src="/media/video.mp4" type="video/mp4">
+        <source src="/media/video1.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
 
 
-</x-videoHome>
+</x-videoHome> --}}
 
 
-<div class="container">
+<div class="container-fluid my-5">
   <div class="row justify-content-center">
-    <h2>Gli Ultimi Articoli Inseriti</h2>
+    <h2 class="display-1 text-center my-5">Gli Ultimi Articoli Inseriti</h2>
     @foreach ($articles as $article )  
-    <div class="col-12 col-md-4 my-4">
-      <div class="card">
-        <img src="https://picsum.photos/200" class="card-img-top p-4 rounded" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{$article->title}}</h5>
-          <p class="card-text">{{$article->price}}</p>
-          <p class="card-text">{{$article->state}}</p>
-          <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Visualizza</a>
-          <a href="#" class="btn btn-primary">Categoria: {{$article -> category->name}}</a>
-          <p class="card">Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
+    <div class="col-12 col-md-4 ">
+      <div class="background-one">
+        <div class="link-container">
+          <h5 class="link-one display-6">{{$article->title}}</h5>
+          <h5 class="link-one">{{$article->price}} £</h5>
+          <p class="link-one">{{$article->state}}</p>
+          <a href="#">Categoria: {{$article -> category->name}}</a>          
+          <p class="link.one">Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
+          <a href="{{route('article.show', compact('article'))}}" class="btn btn-dark">Visualizza</a>
         </div>
       </div>
+        
     </div>
     @endforeach
   </div>
