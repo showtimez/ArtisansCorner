@@ -39,6 +39,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('article.create')}}">Crea Annuncio</a>
                 </li>
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -54,6 +55,19 @@
                         onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
                     </li>
                     <form id="form-logout" action="{{route('logout')}}" method="POST" class="d-none">@csrf</form>
+                    @if(Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('revisor.index')}}">
+                        Area Revisori 
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{App\Models\Article::toBeRevisionedCount()}} 
+                            <span class="visually-hidden">
+                                Articoli da revisionare
+                            </span>
+                        </span>
+                        </a>
+                    </li>
+                    @endif
                 @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

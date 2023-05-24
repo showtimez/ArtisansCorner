@@ -25,4 +25,6 @@ Route::get('/article/create',[ArticleController::class, 'create'])->name('articl
 Route::get('/article/store',[ArticleController::class, 'store'])->name('article.store');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+
 // Route::get('/auth/login-register', [FrontController::class, 'autenticate'])->name('autenticate');
