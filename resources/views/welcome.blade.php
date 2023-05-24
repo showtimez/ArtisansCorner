@@ -1,7 +1,7 @@
 <x-layout>
     <x-header>
       <div class="d-flex justify-content-center align-items-center">
-        <h1 class="text-center" id="titoloHome">The Artisan's Corner</h1>
+        <h1 class="text-center " id="titoloHome">The Artisan's Corner</h1>
       </div>
       <video autoplay muted loop id="myVideo">
         <source src="/media/video1.mp4" type="video/mp4">

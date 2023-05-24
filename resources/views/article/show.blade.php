@@ -41,7 +41,7 @@
                     <p class="card-text">Descrizione: {{$article->description}}</p>
                     <a href="{{route('homepage')}}" class="btn btn-primary">Torna Indietro </a>
                     <a href="#" class="btn btn-primary">Categoria: {{$article -> category->name}}</a>
-                    <p class="card">Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
+                    <p >Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
                   </div>
                 </div>
             </div>

@@ -4,8 +4,8 @@
         <div class="col-12 col-md-8">
 
 
-
-    <form action="{{ route('register') }}" method="POST" class="p-5">
+<h2 class="text-center">Sign up</h2>
+    <form action="{{ route('register') }}" method="POST" class="p-5 shadow">
         @csrf
 
         @if ($errors->any())
@@ -19,6 +19,7 @@
         @endif
 
         <div class="mb-3">
+            <i class="fas fa-user"></i>
           <label for="name" class="form-label">Nome Utente</label>
           <input type="text" name="name" class="form-control" id="name" >
         </div>
@@ -29,11 +30,13 @@
         </div>
 
         <div class="mb-3">
+            <i class="fas fa-lock"></i>
           <label for="password" class="form-label">Password</label>
           <input type="password" name="password" class="form-control" id="password">
         </div>
 
         <div class="mb-3">
+            <i class="fas fa-lock"></i>
             <label for="password_confirmation" class="form-label">Conferma password</label>
             <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
           </div>
@@ -42,9 +45,10 @@
           <input type="checkbox" class="form-check-input" id="checkbox">
           <label class="form-check-label" for="checkbox">Ricordami</label>
         </div>
-
-        <button type="submit" class="btn btn-primary">Registrati</button>
-        <a class="small fst-italic" href="{{ route('login') }}">Sei già registrato? Accedi</a>
+        <div class="container text-center">
+            <button type="submit" class="btn btn-primary mb-3">Registrati</button><br>
+            <a class="small fst-italic" href="{{ route('login') }}">Sei già registrato? Accedi</a>
+        </div>
 
       </form>
     </div>

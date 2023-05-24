@@ -1,6 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row justify-content-center ">
+            <h2 class="text-center">Tutti gli annunci</h2>
             @forelse ($articles as $article)
             <div class="col-12 col-md-4 d-flex justify-content-center   ">
                 <div class="card mx-5 my-5">
@@ -13,7 +14,7 @@
                       <p>Stato: {{$article->state}}</p>
 
                       <p>Categoria {{$article->category->name}}</p>
-                      {{-- <a href="{{route('article.show')}}" class="btn btn-primary">Dettagli</a> --}}
+                      <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettagli</a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-light sticky-top ">
+    <div class="container-fluid ">
         {{-- <a class="navbar-brand" href="#">
             <img src="" alt="" width="30" height="24">
         </a> --}}
@@ -7,8 +7,8 @@
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNavDropdown">
+            <ul class="navbar-nav gap-5">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
@@ -24,6 +24,7 @@
                         @foreach ($categories as $category)
 
                         <li><a class="dropdown-item" href="{{ route('category', compact('category')) }}">{{($category->name)}}</a></li>
+                        <hr>
 
                         @endforeach
 
@@ -54,12 +55,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Ciao Ospite
+                        Area personale
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                            <hr>
                             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
-                        <hr>
+
                         </ul>
                     </li>
                 </ul>
