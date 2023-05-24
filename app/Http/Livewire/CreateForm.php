@@ -18,11 +18,11 @@ class CreateForm extends Component
     public function store() {
 
         
-        // $this->validate([
-        //     'category' => 'required',
+        $this->validate([
+            'category' => 'required',
             
 
-        // ]);
+        ]);
 
 
 
