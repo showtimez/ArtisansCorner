@@ -17,7 +17,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = Article::latest()->get();
+        $articles = Article::where('is_accepted',true)->latest()->get();
 
         return view('article.index', compact('articles'));
     }

@@ -28,8 +28,8 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
 
-Route::patch('/accept/article/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.accept_article');
-Route::patch('/reject/article/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.reject_article');
+Route::patch('/accept/article/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.acceptArticle');
+Route::patch('/reject/article/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
 
 
 // Route::get('/auth/login-register', [FrontController::class, 'autenticate'])->name('autenticate');

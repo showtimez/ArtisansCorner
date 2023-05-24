@@ -22,13 +22,13 @@
                     <p>Stato: {{$article_to_check->state}}</p>
                     {{-- <p>Categoria {{$article_to_check->category->name}}</p> --}}
         
-                    <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}"method="POST">
+                    <form action="{{route('revisor.acceptArticle', ['article'=>$article_to_check])}}"method="POST">
                     @csrf
                     @method('PATCH')
                     <button type="submit" class="btn btn-success shadow">Accetta</button>
                     </form>
 
-                    <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}"method="POST">
+                    <form action="{{route('revisor.rejectArticle', ['article'=>$article_to_check])}}"method="POST">
                         @csrf
                         @method('PATCH')
                         <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
