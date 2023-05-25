@@ -14,10 +14,10 @@ class CreateForm extends Component
     public $category;
     public $title, $description, $state;
 
-    public Article $article;
+    public $article;
 
     public $user_id;
-    public int $price;
+    public $price;
 
     protected $rules = [
         'category' => 'required',
