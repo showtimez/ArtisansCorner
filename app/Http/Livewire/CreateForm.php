@@ -18,13 +18,7 @@ class CreateForm extends Component
     public function store() {
 
 
-        $this->validate([
-            'category' => 'required',
-            'state'
-
-
-        ]);
-
+       
 
 
         $user = Auth::user();
