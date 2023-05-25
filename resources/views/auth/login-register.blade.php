@@ -19,8 +19,8 @@
                     <h2 class="title">Accedi</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-@method('POST')
-              <input type="email" name="email"id="email" placeholder="Email" />
+
+              <input type="text" name="email"id="email" placeholder="Email or Username" />
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
@@ -55,43 +55,43 @@
                     </ul>
                 </div>
             @endif
-            @method('POST')
-              <h2 class="title">Registrati</h2>
+
+            <h2 class="title">Registrati</h2>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Username" />
+              </div>
               <div class="input-field">
-                  <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Username" />
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" />
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" />
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password_confirmation" placeholder="Conferma Password" />
-                </div>
-                <input type="submit" class="btn" value="Register" />
-                <p class="social-text">Or Sign up with social platforms</p>
-                <div class="social-media">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </form>
-        </div>
-    </div>
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" name="email" placeholder="Email" />
+              </div>
+              <div class="input-field">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="password" placeholder="Password" />
+              </div>
+              <div class="input-field">
+                  <i class="fas fa-lock"></i>
+                  <input type="password_confirmation" name="password_confirmation" placeholder="Conferma Password" />
+              </div>
+              <input type="submit" class="btn" value="Register" />
+              <p class="social-text">Or Sign up with social platforms</p>
+              <div class="social-media">
+                  <a href="#" class="social-icon">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                      <i class="fab fa-google"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+              </div>
+          </form>
+      </div>
+  </div>
 
     <div class="panels-container">
         <div class="panel left-panel">
