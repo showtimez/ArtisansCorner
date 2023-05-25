@@ -39,7 +39,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('article.create')}}">Crea Annuncio</a>
                 </li>
-                
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -58,9 +58,9 @@
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('revisor.index')}}">
-                        Area Revisori 
+                        Area Revisori
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{App\Models\Article::toBeRevisionedCount()}} 
+                            {{App\Models\Article::toBeRevisionedCount()}}
                             <span class="visually-hidden">
                                 Articoli da revisionare
                             </span>
@@ -75,9 +75,9 @@
                         Area personale
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                            <li><a class="dropdown-item" href="{{ route('autenticate') }}">Accedi</a></li>
                             <hr>
-                            <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                            <li><a class="dropdown-item" href="{{ route('autenticate') }}">Registrati</a></li>
 
                         </ul>
                     </li>

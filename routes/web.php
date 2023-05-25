@@ -35,6 +35,7 @@ Route::patch('/reject/article/{article}', [RevisorController::class, 'rejectArti
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
-// Route::get('/auth/login-register', [FrontController::class, 'autenticate'])->name('autenticate');
+Route::get('/auth/login-register', [FrontController::class, 'autenticate'])->name('autenticate');
+
 
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchArticles'])->name('articles.search');

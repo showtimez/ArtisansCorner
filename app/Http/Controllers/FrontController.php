@@ -28,4 +28,8 @@ class FrontController extends Controller
 
         return view('articles.index', compact('articles'));
     }
+
+    public function autenticate(){
+        return view('/auth/login-register');
+    }
 }
