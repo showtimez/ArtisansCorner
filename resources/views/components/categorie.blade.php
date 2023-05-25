@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-12 col-md-3 d-flex flex-column align-items-center py-5">
             <a href="">
