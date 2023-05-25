@@ -1,4 +1,14 @@
 <x-layout>
+    @if (session()->has('richiestaRevisor'))
+<div class="alert alert-success text-center">
+    {{ session('richiestaRevisor') }}
+</div>
+@endif
+@if (session()->has('answerRevisor'))
+<div class="alert alert-success text-center">
+    {{ session('answerRevisor') }}
+</div>
+@endif
     <x-header>
       <div class="d-flex justify-content-center align-items-center">
         <h1 class="text-center " id="titoloHome">The Artisan's Corner</h1>

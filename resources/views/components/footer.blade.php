@@ -7,7 +7,7 @@
         <span>Get connected with us on social networks:</span>
       </div>
       <!-- Left -->
-  
+
       <!-- Right -->
       <div>
         <a href="" class="me-4 link-secondary">
@@ -32,7 +32,7 @@
       <!-- Right -->
     </section>
     <!-- Section: Social media -->
-  
+
     <!-- Section: Links  -->
     <section class="">
       <div class="container text-center text-md-start mt-5">
@@ -50,7 +50,7 @@
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
@@ -71,7 +71,7 @@
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
@@ -92,7 +92,7 @@
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
@@ -102,6 +102,7 @@
               <i class="fas fa-envelope me-3 text-secondary"></i>
               info@example.com
             </p>
+            <a href="{{ route('become.revisor') }}">Lavora con noi</a>
             <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
             <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
           </div>
@@ -111,7 +112,7 @@
       </div>
     </section>
     <!-- Section: Links  -->
-  
+
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
       © 2021 Copyright:

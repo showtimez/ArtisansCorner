@@ -32,4 +32,7 @@ Route::patch('/accept/article/{article}', [RevisorController::class, 'acceptArti
 Route::patch('/reject/article/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
 
 
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
 // Route::get('/auth/login-register', [FrontController::class, 'autenticate'])->name('autenticate');
