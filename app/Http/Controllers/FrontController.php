@@ -21,4 +21,11 @@ class FrontController extends Controller
     // public function autenticate(){
     //     return view('/auth/login-register');
     // }
+
+    public function searchArticles(Request $request)
+    {
+        $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
+
+        return view('articles.index', compact('articles'));
+    }
 }

@@ -23,7 +23,7 @@ Route::get('/category/{category}', [FrontController::class, 'show'])->name('cate
 
 Route::get('/article/index',[ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/create',[ArticleController::class, 'create'])->name('article.create');
-Route::get('/article/store',[ArticleController::class, 'store'])->name('article.store');
+Route::post('/article/store',[ArticleController::class, 'store'])->name('article.store');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
@@ -36,3 +36,5 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 // Route::get('/auth/login-register', [FrontController::class, 'autenticate'])->name('autenticate');
+
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchArticles'])->name('articles.search');

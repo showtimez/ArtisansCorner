@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
 
     protected $fillable = [
 
@@ -39,6 +39,21 @@ class Article extends Model
 
     public static function toBeRevisionedCount(){
         return Article::where('is_accepted', null)->count();
+    }
+
+    public function toSearchableArray()
+    {
+        $category = $this->category;
+
+        $array = [
+            'id' => $this->id,
+            'title' => $this->title,
+            'price' => $this->price,
+            'description' => $this->description,
+            'state' => $this->state,
+        ];
+
+        return $array;
     }
 
 

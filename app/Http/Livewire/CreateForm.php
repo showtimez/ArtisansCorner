@@ -12,32 +12,44 @@ class CreateForm extends Component
 {
     use WithFileUploads;
     public $category;
-    public $title, $description, $price, $state;
+    public $title, $description, $state;
 
+    public Article $article;
 
-    public function store() {
+    public $user_id;
+    public int $price;
 
+    protected $rules = [
+        'category' => 'required',
+        'title' => 'required',
+        'description' => 'required',
+        'price' => 'required',
+        'state' => 'required',
+        'user_id' => 'required',
+    ];
 
-        $this->validate([
-            'category' => 'required',
-            'state'
+    public function store()
+    {
 
-
-        ]);
-
-
-
-        $user = Auth::user();
-        $category = Category::find($this->category);
-
-        $article = $category->articles()->create([
-
+        $this->user_id = Auth::user()->id;
+        $this->validate();
+        // $category = Category::find($this->category);
+        // dd(Category::find($this->category)->articles);
+        Category::find($this->category)->articles()->create([
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
             'state' => $this->state,
-            'user_id' => $user->id,
+            'user_id' => $this->user_id,
         ]);
+        // dd($category, $this->title, $this->description, $user, $this->price);
+        // $this->article = $category->articles()->create([
+        //     'title' => $this->title,
+        //     'description' => $this->description,
+        //     'price' => $this->price,
+        //     'state' => $this->state,
+        //     'user_id' => $user
+        // ]);
         session()->flash('articleCreated', 'Congratulazioni! Hai inserito un annuncio!');
         $this->reset();
     }
