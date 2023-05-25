@@ -27,9 +27,9 @@
                 <input type="password" name="password" id="password" placeholder="Password" /><br>
 
             </div>
-            <input type="submit" value="Login" class="btn solid " />
-            <p class="social-text">Or Sign in with social platforms</p>
-            {{-- <div class="social-media">
+            <input type="submit" value="Accedi" class="btn solid " />
+            <p class="social-text">Oppure accedi attraverso i social</p>
+            <div class="social-media">
                 <a href="#" class="social-icon">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -42,7 +42,11 @@
                 <a href="#" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-            </div> --}}
+            </div>
+            <p class="social-text">Torna al sito</p>
+              <a href="{{ route('homepage') }}" class="social-icon">
+                <i class="fa fa-home"></i>
+            </a>
           </form>
           <form action="{{ route('register') }}" method="POST" class="sign-up-form">
             @csrf
@@ -73,8 +77,8 @@
                   <i class="fas fa-lock"></i>
                   <input type="password_confirmation" name="password_confirmation" placeholder="Conferma Password" />
               </div>
-              <input type="submit" class="btn" value="Register" />
-              <p class="social-text">Or Sign up with social platforms</p>
+              <input type="submit" class="btn" value="Registrati" />
+              <p class="social-text">Oppure accedi attraverso i social</p>
               <div class="social-media">
                   <a href="#" class="social-icon">
                       <i class="fab fa-facebook-f"></i>
@@ -89,6 +93,10 @@
                       <i class="fab fa-linkedin-in"></i>
                   </a>
               </div>
+              <p class="social-text">Torna al sito</p>
+              <a href="{{ route('homepage') }}" class="social-icon">
+                <i class="fa fa-home"></i>
+            </a>
           </form>
       </div>
   </div>
@@ -96,29 +104,27 @@
     <div class="panels-container">
         <div class="panel left-panel">
             <div class="content">
-                <h3>New here ?</h3>
+                <h3>Non sei ancora iscritto ?</h3>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                    ex ratione. Aliquid!
+                    Entra in The Artisan's Corner !
                 </p>
                 <button class="btn transparent" id="sign-up-btn">
-                    Sign up
+                    REGISTRATI
                 </button>
             </div>
-            <img src="media/Progetto senza titolo-PhotoRoom.png-PhotoRoom.png" class="image" alt="" />
+
         </div>
         <div class="panel right-panel">
             <div class="content">
-                <h3>One of us ?</h3>
+                <h3>Sei già uno di noi ?</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                    laboriosam ad deleniti.
+                    Entra subito e non perderti nemmeno un capolavoro !
                 </p>
                 <button class="btn transparent" type="submit" id="sign-in-btn">
-                    Sign in
+                    ACCEDI
                 </button>
             </div>
-            <img src="media/Progetto senza titolo-PhotoRoom.png-PhotoRoom.png" class="image" alt="" />
+
         </div>
     </div>
 </div>

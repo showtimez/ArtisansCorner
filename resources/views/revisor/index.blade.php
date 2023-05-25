@@ -1,19 +1,19 @@
 <x-layout>
 
 <x-header>
-    <h2>Articoli da revisionare</h2>
+    <h2 class="text-center py-5 my-5">Articoli da revisionare</h2>
 </x-header>
 
-            <div class="container">
+            <div class="container vh-100 my-5 py-5">
                 <div class="row justify-content-center ">
                     <div class="col-12 col-md-4 d-flex justify-content-center   ">
-                        <h1 class="display-2">{{$article_to_check ? "Ecco l'annuncio da revisionare": "Non ci sono annunci da revisionare"}}</h1>
+                        <h1 class="text-center display-5">{{$article_to_check ? "Ecco l'annuncio da revisionare": "Non ci sono annunci da revisionare"}}</h1>
                     </div>
                 </div>
             </div>
 
             @if($article_to_check)
-                <div class="card mx-5 my-5">
+                <div class="card ">
                     {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
                     <div class="card-body p-5">
                     <h5 class="card-title">{{$article_to_check->title}}</h5>
@@ -21,7 +21,7 @@
                     <h4>Prezzo: {{$article_to_check->price}}</h4>
                     <p>Stato: {{$article_to_check->state}}</p>
                     {{-- <p>Categoria {{$article_to_check->category->name}}</p> --}}
-        
+
                     <form action="{{route('revisor.acceptArticle', ['article'=>$article_to_check])}}"method="POST">
                     @csrf
                     @method('PATCH')

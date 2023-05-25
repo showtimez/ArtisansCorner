@@ -26,7 +26,7 @@ class FrontController extends Controller
     {
         $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
 
-        return view('articles.index', compact('articles'));
+        return view('article.index', compact('articles'));
     }
 
     public function autenticate(){

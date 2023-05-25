@@ -43,19 +43,18 @@ class Article extends Model
     }
 
     public function toSearchableArray()
-    {
-        $category = $this->category;
+{
+    $array = [
+        'id' => $this->id,
+        'title' => $this->title,
+        'price' => $this->price,
+        'description' => $this->description,
+        'state' => $this->state,
+        'category' => $this->category->name,
+    ];
 
-        $array = [
-            'id' => $this->id,
-            'title' => $this->title,
-            'price' => $this->price,
-            'description' => $this->description,
-            'state' => $this->state,
-        ];
-
-        return $array;
-    }
+    return $array;
+}
 
 
 }

@@ -5,7 +5,7 @@ body{
 }
 
 :root{
-  --primary :#333333;
+  --primary :rgb(51, 51, 51);
   --secondary: whitesmoke;
   --accent1 : rgb(165, 121, 102);
 }
@@ -52,7 +52,7 @@ body{
     height: 100%;
 } */
 .content {
-  
+
   color: #f1f1f1;
   position: absolute;
   padding: 2%;

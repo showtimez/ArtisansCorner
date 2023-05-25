@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="container">
-        <div class="row justify-content-center ">
+    <div class="container vh-100">
+        <div class="row justify-content-center py-5 mb-5 ">
             <h2 class="text-center">Tutti gli annunci</h2>
             @forelse ($articles as $article)
             <div class="col-12 col-md-4 d-flex justify-content-center   ">
