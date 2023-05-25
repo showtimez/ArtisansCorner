@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light sticky-top ">
+<nav class="navbar navbar-expand-lg bg-custom py-3 navbar-dark sticky-top ">
     <div class="container-fluid ">
         {{-- <a class="navbar-brand" href="#">
             <img src="" alt="" width="30" height="24">
