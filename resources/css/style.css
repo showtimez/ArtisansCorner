@@ -22,9 +22,23 @@ body{
   color: var(--accent1);
 }
 
+.textAccent2{
+  color: var(--secondary);
+}
+
 .bg-custom{
   background-color: var(--primary);
 }
+/* navbar */
+
+.btnCustom{
+  background-color: var(--accent1);
+  border: none;
+  border-radius: 5px;
+  color: var(--secondary);
+}
+
+/*end navbar */
 
 .vid{
   height: 100%;
@@ -77,7 +91,20 @@ body{
   align-items: center;
   /* width: 180px; */
   height: 500px;
-  
+}
+
+.linkcustom{
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--secondary);
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.linkcustom:hover{
+  color: whitesmoke !important;
+  background-color: var(--accent1);
 }
 
 /* .swiper-slide img {

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-3 d-flex flex-column align-items-center py-5">
             <a href="">
@@ -30,4 +30,7 @@
 
             <p class="text-center textDark px-5 fs-7">La musica accompagna l’uomo dall’alba dei tempi.</p>
         </div>
+    </div>
+</div>
+
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-custom py-3 navbar-dark sticky-top ">
+<nav class="navbar navbar-expand-lg bg-custom py-4 navbar-dark sticky-top ">
     <div class="container-fluid ">
         {{-- <a class="navbar-brand" href="#">
             <img src="" alt="" width="30" height="24">
@@ -84,11 +84,11 @@
                 </ul>
         @endauth
     </ul>
-
-    <form action="{{route('articles.search')}}" method="GET" class="d-flex" role="search">
-        <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-        </div>
+    
+</div>
+<form action="{{route('articles.search')}}" method="GET" class="d-flex" role="search">
+    <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
+    <button class="px-3 btnCustom" type="submit">Search</button>
+</form>
     </div>
 </nav>
