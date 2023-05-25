@@ -37,8 +37,8 @@
 
                             <p>Categoria {{ $article->category->name }}</p>
                             <h4>Prezzo: {{ $article->price }}</h4>
-                            <a href="{{ route('article.show', compact('article')) }}"
-                                class="btn btn-dark mt-5">Dettagli</a>
+                            <button class="btn btn-outline-dark"><a href="{{ route('article.show', compact('article')) }}"
+                                class="mt-5"></a>Dettagli</button>
                             </div>
                             @empty
                         <div class="d-flex justify-content-center">

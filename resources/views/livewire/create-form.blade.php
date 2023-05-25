@@ -4,7 +4,7 @@
             <div class="col-12 col-md-8">
                 <h2 class="text-center py-4">Inserisci un Annuncio</h2>
 
-                    <form class="p-5" wire:submit.prevent="store">
+                    <form class="p-5 justify-content-center" wire:submit.prevent="store">
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -24,12 +24,12 @@
                         @csrf
 
                         <div class="mb-3">
-                            <label for="title" class="form-label">Aggiungi un titolo</label>
+                            <p for="description" class="form-label text-center">Dai un titolo</p>
                             <input type="text" wire:model="title" class="form-control" id="title">
                         </div>
 
                         <div class="mb-3">
-                            <label for="description" class="form-label">Descrizione</label>
+                            <p for="description" class="form-label text-center">Aggiungi una descrizione</p>
                             <textarea wire:model="description" id="description" cols="30" rows="7" class="form-control"></textarea>
                         </div>
 
@@ -46,7 +46,7 @@
                         </div> --}}
 
                         <div class="mb-3">
-                            <label for="category" class="form-label">Categoria</label>
+
                             <select wire:model.defer="category" id="category" class="form-control">
                                 <option value="">Scegli la categoria</option>
                                 @foreach ($categories as $category)
@@ -65,9 +65,11 @@
                             <label for="price" class="form-label px-2">€</label><input type="number" wire:model="price" class="form-control" id="price">
 
                         </div>
+                        <div>
+                            <button type="submit" class="btn btn-outline-dark ">Inserisci</button>
+                            <button class="btn btn-outline-dark" ><a href="{{ route('article.index') }}"></a>Indietro</button>
 
-                        <button type="submit" class="btn btn-dark">Inserisci il tuo annuncio</button>
-                        <a href="{{ route('article.index') }}" class="ms-3 btn btn-outline-dark">Torna indietro</a>
+                        </div>
                     </form>
                 </div>
             </div>

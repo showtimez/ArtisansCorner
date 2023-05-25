@@ -50,7 +50,7 @@ class CreateForm extends Component
         //     'state' => $this->state,
         //     'user_id' => $user
         // ]);
-        session()->flash('articleCreated', 'Congratulazioni! Hai inserito un annuncio!');
+        session()->flash('articleCreated', "Congratulazioni il tuo annuncio è stato inserito ed è in attesa di revisione");
         $this->reset();
     }
 
