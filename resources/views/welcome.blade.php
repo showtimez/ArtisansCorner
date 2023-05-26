@@ -53,15 +53,21 @@
     </div>
 
    {{-- counter --}}
-   <div class="col-12 col-lg-3 d-flex  ">
+   <section class="container-fluid bgCount">
+    <div class="row">
+        {{-- <h2 class="text-center"> Un pò di numeri </h2> --}}
+        <div class="col-12 col-lg-3 d-flex  ">
 
-    <h2 class="text-center"> Un pò di numeri </h2>
-
-    <p class="lead text-center"><span id="clienti" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
-    <p class="lead text-center"><span id="articoli" class="increment-numbers d-block">0</span> Articoli Venduti</p>
-    <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
-
+           
+        
+            <p class="lead text-center"><span id="clienti" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
+            <p class="lead text-center"><span id="articoli" class="increment-numbers d-block">0</span> Articoli Venduti</p>
+            <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
+        
+            </div>
     </div>
+   </section>
+   
 
 
 </x-layout>
