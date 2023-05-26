@@ -21,7 +21,7 @@
     <x-categorie>
     </x-categorie>
     <div class="container-fluid  bg-custom">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="inizio">
             <h2 class="text-center text-white py-5 display-2 fontCustom">Ultimi annunci</h2>
 
 
@@ -53,15 +53,15 @@
     </div>
 
    {{-- counter --}}
-   <div class="col-12 col-lg-3 ">
+   <div class="col-12 col-lg-3 d-flex  ">
 
-    <h2 id="inizio" class="text-center"> Un pò di numeri </h2>
+    <h2 class="text-center"> Un pò di numeri </h2>
 
-    <p class="lead text-center"><span id="first-span" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
-    <p class="lead text-center"><span id="second-span" class="increment-numbers d-block">0</span> Prodotti Venduti</p>
-    <p class="lead text-center"><span id="third-span" class="increment-numbers d-block">0</span> Recensioni</p>
+    <p class="lead text-center"><span id="clienti" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
+    <p class="lead text-center"><span id="articoli" class="increment-numbers d-block">0</span> Articoli Venduti</p>
+    <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
 
     </div>
 
-   
+
 </x-layout>

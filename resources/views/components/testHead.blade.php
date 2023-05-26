@@ -8,7 +8,7 @@
       crossorigin="anonymous"
     ></script>
     {{-- <link rel="stylesheet" href="style.css" /> --}}
-    @vite(['resources/css/form.css', 'resources/js/main.js'])
+    @vite(['resources/css/form.css', 'resources/js/form.js'])
    <link rel="stylesheet" href="/resources/css/form.css">
     <title> Artisan Corner </title>
     @livewireStyles
