@@ -3,14 +3,28 @@
     "file": "assets/arte-25259cd3.jpg",
     "src": "public/media/arte.jpg"
   },
+  "public/media/counterbg.jpg": {
+    "file": "assets/counterbg-dd8a1013.jpg",
+    "src": "public/media/counterbg.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-0ee0ada1.css",
+    "file": "assets/app-9c9e2b85.css",
     "isEntry": true,
     "src": "resources/css/app.css"
+  },
+  "resources/css/form.css": {
+    "file": "assets/form-95f4ae1c.css",
+    "isEntry": true,
+    "src": "resources/css/form.css"
   },
   "resources/js/app.js": {
     "file": "assets/app-3e2ca7eb.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/form.js": {
+    "file": "assets/form-d51f908f.js",
+    "isEntry": true,
+    "src": "resources/js/form.js"
   }
 }
