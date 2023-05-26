@@ -13,6 +13,12 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
+
+    public function is_revisor()
+    {
+        return $this->is_revisor;
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -48,6 +54,6 @@ class User extends Authenticatable
         return $this->hasMany(Article::class);
     }
 
-   
+
 
 }

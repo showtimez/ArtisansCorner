@@ -2,15 +2,15 @@
 
 namespace App\Mail;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class BecomeRevisor extends Mailable
+class BecomeRevisorUser extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,9 +18,10 @@ class BecomeRevisor extends Mailable
      * Create a new message instance.
      */
     public $user;
-    public function __construct(User $user)
+    public $user_revisor;
+    public function __construct(User $user_revisor)
     {
-        $this->user = $user;
+        $this->user_revisor = $user_revisor->is_revisor(true);
     }
 
     /**
@@ -29,7 +30,7 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Richiesta Be Revisore',
+            subject: 'Richiesta accettata, sei Revisore',
         );
     }
 
@@ -39,11 +40,12 @@ class BecomeRevisor extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.become_revisor',
+            view: 'mail.become_revisor_user',
         );
     }
+
     public function build(){
-        return $this->from('corner.it@noreply.com')->view('mail.become_revisor');
+        return $this->from('corner.it@noreply.com')->view('mail.become_revisor_user');
     }
     /**
      * Get the attachments for the message.

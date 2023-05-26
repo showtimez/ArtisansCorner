@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Article;
 use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
+use App\Mail\BecomeRevisorUser;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Artisan;
@@ -40,9 +41,11 @@ class RevisorController extends Controller
         Mail::to('admin@corner.it')->send(new BecomeRevisor(Auth::user()));
         return redirect('/')->with('richiestaRevisor', 'Complimenti hai richiesto di diventare revisore correttamente');
     }
+
     public function makeRevisor(User $user){
         Artisan::call('corner:makeUserRevisor', ['email'=> $user->email]);
-        return redirect('/')->with('answerRevisor', "Complimenti hai reso revisore {$user->name}");
+        Mail::to($user->email)->send(new BecomeRevisorUser(Auth::user()));
+        return redirect()->back()->with('answerRevisor', "Complimenti hai reso revisore {$user->name}");
 
     }
     public function collabora(){

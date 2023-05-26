@@ -1,11 +1,11 @@
 <x-layout>
     @if (session()->has('richiestaRevisor'))
-        <div class="alert alert-success text-center">
+        <div class="alert alert-success text-center mb-0">
             {{ session('richiestaRevisor') }}
         </div>
     @endif
     @if (session()->has('answerRevisor'))
-        <div class="alert alert-success text-center">
+        <div class="alert alert-success text-center mb-0">
             {{ session('answerRevisor') }}
         </div>
     @endif
@@ -58,21 +58,21 @@
         {{-- <h2 class="text-center"> Un pò di numeri </h2> --}}
         <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement m-5">
             <p class="lead text-center"><span id="clienti" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
-                  
+
         </div>
         <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement ">
 
-        
+
             <p class="lead text-center"><span id="articoli" class="increment-numbers d-block ">0</span> Articoli Venduti</p>
-        
+
         </div>
         <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement ">
              <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
-        
+
         </div>
     </div>
    </section>
-   
+
 
 
 </x-layout>
