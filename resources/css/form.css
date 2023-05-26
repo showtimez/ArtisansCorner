@@ -105,7 +105,7 @@ form.sign-in-form {
 
 .social-text {
   padding: 0.7rem 0;
-  font-size: 1rem;
+  font-size: 23px;
 }
 
 .social-media {
@@ -120,7 +120,7 @@ form.sign-in-form {
   justify-content: center;
   align-items: center;
   margin: 0 0.45rem;
-  color: #333;
+  color: #acacac;
   border-radius: 50%;
   border: 1px solid #333;
   text-decoration: none;
@@ -134,7 +134,7 @@ form.sign-in-form {
     justify-content: center;
     align-items: center;
     margin: 0 0.45rem;
-    color: #333;
+    color: #acacac;
     border-radius: 50%;
     border: 1px solid #333;
     text-decoration: none;
@@ -165,6 +165,20 @@ form.sign-in-form {
   cursor: pointer;
   transition: 0.5s;
 }
+.btn-accedi {
+    width: 150px;
+    background-color:rgb(93,77,70);
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
 
 .btn:hover {
   background-color: linear-gradient(-45deg, rgb(51, 51, 51) 0%, rgb(165, 121, 102) 100%);

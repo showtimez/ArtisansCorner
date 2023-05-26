@@ -13,13 +13,20 @@ use Illuminate\Support\Facades\Artisan;
 class RevisorController extends Controller
 {
     public function index(){
-        $article_to_check=Article::where('is_accepted', null)->first();
-        return view('revisor.index', compact('article_to_check'));
+        $article_checked_ok=Article::where('is_accepted', true)->get();
+        $article_checked_ko=Article::where('is_accepted', false)->get();
+        $article_to_check=Article::where('is_accepted', null)->get();
+        return view('revisor.index', compact('article_to_check', 'article_checked_ok', 'article_checked_ko'));
     }
 
     public function acceptArticle(Article $article){
         $article->setAccepted(true);
         return redirect()->back()->with('acceptedArticle', "Complimenti hai accettato l'articolo");
+
+    }
+    public function nullArticle(Article $article){
+        $article->setAccepted(null);
+        return redirect()->back()->with('nulledArticle', "Hai rimesso l' articolo in revisione");
 
     }
 
@@ -37,5 +44,9 @@ class RevisorController extends Controller
         Artisan::call('corner:makeUserRevisor', ['email'=> $user->email]);
         return redirect('/')->with('answerRevisor', "Complimenti hai reso revisore {$user->name}");
 
+    }
+    public function collabora(){
+
+            return view('/revisor/collabora');
     }
 }

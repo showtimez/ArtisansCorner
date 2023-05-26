@@ -46,28 +46,33 @@
                     Ciao {{Auth::user()->name}}
                     </a>
                 <ul class="dropdown-menu">
-                    <li>
-                        <a class="dropdown-item" href="#">Profilo</a>
+                    @if(!Auth::user()->is_revisor)
+                       <li>
+                        <a class="dropdown-item" href="{{ route('revisor.collabora') }}">Lavora con noi</a>
                     </li>
-                    <hr>
-                    <li>
-                        <a class="dropdown-item" href="#"
-                        onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
-                    </li>
-                    <form id="form-logout" action="{{route('logout')}}" method="POST" class="d-none">@csrf</form>
+                    @endif
+
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('revisor.index')}}">
+                        <a class="nav-link text-dark" href="{{route('revisor.index')}}">
                         Area Revisori
+                        @if (App\Models\Article::toBeRevisionedCount() > 0)
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{App\Models\Article::toBeRevisionedCount()}}
                             <span class="visually-hidden">
                                 Articoli da revisionare
                             </span>
                         </span>
+                    @endif
                         </a>
                     </li>
+                    <hr>
                     @endif
+                    <li>
+                        <a class="dropdown-item" href="#"
+                        onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
+                    </li>
+                    <form id="form-logout" action="{{route('logout')}}" method="POST" class="d-none">@csrf</form>
                 @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -84,7 +89,7 @@
                 </ul>
         @endauth
     </ul>
-    
+
 </div>
 <form action="{{route('articles.search')}}" method="GET" class="d-flex" role="search">
     <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">

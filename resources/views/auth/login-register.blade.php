@@ -27,7 +27,7 @@
                 <input type="password" name="password" id="password" placeholder="Password" /><br>
 
             </div>
-            <input type="submit" value="Accedi" class="btn solid " />
+            <input type="submit" value="Accedi" class=" solid btn-accedi" />
             {{-- <p class="social-text">Oppure accedi attraverso i social</p>
             <div class="social-media">
                 <a href="#" class="social-icon">
@@ -45,7 +45,7 @@
             </div> --}}
             <p class="social-text">Torna al sito</p>
             <a href="{{ route('homepage') }}" class="social-home">
-                <i class="fa fa-home  fa-3x"></i>
+                <i class="fa fa-home  fa-2x"></i>
              </a>
           </form>
           <form action="{{ route('register') }}" method="POST" class="sign-up-form">
@@ -95,7 +95,7 @@
               </div> --}}
               <p class="social-text">Torna al sito</p>
               <a href="{{ route('homepage') }}" class="social-home">
-                <i class="fa fa-home  fa-3x"></i>
+                <i class="fa fa-home  fa-2x"></i>
              </a>
           </form>
       </div>
