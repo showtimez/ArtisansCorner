@@ -203,7 +203,14 @@ input {
 
 
 
+/* incremento numeri */
+.increment-numbers{
 
+  font-size: 50px;
+  color: var(--accent1);
+  font-weight: 800px;
+
+}
 
 
 

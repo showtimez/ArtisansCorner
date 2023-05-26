@@ -52,4 +52,16 @@
         </div>
     </div>
 
+   {{-- counter --}}
+   <div class="col-12 col-lg-3 ">
+
+    <h2 id="inizio" class="text-center"> Un pò di numeri </h2>
+
+    <p class="lead text-center"><span id="first-span" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
+    <p class="lead text-center"><span id="second-span" class="increment-numbers d-block">0</span> Prodotti Venduti</p>
+    <p class="lead text-center"><span id="third-span" class="increment-numbers d-block">0</span> Recensioni</p>
+
+    </div>
+
+   
 </x-layout>
