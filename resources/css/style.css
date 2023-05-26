@@ -119,8 +119,24 @@ body, input{
 
 
 
+.bgCount{
+  height: 80vh;
+  background-image:linear-gradient(45deg,rgba(255, 255, 255, 0.803),rgba(255, 255, 255, 0.803)), url(/public/media/counterbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
 
-
+.bgIncrement{
+  border-radius: 2px;
+  border-color: var(--accent1);
+  background-color: var(--primary);
+  width: 150px;
+  height: 150px;
+  padding: 8px;
+  color: var(--accent1);
+}
 
 
 
