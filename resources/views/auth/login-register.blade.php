@@ -28,7 +28,7 @@
 
             </div>
             <input type="submit" value="Accedi" class="btn solid " />
-            <p class="social-text">Oppure accedi attraverso i social</p>
+            {{-- <p class="social-text">Oppure accedi attraverso i social</p>
             <div class="social-media">
                 <a href="#" class="social-icon">
                     <i class="fab fa-facebook-f"></i>
@@ -42,11 +42,11 @@
                 <a href="#" class="social-icon">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-            </div>
+            </div> --}}
             <p class="social-text">Torna al sito</p>
-              <a href="{{ route('homepage') }}" class="social-icon">
-                <i class="fa fa-home"></i>
-            </a>
+            <a href="{{ route('homepage') }}" class="social-home">
+                <i class="fa fa-home  fa-3x"></i>
+             </a>
           </form>
           <form action="{{ route('register') }}" method="POST" class="sign-up-form">
             @csrf
@@ -78,7 +78,7 @@
                   <input type="password_confirmation" name="password_confirmation" placeholder="Conferma Password" />
               </div>
               <input type="submit" class="btn" value="Registrati" />
-              <p class="social-text">Oppure accedi attraverso i social</p>
+              {{-- <p class="social-text">Oppure accedi attraverso i social</p>
               <div class="social-media">
                   <a href="#" class="social-icon">
                       <i class="fab fa-facebook-f"></i>
@@ -92,11 +92,11 @@
                   <a href="#" class="social-icon">
                       <i class="fab fa-linkedin-in"></i>
                   </a>
-              </div>
+              </div> --}}
               <p class="social-text">Torna al sito</p>
-              <a href="{{ route('homepage') }}" class="social-icon">
-                <i class="fa fa-home"></i>
-            </a>
+              <a href="{{ route('homepage') }}" class="social-home">
+                <i class="fa fa-home  fa-3x"></i>
+             </a>
           </form>
       </div>
   </div>

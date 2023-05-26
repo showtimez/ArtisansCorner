@@ -1,0 +1,16 @@
+{
+  "public/media/arte.jpg": {
+    "file": "assets/arte-25259cd3.jpg",
+    "src": "public/media/arte.jpg"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-0ee0ada1.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-3e2ca7eb.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}

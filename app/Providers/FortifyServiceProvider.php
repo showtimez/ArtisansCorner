@@ -52,7 +52,8 @@ class FortifyServiceProvider extends ServiceProvider
         return view('auth.login-register');
         });
 
-    // Fortify::ignoreRoutes();
+        // Fortify::ignoreRoutes();
+
 
     }
 }

@@ -127,6 +127,24 @@ form.sign-in-form {
   font-size: 1.1rem;
   transition: 0.3s;
 }
+.social-home {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    color: #333;
+    border-radius: 50%;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+  }
+  .social-home:hover {
+    color: rgb(165, 121, 102);
+    border-color: rgb(165, 121, 102);
+  }
 
 .social-icon:hover {
   color: rgb(165, 121, 102);
