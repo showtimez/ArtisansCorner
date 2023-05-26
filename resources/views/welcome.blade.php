@@ -53,18 +53,23 @@
     </div>
 
    {{-- counter --}}
-   <section class="container-fluid bgCount">
-    <div class="row">
+   <section class="container-fluid bgCount d-flex align-items-center justify-content-center">
+    <div class="row justify-content-betwheen vh-100 align-items-center">
         {{-- <h2 class="text-center"> Un pò di numeri </h2> --}}
-        <div class="col-12 col-lg-3 d-flex  ">
-
-           
-        
+        <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement m-5">
             <p class="lead text-center"><span id="clienti" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
-            <p class="lead text-center"><span id="articoli" class="increment-numbers d-block">0</span> Articoli Venduti</p>
-            <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
+                  
+        </div>
+        <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement ">
+
         
-            </div>
+            <p class="lead text-center"><span id="articoli" class="increment-numbers d-block ">0</span> Articoli Venduti</p>
+        
+        </div>
+        <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement ">
+             <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
+        
+        </div>
     </div>
    </section>
    
