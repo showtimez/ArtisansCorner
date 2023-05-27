@@ -145,8 +145,11 @@ return [
     'fuzziness' => env('TNTSEARCH_FUZZINESS', false),
     'fuzzy' => [
         'prefix_length' => 1,
+        // 'prefix_length' => 2, //Il numero di caratteri iniziali che non saranno “fuzzificati”. Questo aiuta a ridurre il numero di termini che devono essere esaminati. Il valore predefinito è 0.
         'max_expansions' => 50,
-        'distance' => 3,
+        // 'max_expansions' => 50, //Il numero massimo di termini a cui si espanderà la query fuzzy. Il valore predefinito è 50.
+        'distance' => 'auto',
+        // sembra essere la lunghezza dei caratteri a cui si estende, una spiegazione precedente dice che è la distanza di Levenshtein. L'impostazione sfocata sembra descrivere la distanza di Levenshtein.
 	'no_limit' => true
     ],
     'asYouType' => true,
