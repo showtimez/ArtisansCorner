@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container vh-100">
+    <div class="container ">
         <div class="row justify-content-center py-5 mb-5 ">
             <h2 class="text-center">Tutti gli annunci</h2>
             @forelse ($articles as $article)
@@ -18,12 +18,11 @@
                     </div>
                 </div>
             </div>
-                    @empty
-                    <div class="d-flex justify-content-center">
-                        <h3>Non sono ancora stati inseriti annunci.</h3>
-                    </div>
-
-                    @endforelse
+            @empty
+            <div class="d-flex justify-content-center">
+                <h3>Non sono ancora stati inseriti annunci.</h3>
+            </div>
         </div>
+            @endforelse
     </div>
 </x-layout>
