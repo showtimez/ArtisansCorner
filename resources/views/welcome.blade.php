@@ -20,14 +20,17 @@
     </x-header>
     <x-categorie>
     </x-categorie>
-    <div class="container-fluid  bg-custom">
-        <div class="row justify-content-center" id="inizio">
-            <h2 class="text-center text-white py-5 display-2 fontCustom">Ultimi annunci</h2>
-
-
-            <div class="swiper mySwiper col-12 my-5">
-
-                {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
+    <div class="container-fluid bg-dark">
+        <div id="inizio" class="row">
+            <div class="col-12 d-flex justify-content-center">  
+                <div>
+                    <h2 class="text-center text-light pt-5 fontCustomannunci">Ultimi annunci</h2>
+                    <p class="text-center text-light pb-5 fontCustomannunci ">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Nam ipsa ea sint aliquid laborum</p>
+                </div>                      
+            </div>
+                <div class="swiper mySwiper col-12 my-5">
+                    {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
                 <div class="swiper-wrapper">
                     @forelse ($articles as $article)
                         <div class="swiper-slide d-flex flex-column">
@@ -37,41 +40,39 @@
 
                             <p>Categoria {{ $article->category->name }}</p>
                             <h4>Prezzo: {{ $article->price }}</h4>
-                            <button class="btn btn-outline-dark"><a href="{{ route('article.show', compact('article')) }}"
-                                class="mt-5"></a>Dettagli</button>
-                            </div>
-                            @empty
+                            <button class="btn btn-outline-dark"><a
+                                    href="{{ route('article.show', compact('article')) }}"
+                                    class="mt-5"></a>Dettagli</button>
+                        </div>
+                    @empty
                         <div class="d-flex justify-content-center">
                             <h3>Non sono ancora stati inseriti annunci.</h3>
                         </div>
                     @endforelse
                 </div>
             </div>
-
-
         </div>
     </div>
 
-   {{-- counter --}}
-   <section class="container-fluid bgCount d-flex align-items-center justify-content-center">
-    <div class="row justify-content-betwheen vh-100 align-items-center">
-        {{-- <h2 class="text-center"> Un pò di numeri </h2> --}}
-        <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement m-5">
-            <p class="lead text-center"><span id="clienti" class="increment-numbers d-block">0</span> Clienti Soddisfatti</p>
+    {{-- counter --}}
+    <section class="container-fluid bgCount d-flex align-items-center justify-content-center">
+        <div class="row justify-content-between align-items-center">
+            {{-- <h2 class="text-center"> Un pò di numeri </h2> --}}
+            <div class="col-12 col-lg-3 d-flex justify-content-center px-5 ">
+                {{-- <img class="recensionecustom mx-3 rounded" src="/media/clientisodd.jpg" alt="recensione tipo"> --}}
+                <p class="lead text-center p-5"><span id="clienti" class="increment-numbers d-block">0</span>Clienti Soddisfatti</p>
+            </div>
+            <div class="col-12 col-lg-3 d-flex justify-content-center px-5 ">
+                {{-- <img class="recensionecustom mx-3" src="/media/scultura.jpg" alt="recensione tipo"> --}}
+                <p class="lead text-center"><span id="articoli" class="increment-numbers d-block ">0</span>Articoli Venduti</p>
+            </div>
+            <div class="col-12 col-lg-3 d-flex justify-content-center px-5 ">
+                {{-- <img class="recensionecustom mx-3" src="/media/review.png" alt="recensione tipo"> --}}
+                <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
 
+            </div>
         </div>
-        <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement ">
-
-
-            <p class="lead text-center"><span id="articoli" class="increment-numbers d-block ">0</span> Articoli Venduti</p>
-
-        </div>
-        <div class="col-12 col-lg-3 d-flex justify-content-center bgIncrement ">
-             <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
-
-        </div>
-    </div>
-   </section>
+    </section>
 
 
 

@@ -40,44 +40,60 @@ body, input{
   border-radius: 5px;
   color: var(--secondary);
 }
-
 /*end navbar */
-
+/* header */
 .vid{
   height: 100%;
   width: 100%;
   /* opacity: 0.9; */
 }
 /* #myVideo {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 } */
-.content {
-
+.content {  
   color: #f1f1f1;
   position: absolute;
   padding: 2%;
   z-index: 1;
   bottom: 30%;
-  left: 30%;
-
+  left: 28%;  
 }
+
 .fontCustom{
   font-family: 'Ysabeau', sans-serif;
   font-weight: 800;
+  max-width: 100%;
 }
+/*end header */
 
-/* card categorie */
+/*categorie */
 .icon{
   font-size: 50px;
   color:var(--accent1)
 }
-/*end card categorie */
+
+.bgCategorie{
+  height: 50vh;
+  background-image: url(/public/media/sfondoCarta.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/*end categorie */
 
 
 /* card annunci home */
+.fontCustomannunci{
+  font-family: 'Ysabeau', sans-serif;
+  font-weight: 800;
+  max-width: 500px;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -117,18 +133,17 @@ body, input{
   object-fit: cover;
 } */
 
+/* end card annunci home */
 
-
+/* contatore */
 .bgCount{
   height: 80vh;
   background-image:linear-gradient(45deg,rgba(255, 255, 255, 0.803),rgba(255, 255, 255, 0.803)), url(/public/media/counterbg.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  
+  background-position: center;  
 }
 
-.bgIncrement{
+/* .bgIncrement{
   border-radius: 2px;
   border-color: var(--accent1);
   background-color: var(--primary);
@@ -136,8 +151,14 @@ body, input{
   height: 150px;
   padding: 8px;
   color: var(--accent1);
-}
+} */
 
+.increment-numbers{
+  font-size: 100px;
+  color: var(--accent1);
+  font-weight: 800px;
+}
+/*end  contatore */
 
 
 
@@ -220,13 +241,6 @@ input {
 
 
 /* incremento numeri */
-.increment-numbers{
-
-  font-size: 50px;
-  color: var(--accent1);
-  font-weight: 800px;
-
-}
 
 
 
