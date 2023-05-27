@@ -22,7 +22,8 @@
             <div class="d-flex justify-content-center">
                 <h3>Non sono ancora stati inseriti annunci.</h3>
             </div>
-        </div>
-            @endforelse
+
+             @endforelse
+    </div>
     </div>
 </x-layout>

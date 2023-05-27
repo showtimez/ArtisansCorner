@@ -53,13 +53,13 @@ body, input{
   width: 100%;
   height: 100%;
 } */
-.content {  
+.content {
   color: #f1f1f1;
   position: absolute;
   padding: 2%;
   z-index: 1;
   bottom: 30%;
-  left: 28%;  
+  left: 28%;
 }
 
 .fontCustom{
@@ -140,7 +140,10 @@ body, input{
   height: 80vh;
   background-image:linear-gradient(45deg,rgba(255, 255, 255, 0.803),rgba(255, 255, 255, 0.803)), url(/public/media/counterbg.jpg);
   background-size: cover;
-  background-position: center;  
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* .bgIncrement{
@@ -156,7 +159,7 @@ body, input{
 .increment-numbers{
   font-size: 100px;
   color: var(--accent1);
-  font-weight: 800px;
+  font-weight: 800;
 }
 /*end  contatore */
 
@@ -477,5 +480,3 @@ a {
 
   margin-top: 2rem;
 } */
-
-

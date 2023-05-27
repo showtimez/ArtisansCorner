@@ -22,12 +22,12 @@
     </x-categorie>
     <div class="container-fluid bg-dark">
         <div id="inizio" class="row">
-            <div class="col-12 d-flex justify-content-center">  
+            <div class="col-12 d-flex justify-content-center">
                 <div>
                     <h2 class="text-center text-light pt-5 fontCustomannunci">Ultimi annunci</h2>
-                    <p class="text-center text-light pb-5 fontCustomannunci ">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <p class="text-center text-light pb-5 fontCustomannunci ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nam ipsa ea sint aliquid laborum</p>
-                </div>                      
+                </div>
             </div>
                 <div class="swiper mySwiper col-12 my-5">
                     {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
@@ -35,7 +35,7 @@
                     @forelse ($articles as $article)
                         <div class="swiper-slide d-flex flex-column">
                             <h5>{{ $article->title }}</h5>
-                            <p>{{ $article->description }}</p>
+                            {{ $article->description }}</p>
                             <p>Stato: {{ $article->state }}</p>
 
                             <p>Categoria {{ $article->category->name }}</p>
@@ -58,20 +58,18 @@
     <section class="container-fluid bgCount d-flex align-items-center justify-content-center">
         <div class="row justify-content-between align-items-center">
             {{-- <h2 class="text-center"> Un pò di numeri </h2> --}}
-            <div class="col-12 col-lg-3 d-flex justify-content-center px-5 ">
-                {{-- <img class="recensionecustom mx-3 rounded" src="/media/clientisodd.jpg" alt="recensione tipo"> --}}
-                <p class="lead text-center p-5"><span id="clienti" class="increment-numbers d-block">0</span>Clienti Soddisfatti</p>
-            </div>
-            <div class="col-12 col-lg-3 d-flex justify-content-center px-5 ">
-                {{-- <img class="recensionecustom mx-3" src="/media/scultura.jpg" alt="recensione tipo"> --}}
-                <p class="lead text-center"><span id="articoli" class="increment-numbers d-block ">0</span>Articoli Venduti</p>
-            </div>
-            <div class="col-12 col-lg-3 d-flex justify-content-center px-5 ">
-                {{-- <img class="recensionecustom mx-3" src="/media/review.png" alt="recensione tipo"> --}}
-                <p class="lead text-center"><span id="recensioni" class="increment-numbers d-block">0</span> Recensioni</p>
 
-            </div>
-        </div>
+                {{-- <img class="recensionecustom mx-3 rounded" src="/media/clientisodd.jpg" alt="recensione tipo"> --}}
+                <p class=" text-center "><span id="clienti" class="increment-numbers d-block mx-3 ">0</span>Clienti Soddisfatti</p>
+
+                {{-- <img class="recensionecustom mx-3" src="/media/scultura.jpg" alt="recensione tipo"> --}}
+                <p class=" text-center"><span id="articoli" class="increment-numbers d-block mx-3">0</span>Articoli Venduti</p>
+
+                {{-- <img class="recensionecustom mx-3" src="/media/review.png" alt="recensione tipo"> --}}
+                <p class=" text-center"><span id="recensioni" class="increment-numbers d-block mx-3">0</span>Recensioni </p>
+
+             </div>
+</div>
     </section>
 
 
