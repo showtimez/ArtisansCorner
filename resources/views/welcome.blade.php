@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="swiper mySwiper pb-5">
+                <div class="swiper pb-5">
                     <div class="swiper-wrapper">
                         @forelse ($articles as $article)
                         {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}

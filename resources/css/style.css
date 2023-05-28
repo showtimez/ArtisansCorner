@@ -71,7 +71,7 @@ body, input{
   max-width: 100%;
 }
 /*end header */
-/* @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
 
     .fontCustom {
         font-family: 'Ysabeau', sans-serif;
@@ -80,9 +80,36 @@ body, input{
         top: -5rem;
         left: -3rem;
     }
-} */
-/* Stili per schermi piccoli (telefoni) */
-/* @media only screen and (max-width: 480px) {
+}
+@media only screen and (min-width: 390px) and (max-width: 844px) {
+    .fontCustom {
+        font-family: 'Ysabeau', sans-serif;
+        font-weight: 600;
+        position: relative;
+        top: -14rem;
+        left: -3rem;
+    }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 741px) {
+    .fontCustom {
+        font-family: 'Ysabeau', sans-serif;
+        font-weight: 600;
+        position: relative;
+        top: -25rem;
+        left: -3rem;
+    }
+}
+@media only screen and (min-width: 912px) and (max-width: 1368px) {
+    .fontCustom {
+        font-family: 'Ysabeau', sans-serif;
+        font-weight: 600;
+        position: relative;
+        top: -25rem;
+        left: -3rem;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 720px) {
     .fontCustom {
         font-family: 'Ysabeau', sans-serif;
         font-weight: 600;
@@ -90,18 +117,9 @@ body, input{
         top: -5rem;
         left: -3rem;
     }
-} */
-
+}
 /* Stili per schermi medi (tablet) */
-/* @media only screen and (min-width: 414px) and (max-width: 1024px) {
-    .fontCustom {
-        font-family: 'Ysabeau', sans-serif;
-        font-weight: 600;
-        position: relative;
-        top: -10rem;
-        left: -3rem;
-    }
-} */
+
 
 /* Stili per schermi grandi (desktop) */
 /* @media only screen and (min-width: 1025px) {
