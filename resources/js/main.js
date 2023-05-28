@@ -49,9 +49,9 @@ let observed = new IntersectionObserver(
 
             if(entry.isIntersecting && intersectionCheck == true){
 
-                createInterval(1250, contaClienti);
-                createInterval(1110, contaArticoli);
-                createInterval(652, contaRecensioni);
+                createInterval(100, contaClienti);
+                createInterval(618, contaArticoli);
+                createInterval(352, contaRecensioni);
 
                 intersectionCheck = false;
 

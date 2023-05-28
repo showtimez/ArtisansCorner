@@ -9,6 +9,7 @@ body, input{
 
 :root{
   --primary :rgb(51, 51, 51);
+  --accent2 :rgba(0, 0, 0, 0.879);
   --secondary: whitesmoke;
   --accent1 : rgb(165, 121, 102);
 }
@@ -30,7 +31,7 @@ body, input{
 }
 
 .bg-custom{
-  background-color: var(--primary);
+  background-color: var(--accent2);
 }
 /* navbar */
 
@@ -76,7 +77,9 @@ body, input{
 }
 
 .bgCategorie{
-  height: 50vh;
+  /* height: 50vh; */
+  padding-top: 5%;
+  padding-bottom: 5%;
   background-image: url(/public/media/sfondoCarta.jpg);
   background-size: cover;
   display: flex;
@@ -88,14 +91,21 @@ body, input{
 
 
 /* card annunci home */
+
+.bg-articles{
+  background-color:rgb(17, 17, 17);
+  background-size: contain;
+}
+
 .fontCustomannunci{
   font-family: 'Ysabeau', sans-serif;
   font-weight: 800;
   max-width: 500px;
+  
 }
 
 .swiper {
-  width: 100%;
+  width: 70%;
   height: 100%;
 }
 
@@ -108,7 +118,7 @@ body, input{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 180px; */
+  border-radius: 5px;
   height: 500px;
 }
 
@@ -137,13 +147,13 @@ body, input{
 
 /* contatore */
 .bgCount{
-  height: 80vh;
+  /* height: 80vh; */
   background-image:linear-gradient(45deg,rgba(255, 255, 255, 0.803),rgba(255, 255, 255, 0.803)), url(/public/media/counterbg.jpg);
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding-top: 10%;
+  padding-bottom: 10%;
+
 }
 
 /* .bgIncrement{
@@ -159,7 +169,8 @@ body, input{
 .increment-numbers{
   font-size: 100px;
   color: var(--accent1);
-  font-weight: 800;
+  font-weight: 600;
+  margin-left: 35%;
 }
 /*end  contatore */
 
