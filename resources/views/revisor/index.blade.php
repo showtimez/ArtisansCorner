@@ -1,13 +1,42 @@
 <x-layout>
 
 <x-header>
-    <h2 class="text-center py-5 my-5">Articoli da revisionare</h2>
+    <div class="bgCarta">
+    <h2 id="testo" class="text-center py-5 my-5 display-4 fw-bold" >Articoli da revisionare</h2>
+    </div>
+    <script type="text/javascript">
+        // testo da mostrare    
+        var testo = "Articoli da revisionare";
+        // output
+        var output = "";
+        // incrementatore
+        var i = 0;
+        // velocità di scrittura
+        var speed = 120;
+        // dichiaro la funzione
+        function scrivi() {
+            // creo l'output
+            output += testo.charAt(i);
+            // incremento
+            i++;
+            // scrittura
+            document.getElementById("testo").innerHTML = output;
+            // se è finito il testo
+            if(i >= testo.length) {
+                // fine
+                clearInterval(s);
+            }
+        }
+        // richiamo la funzione a intervalli
+        s = setInterval("scrivi()",speed);
+    </script>
+
 </x-header>
 
             <div class="container  my-5 py-5">
                 <div class="row justify-content-center ">
                     <div class="col-12 col-md-6 d-flex justify-content-center   ">
-                        <h1 class="text-center display-5">{{$article_to_check ? "Ecco l'annuncio da revisionare": "Non ci sono annunci da revisionare"}}</h1>
+                        <h3 class="text-center display-6">{{$article_to_check ? "Ecco gli annunci da revisionare": "Non ci sono annunci da revisionare"}}</h3>
                     </div>
                 </div>
             </div>

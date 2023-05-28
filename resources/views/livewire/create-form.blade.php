@@ -1,9 +1,8 @@
 
-    <div class="container shadow rounded my-5">
+    <div class="container-fluid shadow rounded my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <h2 class="text-center py-4">Inserisci un Annuncio</h2>
-
+                <h3 class="text-center py-3 my-3 "> Il tuo articolo </h3>
                     <form class="p-5 justify-content-center" wire:submit.prevent="store">
                         @if ($errors->any())
                             <div class="alert alert-danger">
@@ -48,7 +47,7 @@
                         <div class="mb-3">
 
                             <select wire:model.defer="category" id="category" class="form-control">
-                                <option value="">Scegli la categoria</option>
+                                <option value="">Scegli la categoria </option>
                                 @foreach ($categories as $category)
                                     <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach

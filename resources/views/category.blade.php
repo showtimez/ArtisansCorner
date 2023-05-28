@@ -1,6 +1,40 @@
 <x-layout>
     <x-header>
-        <h2 class="text-center py-5 my-5">Ecco tutti gli annunci di {{ $category->name }}</h2>
+        <div class="container-fluid bgCarta">
+
+        <h2 class="text-center py-5 my-5"> <span id="testo"> Ecco tutti gli annunci di </span>  {{ $category->name }} </h2>
+        </div>
+            {{-- <span id="testo"></span> --}}
+    
+        <script type="text/javascript">
+            // testo da mostrare    
+            var testo = "Ecco tutti gli annunci di";
+            // output
+            var output = "";
+            // incrementatore
+            var i = 0;
+            // velocità di scrittura
+            var speed = 120;
+            // dichiaro la funzione
+            function scrivi() {
+                // creo l'output
+                output += testo.charAt(i);
+                // incremento
+                i++;
+                // scrittura
+                document.getElementById("testo").innerHTML = output;
+                // se è finito il testo
+                if(i >= testo.length) {
+                    // fine
+                    clearInterval(s);
+                }
+            }
+            // richiamo la funzione a intervalli
+            s = setInterval("scrivi()",speed);
+        </script>
+    
+    
+    
     </x-header>
     <div class="container vh-100">
         <div class="row justify-content-center py-5 my-5">

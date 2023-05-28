@@ -5,7 +5,7 @@
         <div class="container-fluid bgCarta">
         <h2 id="testo" class="text-center py-5 my-5 display-3 fw-bold">Lavora con noi</h2>
         </div>
-        {{-- <span id="testo"></span> --}}
+       
 
     <script type="text/javascript">
         // testo da mostrare    
