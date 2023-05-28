@@ -175,7 +175,6 @@ body, input{
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
   background-image:url(/public/media/musica.jpg);
   background-size: cover;
   color: #f1f1f1;
@@ -185,6 +184,12 @@ body, input{
   border-radius: 5px;
   height: 500px;
 
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    height: 16rem;
+  }
 }
 
 
