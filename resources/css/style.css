@@ -177,10 +177,28 @@ body, input{
 
 
 
+/* header carta in tutte le pagine */
+.bgCarta{
+  background-image: url(/public/media/sfondoCarta.jpg);
+}
+/* fine */
 
+.linkcustomAccent{
+  text-decoration: none;
+  color: var(--secondary);
+  background-color: var(--accent1);
+  padding: 5px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
 
-
-
+.linkcustomAccent:hover{
+  color: var(--accent1)!important;
+  background-color: whitesmoke;
+  border: solid var(--accent1);
+  border-radius: 8px;
+ 
+}
 
 
 
