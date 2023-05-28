@@ -13,7 +13,7 @@
         <div class="d-flex justify-content-center align-items-center">
             <video class="vid" src="/media/TheArtisansCorner.mp4" autoplay muted loop></video>
         </div>
-        <div class="content text-center">
+        <div class="content text-center ">
             <h1 class="fontCustom display-1">The Artisan's Corner</h1>
             <p class=" fontCustom text-center fs-3">Non c'è arte senza stile</p>
         </div>

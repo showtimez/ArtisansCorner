@@ -5,6 +5,7 @@ body, input{
   padding: 0;
   background-color: var(--secondary);
   font-family: "Poppins", sans-serif;
+
 }
 
 :root{
@@ -61,6 +62,7 @@ body, input{
   z-index: 1;
   bottom: 30%;
   left: 28%;
+
 }
 
 .fontCustom{
@@ -69,6 +71,50 @@ body, input{
   max-width: 100%;
 }
 /*end header */
+/* @media only screen and (max-width: 400px) {
+
+    .fontCustom {
+        font-family: 'Ysabeau', sans-serif;
+        font-weight: 600;
+        position: relative;
+        top: -5rem;
+        left: -3rem;
+    }
+} */
+/* Stili per schermi piccoli (telefoni) */
+/* @media only screen and (max-width: 480px) {
+    .fontCustom {
+        font-family: 'Ysabeau', sans-serif;
+        font-weight: 600;
+        position: relative;
+        top: -5rem;
+        left: -3rem;
+    }
+} */
+
+/* Stili per schermi medi (tablet) */
+/* @media only screen and (min-width: 414px) and (max-width: 1024px) {
+    .fontCustom {
+        font-family: 'Ysabeau', sans-serif;
+        font-weight: 600;
+        position: relative;
+        top: -10rem;
+        left: -3rem;
+    }
+} */
+
+/* Stili per schermi grandi (desktop) */
+/* @media only screen and (min-width: 1025px) {
+    .fontCustom {
+        font-family: 'Ysabeau', sans-serif;
+        font-weight: 600;
+        position: relative;
+        top: -15rem;
+        left: -3rem;
+    }
+} */
+
+
 
 /*categorie */
 .icon{
