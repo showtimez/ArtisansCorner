@@ -57,7 +57,13 @@
 
                         <div class="mb-3">
                             <label for="state" class="form-label">In che condizioni si trova il tuo oggetto?</label>
-                            <input type="text" wire:model="state" class="form-control" id="state">
+                            <select for="state" wire:model.defer="state" id="state" class="form-control">
+                                    <option value="">Seleziona Condizioni </option>
+                                    <option value="danneggiato">Danneggiato</option>
+                                    <option value="ristrutturato">Ristrutturato</option>
+                                    <option value="nuovo">Nuovo</option>
+                                </select>
+
                         </div>
 
                         <div class="col-3 d-flex mb-3 align-items-center">
