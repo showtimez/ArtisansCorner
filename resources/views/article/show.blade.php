@@ -1,7 +1,7 @@
 <x-layout>
     <x-header>
-        <div class="content">
-        <h1 id="titoloHome">{{$article -> title}}</h1>
+        <div class="container-fluid text-center bgCarta mb-3">
+        <h2 id="titoloHome">{{$article -> title}}</h2>
       </div>
     </x-header>
     <div class="container">
@@ -40,15 +40,13 @@
                     <p class="card-text">Descrizione: {{$article->description}}</p>
                     <p class="card-text">Prezzo: {{$article->price}}€</p>
                     <a href="{{route('homepage')}}" class="btn btn-primary">Torna Indietro </a>
-                    <a href="#" class="btn btn-primary">Categoria: {{$article -> category->name}}</a>
+                    <p><a href="#">Categoria: {{$article -> category->name}}</a></p>
                     <p >Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
                   </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
 
     
 

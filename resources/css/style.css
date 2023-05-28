@@ -606,31 +606,8 @@ a {
     margin-right: auto;
   }
   
-  .close-content {
-    display: block;
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    width: 30px;
-    height: 30px;
-  }
   
-  .close-content span {
-    background: #222;
-    width: 30px;
-    height: 6px;
-    display: block;
-    position: absolute;
-    top: 14px;
-  }
   
-  .x-1 {
-    transform: rotate(45deg);
-  }
-  
-  .x-2 {
-    transform: rotate(-45deg);
-  }
   
   /* 
   ** Transitions

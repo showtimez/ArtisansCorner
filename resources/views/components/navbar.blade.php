@@ -44,6 +44,15 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Ciao {{ Auth::user()->name }}
+                            @if (App\Models\Article::toBeRevisionedCount() > 0)
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{ App\Models\Article::toBeRevisionedCount() }}
+                                    <span class="visually-hidden">
+                                        Articoli da revisionare
+                                    </span>
+                                </span>
+                             @endif
                         </a>
                         <ul class="dropdown-menu">
                             @if (!Auth::user()->is_revisor)
@@ -56,7 +65,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" href="{{ route('revisor.index') }}">
                                         Area Revisori
-                                        @if (App\Models\Article::toBeRevisionedCount() > 0)
+                                        {{-- @if (App\Models\Article::toBeRevisionedCount() > 0)
                                             <span
                                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                 {{ App\Models\Article::toBeRevisionedCount() }}
@@ -64,7 +73,7 @@
                                                     Articoli da revisionare
                                                 </span>
                                             </span>
-                                        @endif
+                                        @endif --}}
                                     </a>
                                 </li>
                                 <hr>
