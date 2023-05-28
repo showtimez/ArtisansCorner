@@ -9,7 +9,7 @@
             {{ session('answerRevisor') }}
         </div>
     @endif
-    <x-header>    
+    <x-header>
         <div class="d-flex justify-content-center align-items-center">
             <video class="vid" src="/media/TheArtisansCorner.mp4" autoplay muted loop></video>
         </div>
@@ -42,10 +42,10 @@
                                         <p>Stato: {{ $article->state }}</p>
                                         <p>Categoria {{ $article->category->name }}</p>
                                         <h4>Prezzo: {{ $article->price }}</h4>
-                                    </div>                               
-                                <button class="btn btn-outline-dark"><a
-                                        href="{{ route('article.show', compact('article')) }}"
-                                        class="mt-5"></a>Dettagli</button>
+                                    </div>
+
+                                       <a href="{{ route('article.show', compact('article')) }}"
+                                        class="mt-5"><button class="btn btn-outline-dark">Dettagli</button></a>
                             </div>
                         @empty
                             <div class="d-flex justify-content-center">
@@ -69,15 +69,15 @@
             <span id="articoli" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">+</span>
         </div>
         <div class="col-12 col-md-4">
-            <span id="recensioni" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">‟</span>                       
+            <span id="recensioni" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">‟</span>
         </div>
         <div class="col-12 col-md-4">
             <p class=" text-center fw-bold fs-1 ">Clienti Soddisfatti</p>
         </div>
-        <div class="col-12 col-md-4">            
-            <p class=" text-center fw-bold fs-1">Articoli Venduti</p>  
+        <div class="col-12 col-md-4">
+            <p class=" text-center fw-bold fs-1">Articoli Venduti</p>
         </div>
-        <div class="col-12 col-md-4">    
+        <div class="col-12 col-md-4">
             <p class=" text-center fw-bold fs-1">Recensioni</p>
         </div>
         <hr class="text-dark">

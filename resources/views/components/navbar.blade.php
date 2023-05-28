@@ -90,9 +90,9 @@
                                     Area personale
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ route('autenticate') }}">Accedi</a></li>
-                                    <hr>
-                                    <li><a class="dropdown-item" href="{{ route('autenticate') }}">Registrati</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('autenticate') }}">Accedi o Registrati</a></li>
+                                    {{-- <hr> --}}
+                                    {{-- <li><a class="dropdown-item" href="{{ route('autenticate') }}">Registrati</a></li> --}}
 
                                 </ul>
                             </li>

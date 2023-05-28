@@ -6,7 +6,7 @@
     </x-header>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 text-center">
 
                 <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="true">
                     <div class="carousel-indicators">
@@ -16,13 +16,13 @@
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                        <img src="https://picsum.photos/1500" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                        <img src="https://picsum.photos/1500" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                        <img src="https://picsum.photos/1500" class="d-block w-100" alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    
+
 
 
 

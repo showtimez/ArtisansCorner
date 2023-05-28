@@ -105,7 +105,7 @@
             <p><i class="fas fa-phone text-light me-3 text-secondary"></i> + 01 234 567 88</p>
             <p><i class="fas fa-print text-light me-3 text-secondary"></i> + 01 234 567 89</p>
             @if(Auth::user())
-            <a class="linkcustom px-3" href="{{ route('become.revisor') }}">Lavora con noi</a>
+            <a class="linkcustom px-3" href="{{ route('revisor.collabora') }}">Lavora con noi</a>
             @endif
           </div>
           <!-- Grid column -->

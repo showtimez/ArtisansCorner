@@ -2,13 +2,13 @@
     <x-header>
         <div class="container-fluid bgCarta">
 
-        <h2 class="text-center py-5 my-5"> <span id="testo"> Ecco tutti gli annunci di </span>  {{ $category->name }} </h2>
+        <h2 class="py-5 my-5 display-3 fw-bold" id="testo">Ecco tutti gli annunci di   </h2> <h2 id="categoria-nome" class="text-center py-5 my-5 testo display-3">  {{ $category->name }} </h2>
         </div>
             {{-- <span id="testo"></span> --}}
-    
+
         <script type="text/javascript">
-            // testo da mostrare    
-            var testo = "Ecco tutti gli annunci di";
+            // testo da mostrare
+            var testo = "Ecco tutti gli annunci di :";
             // output
             var output = "";
             // incrementatore
@@ -32,9 +32,9 @@
             // richiamo la funzione a intervalli
             s = setInterval("scrivi()",speed);
         </script>
-    
-    
-    
+
+
+
     </x-header>
     <div class="container vh-100">
         <div class="row justify-content-center py-5 my-5">

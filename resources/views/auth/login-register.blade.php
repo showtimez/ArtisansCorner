@@ -75,7 +75,7 @@
               </div>
               <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password_confirmation" name="password_confirmation" placeholder="Conferma Password" />
+                  <input type="password" name="password_confirmation" placeholder="Conferma Password" />
               </div>
               <input type="submit" class="btn" value="Registrati" />
               {{-- <p class="social-text">Oppure accedi attraverso i social</p>

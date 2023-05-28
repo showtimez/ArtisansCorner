@@ -5,7 +5,7 @@
             <h2 id="testo" class="text-center py-5 my-5 display-4 fw-bold" >Articoli da revisionare</h2>
         </div>
         <script type="text/javascript">
-            // testo da mostrare    
+            // testo da mostrare
             var testo = "Articoli da revisionare";
             // output
             var output = "";
@@ -122,7 +122,7 @@
                         @endforeach
                         @endif
                 </div>
-                  
+
             </div>
         </div>
     </div>
