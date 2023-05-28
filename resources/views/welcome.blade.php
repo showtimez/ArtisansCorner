@@ -62,15 +62,15 @@
 <section class="container-fluid bgCount">
     <div class="row">
         <hr class="text-dark">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 text-center">
             <span id="clienti" class="increment-numbers ">0</span><span class=" mx-1 increment-numbers ">%</span>
             <p class=" text-center fw-bold fs-1 ">Clienti Soddisfatti</p>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 text-center">
             <span id="articoli" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">+</span>
             <p class=" text-center fw-bold fs-1">Articoli Venduti</p>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 text-center">
             <span id="recensioni" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">‟</span>
             <p class=" text-center fw-bold fs-1">Recensioni</p>
         </div>

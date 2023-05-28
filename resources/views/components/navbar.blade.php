@@ -14,7 +14,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center " id="navbarNavDropdown">
-            <ul class="navbar-nav gap-5">
+            <ul class="navbar-nav gap-3">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
