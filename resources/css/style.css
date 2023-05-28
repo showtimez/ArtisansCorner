@@ -112,7 +112,7 @@ body, input{
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background-image:url(/public/media/arte.jpg);
+  background-image:url(/public/media/musica.jpg);
   background-size: cover;
   color: #f1f1f1;
   display: flex;

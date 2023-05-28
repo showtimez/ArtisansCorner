@@ -36,11 +36,13 @@
                         @forelse ($articles as $article)
                         {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
                             <div class="swiper-slide d-flex flex-column">
-                                <h5>{{ $article->title }}</h5>
-                                {{ $article->description }}</p>
-                                <p>Stato: {{ $article->state }}</p>
-                                <p>Categoria {{ $article->category->name }}</p>
-                                <h4>Prezzo: {{ $article->price }}</h4>
+                                    <div>
+                                        <h5>{{ $article->title }}</h5>
+                                        {{ $article->description }}</p>
+                                        <p>Stato: {{ $article->state }}</p>
+                                        <p>Categoria {{ $article->category->name }}</p>
+                                        <h4>Prezzo: {{ $article->price }}</h4>
+                                    </div>                               
                                 <button class="btn btn-outline-dark"><a
                                         href="{{ route('article.show', compact('article')) }}"
                                         class="mt-5"></a>Dettagli</button>
