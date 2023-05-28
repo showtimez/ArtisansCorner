@@ -175,10 +175,10 @@ body, input{
 } */
 
 .increment-numbers{
-  font-size: 100px;
+  font-size: 80px;
   color: var(--accent1);
   font-weight: 600;
-  margin-left: 35%;
+
 }
 /*end  contatore */
 

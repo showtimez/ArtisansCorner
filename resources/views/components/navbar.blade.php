@@ -1,8 +1,14 @@
 <nav class="navbar navbar-expand-lg bg-custom py-4 navbar-dark sticky-top ">
     <div class="container-fluid ">
-        {{-- <a class="navbar-brand" href="#">
-            <img src="" alt="" width="30" height="24">
-        </a> --}}
+        <a class="navbar-brand" href="#">
+            <img src="/public/media/Logo.png" alt="" >
+        </a>
+        <ul>
+        <span class="navbar-brand brand-name mx-auto">
+            <a href="{{ route('homepage') }}"><img width="170" height="80"
+            src="/media/logoooo-removebg-preview.png"></a>
+        </span>
+         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

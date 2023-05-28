@@ -13,7 +13,7 @@
         <div class="d-flex justify-content-center align-items-center">
             <video class="vid" src="/media/TheArtisansCorner.mp4" autoplay muted loop></video>
         </div>
-        <div class="content">
+        <div class="content text-center">
             <h1 class="fontCustom display-1">The Artisan's Corner</h1>
             <p class=" fontCustom text-center fs-3">Non c'è arte senza stile</p>
         </div>
@@ -64,21 +64,16 @@
         <hr class="text-dark">
         <div class="col-12 col-md-4">
             <span id="clienti" class="increment-numbers ">0</span><span class=" mx-1 increment-numbers ">%</span>
-        </div>
-        <div class="col-12 col-md-4">
-            <span id="articoli" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">+</span>
-        </div>
-        <div class="col-12 col-md-4">
-            <span id="recensioni" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">‟</span>
-        </div>
-        <div class="col-12 col-md-4">
             <p class=" text-center fw-bold fs-1 ">Clienti Soddisfatti</p>
         </div>
         <div class="col-12 col-md-4">
+            <span id="articoli" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">+</span>
             <p class=" text-center fw-bold fs-1">Articoli Venduti</p>
         </div>
         <div class="col-12 col-md-4">
+            <span id="recensioni" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">‟</span>
             <p class=" text-center fw-bold fs-1">Recensioni</p>
+        </div>
         </div>
         <hr class="text-dark">
     </div>
