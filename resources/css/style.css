@@ -170,7 +170,7 @@ body, input{
 
 .swiper {
   width: 70%;
-  height: 100%;
+  /* height: 70%; */
 }
 
 .swiper-slide {
@@ -184,7 +184,9 @@ body, input{
   align-items: center;
   border-radius: 5px;
   height: 500px;
+
 }
+
 
 .linkcustom{
   text-decoration: none;

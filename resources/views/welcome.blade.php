@@ -30,19 +30,19 @@
                         Nam ipsa ea sint aliquid laborum</p>
                 </div>
             </div>
-            <div class="col-12">
-                <div class="swiper pb-5">
-                    <div class="swiper-wrapper">
+            <div class="col-12 d-flex">
+                <div class="swiper mySwiper pb-5 ">
+                    <div class="swiper-wrapper ">
                         @forelse ($articles as $article)
                         {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
-                            <div class="swiper-slide d-flex flex-column">
-                                    <div>
+                            <div class="swiper-slide  flex-column">
+
                                         <h5>{{ $article->title }}</h5>
                                         {{ $article->description }}</p>
                                         <p>Stato: {{ $article->state }}</p>
                                         <p>Categoria {{ $article->category->name }}</p>
                                         <h4>Prezzo: {{ $article->price }}</h4>
-                                    </div>
+
 
                                        <a href="{{ route('article.show', compact('article')) }}"
                                         class="mt-5"><button class="btn btn-outline-dark">Dettagli</button></a>

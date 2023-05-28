@@ -16,6 +16,7 @@
                             </ul>
                         </div>
                     @endif
+                    <img src="/media/logoooo-removebg-preview.png" alt="logo">
                     <h2 class="title">Accedi</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -59,7 +60,7 @@
                     </ul>
                 </div>
             @endif
-
+            <img src="/media/logoooo-removebg-preview.png" alt="logo">
             <h2 class="title">Registrati</h2>
             <div class="input-field">
                 <i class="fas fa-user"></i>
@@ -104,6 +105,7 @@
     <div class="panels-container">
         <div class="panel left-panel">
             <div class="content">
+
                 <h3>Non sei ancora iscritto ?</h3>
                 <p>
                     Entra in The Artisan's Corner !
@@ -116,6 +118,7 @@
         </div>
         <div class="panel right-panel">
             <div class="content">
+
                 <h3>Sei già uno di noi ?</h3>
                 <p>
                     Entra subito e non perderti nemmeno un capolavoro !
