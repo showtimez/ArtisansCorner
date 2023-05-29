@@ -50,6 +50,9 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Ciao {{ Auth::user()->name }}
+                            
+                        </a>
+                        <ul class="dropdown-menu">
                             @if (App\Models\Article::toBeRevisionedCount() > 0)
                                 <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -59,8 +62,6 @@
                                     </span>
                                 </span>
                              @endif
-                        </a>
-                        <ul class="dropdown-menu">
                             @if (!Auth::user()->is_revisor)
                                 <li>
                                     <a class="dropdown-item" href="{{ route('revisor.collabora') }}">Lavora con noi</a>
