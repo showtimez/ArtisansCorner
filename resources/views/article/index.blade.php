@@ -36,7 +36,7 @@
 
 
             @forelse ($articles as $article)
-            <div class="col-12 col-md-4 ">
+            <div class="col-12 col-md-4">
                 <div class="card card-color-0 mt-4 ">
                     <div class="border "></div>
                     <img src="/media/articoli.jpg" />
