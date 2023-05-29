@@ -1,5 +1,6 @@
 <div class="container-fluid bgCategorie ">
     <div class="row">
+        <hr>
         <div class="col-12 col-md-3 d-flex flex-column align-items-center py-5">
             <a href="">
             <span class="icon"><i class="fa-solid fa-music"></i></span>
@@ -30,5 +31,6 @@
 
             <p class="text-center textDark px-5 fs-7">La musica accompagna l’uomo dall’alba dei tempi.</p>
         </div>
+        <hr>
     </div>
 </div>

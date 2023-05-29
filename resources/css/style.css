@@ -148,8 +148,8 @@ body, input{
   background-size: cover;
   display: flex;
   align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
 }
 /*end categorie */
 

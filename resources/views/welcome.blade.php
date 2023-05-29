@@ -44,7 +44,7 @@
                                         <h4>Prezzo: {{ $article->price }}</h4>
 
 
-                                       <a href="{{ route('article.show', compact('article')) }}"
+                                        <a href="{{ route('article.show', compact('article')) }}"
                                         class="mt-5"><button class="btn btn-outline-dark">Dettagli</button></a>
                             </div>
                         @empty
