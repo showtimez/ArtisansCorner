@@ -36,3 +36,5 @@ Route::patch('/null/article/{article}', [RevisorController::class, 'nullArticle'
 Route::get('/revisor/collabora', [RevisorController::class, 'collabora'])->name('revisor.collabora');
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+Route::post('/lingua/{lang}', [FrontController::class, 'setLocale'])->name('setLocale');

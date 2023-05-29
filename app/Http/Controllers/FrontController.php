@@ -32,4 +32,10 @@ class FrontController extends Controller
     public function autenticate(){
         return view('/auth/login-register');
     }
+
+    public function setLocale($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+
+    }
 }
