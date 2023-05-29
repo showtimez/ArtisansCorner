@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Auth;
 class CreateForm extends Component
 {
     use WithFileUploads;
+    
+    public $temporary_images;
+    public $images = [];
+    public $image;
     public $category;
     public $title, $description, $state;
 
@@ -26,6 +30,8 @@ class CreateForm extends Component
         'price' => 'required',
         'state' => 'required',
         'user_id' => 'required',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024',
     ];
 
     public function store()

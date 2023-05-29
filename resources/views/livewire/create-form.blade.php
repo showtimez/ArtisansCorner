@@ -32,20 +32,31 @@
                             <textarea wire:model="description" id="description" cols="30" rows="7" class="form-control"></textarea>
                         </div>
 
-                        {{-- @if ($image)
-                            <div class="mt-3 text-center">
-                                Anteprima immagine:<br>
-                                <img width="250" src="{{ $image->temporaryUrl() }}">
+                        <div>
+                            <input type="file" wire:model="temporary_images" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+                            @error('temporary_images.*')
+                                <p class="text-danger">{{$message}}</p>
+                            @enderror
+                        </div>
+
+                        @if (!empty($images))
+                            <div class="row">
+                                <div class="col-12">
+                                    Anteprima immagine:<br>
+                                    <div class="row border border-4 border-info rounded shadow py-4">
+                                        @foreach($images as $key => $image)
+                                        <div class="col my-3">
+                                            <div class="img-preview mx-auto shadow rounded" style="background-image:url({{$image->temporaryUrl()}});">
+                                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                                            </div>
+                                        @endforeach
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         @endif
 
                         <div class="mb-3">
-                            <label for="image" class="form-label">Inserisci un' immagine</label>
-                            <input type="file" wire:model="image" class="form-control" id="image">
-                        </div> --}}
-
-                        <div class="mb-3">
-
                             <select wire:model.defer="category" id="category" class="form-control">
                                 <option value="">Scegli la categoria </option>
                                 @foreach ($categories as $category)
