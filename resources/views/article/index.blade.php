@@ -6,7 +6,7 @@
 
         <script type="text/javascript">
             // testo da mostrare
-            var testo = "Tutti gli annunci";
+            var testo = "{{ __('ui.allArticles') }}";
             // output
             var output = "";
             // incrementatore
