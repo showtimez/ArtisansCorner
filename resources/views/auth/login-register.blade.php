@@ -16,20 +16,20 @@
                             </ul>
                         </div>
                     @endif
-                    <img src="/media/logoooo-removebg-preview.png" alt="logo">
+                    <img class="logoMobile" src="/media/logoooo-removebg-preview.png" alt="logo">
                     <h2 class="title">Accedi</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
 
-              <input type="text" name="email"id="email" placeholder="Email or Username" />
-            </div>
-            <div class="input-field">
-                <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Password" /><br>
+                        <input type="text" name="email"id="email" placeholder="Email or Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Password" /><br>
 
-            </div>
-            <input type="submit" value="Accedi" class=" solid btn-accedi" />
-            {{-- <p class="social-text">Oppure accedi attraverso i social</p>
+                    </div>
+                    <input type="submit" value="Accedi" class=" solid btn-accedi" />
+                    {{-- <p class="social-text">Oppure accedi attraverso i social</p>
             <div class="social-media">
                 <a href="#" class="social-icon">
                     <i class="fab fa-facebook-f"></i>
@@ -44,42 +44,42 @@
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div> --}}
-            <p class="social-text">Torna al sito</p>
-            <a href="{{ route('homepage') }}" class="social-home">
-                <i class="fa fa-home  fa-2x"></i>
-             </a>
-          </form>
-          <form action="{{ route('register') }}" method="POST" class="sign-up-form">
-            @csrf
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-            <img src="/media/logoooo-removebg-preview.png" alt="logo">
-            <h2 class="title">Registrati</h2>
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="name" placeholder="Username" />
-              </div>
-              <div class="input-field">
-                  <i class="fas fa-envelope"></i>
-                  <input type="email" name="email" placeholder="Email" />
-              </div>
-              <div class="input-field">
-                  <i class="fas fa-lock"></i>
-                  <input type="password" name="password" placeholder="Password" />
-              </div>
-              <div class="input-field">
-                  <i class="fas fa-lock"></i>
-                  <input type="password" name="password_confirmation" placeholder="Conferma Password" />
-              </div>
-              <input type="submit" class="btn" value="Registrati" />
-              {{-- <p class="social-text">Oppure accedi attraverso i social</p>
+                    <p class="social-text">Torna al sito</p>
+                    <a href="{{ route('homepage') }}" class="social-home">
+                        <i class="fa fa-home  fa-2x"></i>
+                    </a>
+                </form>
+                <form action="{{ route('register') }}" method="POST" class="sign-up-form">
+                    @csrf
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <img class="logoMobile" src="/media/logoooo-removebg-preview.png" alt="logo">
+                    <h2  class="title ">Registrati</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password_confirmation" placeholder="Conferma Password" />
+                    </div>
+                    <input type="submit" class="btn" value="Registrati" />
+                    {{-- <p class="social-text">Oppure accedi attraverso i social</p>
               <div class="social-media">
                   <a href="#" class="social-icon">
                       <i class="fab fa-facebook-f"></i>
@@ -94,43 +94,43 @@
                       <i class="fab fa-linkedin-in"></i>
                   </a>
               </div> --}}
-              <p class="social-text">Torna al sito</p>
-              <a href="{{ route('homepage') }}" class="social-home">
-                <i class="fa fa-home  fa-2x"></i>
-             </a>
-          </form>
-      </div>
-  </div>
-
-    <div class="panels-container">
-        <div class="panel left-panel">
-            <div class="content">
-
-                <h3>Non sei ancora iscritto ?</h3>
-                <p>
-                    Entra in The Artisan's Corner !
-                </p>
-                <button class="btn transparent" id="sign-up-btn">
-                    REGISTRATI
-                </button>
+                    <p class="social-text">Torna al sito</p>
+                    <a href="{{ route('homepage') }}" class="social-home">
+                        <i class="fa fa-home  fa-2x"></i>
+                    </a>
+                </form>
             </div>
-
         </div>
-        <div class="panel right-panel">
-            <div class="content">
 
-                <h3>Sei già uno di noi ?</h3>
-                <p>
-                    Entra subito e non perderti nemmeno un capolavoro !
-                </p>
-                <button class="btn transparent" type="submit" id="sign-in-btn">
-                    ACCEDI
-                </button>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+
+                    <h3>Non sei ancora iscritto ?</h3>
+                    <p>
+                        Entra in The Artisan's Corner !
+                    </p>
+                    <button class="btn transparent" id="sign-up-btn">
+                        REGISTRATI
+                    </button>
+                </div>
+
             </div>
+            <div class="panel right-panel">
+                <div class="content">
 
+                    <h3>Sei già uno di noi ?</h3>
+                    <p>
+                        Entra subito e non perderti nemmeno un capolavoro !
+                    </p>
+                    <button class="btn transparent" type="submit" id="sign-in-btn">
+                        ACCEDI
+                    </button>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
 
 
 </x-testHead>

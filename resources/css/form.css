@@ -12,6 +12,15 @@ input {
 
 }
 
+@media only screen and (max-width: 878px) {
+
+  .logoMobile {
+    width: 130px;
+    height: 70px;
+  }
+}
+
+
 .container {
   position: relative;
   width: 100%;
@@ -71,8 +80,8 @@ form.sign-in-form {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 10px 0;
-  height: 55px;
+  margin: 5px 0;
+  height: 45px;
   border-radius: 55px;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -104,8 +113,8 @@ form.sign-in-form {
 }
 
 .social-text {
-  padding: 0.7rem 0;
-  font-size: 23px;
+  padding: 0.4rem 0;
+  font-size: 20px;
 }
 
 .social-media {
