@@ -31,8 +31,24 @@
                             <p for="description" class="form-label text-center">Aggiungi una descrizione</p>
                             <textarea wire:model="description" id="description" cols="30" rows="7" class="form-control"></textarea>
                         </div>
+                        <div class="mb-3">
+                            <input type="file" wire:model="temporary_images" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+                            @error('temporary_images.*')
+                                <p class="text-danger">{{$message}}</p>
+                            @enderror
+                        </div>
 
-                        
+                        @if (!empty($images))
+                        Anteprima immagine:<br>
+                            <div class="container d-flex ">
+                                @foreach($images as $key => $image)
+
+                                   <img class="image-preview" src="{{$image->temporaryUrl()}}" alt="preview">
+                                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+
+                                 @endforeach
+                                </div>
+                        @endif
                         <div class="mb-3">
                             <select wire:model.defer="category" id="category" class="form-control">
                                 <option value="">Scegli la categoria </option>
@@ -41,8 +57,8 @@
                                 @endforeach
                             </select>
                         </div>
-                        
-                        
+
+
                         <div class="mb-3">
                             <label for="state" class="form-label">In che condizioni si trova il tuo oggetto?</label>
                             <select for="state" wire:model.defer="state" id="state" class="form-control">
@@ -51,45 +67,21 @@
                                     <option value="ristrutturato">Ristrutturato</option>
                                     <option value="nuovo">Nuovo</option>
                             </select>
-                            
+
                         </div>
 
                         <div class="col-3 d-flex mb-3 align-items-center">
                             <label for="price" class="form-label px-2">€</label><input type="number" wire:model="price" class="form-control" id="price">
-                            
+
                         </div>
-
-                        <div class="bg-danger">
-                            <input type="file" wire:model="temporary_images" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
-                            @error('temporary_images.*')
-                                <p class="text-danger">{{$message}}</p>
-                            @enderror
-                        </div>
-
-                        @if (!empty($images))
-                            
-                                
-                                    Anteprima immagine:<br>
-                                    <div class="border border-4 border-info rounded shadow py-4 bg-dark">
-                                        @foreach($images as $key => $image)
-                                      
-                                            <div class="img-preview mx-auto shadow rounded" style="background-image:url({{$image->temporaryUrl()}}); z-index:2;">
-                                            </div>
-                                            <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
-                                        
-                                        @endforeach
-                                    </div>
-                                
-                            
-                        @endif
-
                         <div>
                             <button type="submit" class="btn btn-outline-dark ">Inserisci</button>
                             <button class="btn btn-outline-dark" ><a href="{{ route('article.index') }}"></a>Indietro</button>
 
                         </div>
+
                     </form>
-                
+
         </div>
     </div>
 </div>

@@ -467,7 +467,7 @@ body, input{
     }
   }
 
-  .img-preview{
-    height: 30px;
-    width: 30px;
+  .image-preview{
+    height: 150px;
+    width: 150px;
   }
