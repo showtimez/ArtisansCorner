@@ -5,8 +5,8 @@
         </a>
         <ul>
         <span class="navbar-brand brand-name mx-auto">
-            <a href="{{ route('homepage') }}"><img width="170" height="80"
-            src="/media/logoooo-removebg-preview.png"></a>
+            <a href="{{ route('homepage') }}"><img width="160" height="80"
+            src="/media/logowhite.png"></a>
         </span>
          </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"

@@ -16,7 +16,7 @@
                             </ul>
                         </div>
                     @endif
-                    <img class="logoMobile" src="/media/logoooo-removebg-preview.png" alt="logo">
+                    <img class="logoMobile" src="/media/logoblack.png" alt="logo">
                     <h2 class="title">Accedi</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -60,7 +60,7 @@
                             </ul>
                         </div>
                     @endif
-                    <img class="logoMobile" src="/media/logoooo-removebg-preview.png" alt="logo">
+                    <img class="logoMobile" src="/media/logoblack.png" alt="logo">
                     <h2  class="title ">Registrati</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
