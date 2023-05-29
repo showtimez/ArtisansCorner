@@ -466,3 +466,8 @@ body, input{
       margin-top: 40px;
     }
   }
+
+  .img-preview{
+    height: 30px;
+    width: 30px;
+  }

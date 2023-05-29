@@ -34,9 +34,29 @@ class CreateForm extends Component
         'temporary_images.*' => 'image|max:1024',
     ];
 
-    public function store()
-    {
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*'=>'image|max:1024',
+        ])){
+            foreach($this->temporary_images as $image){
+                $this->images[]=$image;
+            }
+        }
+    }
 
+    public function removeImage($key){
+        if(in_array($key,array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
+
+    public function store()
+    {   
+
+        $this->article->user()->associate(Auth::user());
+
+        $this->article->save();
+        
         $this->user_id = Auth::user()->id;
         $this->validate();
         // $category = Category::find($this->category);
@@ -47,7 +67,16 @@ class CreateForm extends Component
             'price' => $this->price,
             'state' => $this->state,
             'user_id' => $this->user_id,
+            
         ]);
+        
+        if(count($this->images)){
+            foreach($this->images as $image){
+                $this->article->images()->create([
+                    'path'=>$image->store('images', 'public')
+                ]);
+            }
+        }
         // dd($category, $this->title, $this->description, $user, $this->price);
         // $this->article = $category->articles()->create([
         //     'title' => $this->title,
@@ -57,7 +86,14 @@ class CreateForm extends Component
         //     'user_id' => $user
         // ]);
         session()->flash('articleCreated', "Congratulazioni il tuo annuncio è stato inserito ed è in attesa di revisione");
-        $this->reset();
+        $this->reset(); $this->cleanForm();
+    }
+
+    public function cleanForm(){
+        $this->image='';
+        $this->images=[];
+        $this->temporary_images=[];
+
     }
 
     public function render()
@@ -66,4 +102,5 @@ class CreateForm extends Component
         // $this->categories = ['pittura', 'scultura', 'fotografia', 'design', 'grafica', 'architettura', 'musica', 'fumetti', 'cartoni', 'videogames'];
         return view('livewire.create-form');
     }
+
 }
