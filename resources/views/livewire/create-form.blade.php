@@ -56,7 +56,8 @@
                             <select wire:model.defer="category" id="category" class="form-control">
                                 <option value="">{{ __('ui.seleziona') }}</option>
                                 @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                <option value="{{$category->id}}">{{ trans('categories.' . $category->name) }}
+                                </option>
                                 @endforeach
                             </select>
                         </div>

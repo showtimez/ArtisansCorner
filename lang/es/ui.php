@@ -4,6 +4,8 @@ return [
     'navCategorie' => 'Categorías',
     'navCreaAnnuncio' => 'Crear Anuncio',
     'navCiao' => 'Hola',
+    'navLavConNoi' => 'Trabaja con nosotros',
+    'navAreaRev'=> 'Área de Revisor',
     'subtitleWelcome' => "No hay arte sin estilo",
     'allArticles'=>'Aquí están todos los artículos',
     'categorieIcone1' => 'Música',
@@ -52,7 +54,17 @@ return [
 'senToRev'=>'Enviar para revisión',
 'toBeRev'=>'Para ser revisado',
 'rifiuta'=>'Rechazar',
-'rifiutati'=>'Rechazados'
+'rifiutati'=>'Rechazados',
 
+
+// lavora con noi
+// Spanish Translation
+'collabRev2' => 'Otras posiciones abiertas',
+'collabTitolo' => 'Trabaja con nosotros',
+'collabRev' => 'Conviértete en revisor',
+'collabText1' => '¿Quieres colaborar con el equipo de The Artisan\'s Corner?',
+'collabText2' => 'Si eres un apasionado del arte, envíanos tu candidatura.',
+'collabText3' => '¿Qué estás esperando? Haz clic abajo para unirte a nuestro equipo.',
+'lavoraBtn' => 'Trabaja con nosotros'
 
 ];

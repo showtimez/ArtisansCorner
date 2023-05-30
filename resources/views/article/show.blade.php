@@ -15,14 +15,15 @@
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                      
-                      <div class="carousel-inner">
-                        @foreach ($article->images as $image)
-                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                              <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
-                            </div>
-                        @endforeach
-                    </div>
+
+                        <div class="carousel-inner">
+                            @foreach ($article->images as $image)
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <img src="{{ $image->getUrl(400,300) }}" alt="Image">
+                                </div>
+                            @endforeach
+                        </div>
+
 
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

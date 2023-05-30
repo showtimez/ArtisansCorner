@@ -4,6 +4,8 @@ return [
     'navCategorie' => 'Categories',
     'navCreaAnnuncio' => 'Insert an article',
     'navCiao' => 'Hi, ',
+    'navLavConNoi'=> 'Work with us',
+    'navAreaRev'=> 'Reviewer Area',
     'subtitleWelcome' => 'There is no art without style',
     'allArticles'=>"Here is all our articles",
     'categorieIcone1' => 'Music',
@@ -54,6 +56,17 @@ return [
 'toBeRev'=>'To be reviewed',
 'rifiuta'=>'Reject',
 'rifiutati'=>'Rejected',
+
+// lavora con noi
+'collabRev2' => 'Other open positions',
+'collabTitolo' => 'Work with us',
+'collabRev' => 'Become a Reviewer',
+'collabText1' => 'Do you want to collaborate with The Artisan\'s Corner team?',
+'collabText2' => 'If you are passionate about art, send us your application.',
+'collabText3' => 'What are you waiting for? Click below to join our team.',
+'lavoraBtn' => 'Work with us'
+
+
 
 
 

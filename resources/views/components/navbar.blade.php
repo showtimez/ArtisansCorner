@@ -21,10 +21,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('article.index') }}">{{ __('ui.navAnnunci') }}</a>
                 </li>
-
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="{{route('autenticate')}}">Autenticazione</a>
-                    </li> --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -33,7 +29,7 @@
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                         <li><a class="dropdown-item"
-                        href="{{ route('category', compact('category')) }}">{{ $category->name }}</a></li>
+                        href="{{ route('category', compact('category')) }}">{{ trans('categories.' . $category->name) }}</a></li>
                     <hr>
                          @endforeach
                     </ul>
@@ -54,25 +50,16 @@
 
                     </a>
                     <ul class="dropdown-menu">
-                        @if (App\Models\Article::toBeRevisionedCount() > 0)
-                        <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        {{ App\Models\Article::toBeRevisionedCount() }}
-                        <span class="visually-hidden">
-                            Articoli da revisionare
-                        </span>
-                    </span>
-                    @endif
+
                     @if (!Auth::user()->is_revisor)
                     <li>
-                        <a class="dropdown-item" href="{{ route('revisor.collabora') }}">Lavora con noi</a>
+                        <a class="dropdown-item" href="{{ route('revisor.collabora') }}">{{ __('ui.navLavConNoi') }}</a>
                     </li>
                     @endif
-
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="{{ route('revisor.index') }}">
-                            Area Revisori
+                            {{ __('ui.navAreaRev') }}
                             @if (App\Models\Article::toBeRevisionedCount() > 0)
                             <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

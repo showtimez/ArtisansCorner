@@ -4,6 +4,8 @@ return [
     'navCategorie' => 'Categorie',
     'navCreaAnnuncio' => 'Crea Annuncio',
     'navCiao' => 'Ciao',
+    'navLavConNoi'=> 'Lavora con noi',
+    'navAreaRev'=> 'Area Revisore',
     'subtitleWelcome' => "Non c'è arte senza stile",
     'allArticles'=>'Ecco tutti gli articoli',
     'categorieIcone1' => 'Musica',
@@ -52,6 +54,17 @@ return [
 'toBeRev'=>'Da revisionare',
 'rifiuta'=>'Rifiuta',
 'rifiutati'=>'Rifiutati',
+
+
+
+// Lavora con noi
+'collabRev2' => 'Altre posizioni',
+'collabTitolo'=>'Lavora con noi',
+'collabRev'=> 'Diventa Revisore',
+'collabText1'=> "Vuoi collaborare con il team The Artisan's Corner?",
+'collabText2'=> "Se sei appassionato di arte inviaci la tua candidatura.",
+'collabText3'=> "Cosa aspetti, clicca in basso per entrare nel nostro team.",
+'lavoraBtn' => 'Lavora con noi'
 
 
 
