@@ -25,6 +25,7 @@ return [
     'categoria'=>'Categoria',
     'prezzo'=>'Prezzo',
     'dettagli'=>'Dettagli',
+
     // Form Create
 
     'createTitolo'=>'Inserisci un articolo',
@@ -47,35 +48,35 @@ return [
 
 // Pagina revisore
 
-'revTitolo'=>'Articoli da revisionare',
-'revAlert1'=>'Ecco gli articoli da revisionare',
-'revAlert2'=>'Non ci sono articoli da revisionare',
-'accetta'=>'Accetta',
-'accettati'=>'Accettati',
-'senToRev'=>'Manda in revisione',
-'toBeRev'=>'Da revisionare',
-'rifiuta'=>'Rifiuta',
-'rifiutati'=>'Rifiutati',
+    'revTitolo'=>'Articoli da revisionare',
+    'revAlert1'=>'Ecco gli articoli da revisionare',
+    'revAlert2'=>'Non ci sono articoli da revisionare',
+    'accetta'=>'Accetta',
+    'accettati'=>'Accettati',
+    'senToRev'=>'Manda in revisione',
+    'toBeRev'=>'Da revisionare',
+    'rifiuta'=>'Rifiuta',
+    'rifiutati'=>'Rifiutati',
 
 
 
-// Lavora con noi
-'collabRev2' => 'Altre posizioni',
-'collabTitolo'=>'Lavora con noi',
-'collabRev'=> 'Diventa Revisore',
-'collabText1'=> "Vuoi collaborare con il team The Artisan's Corner?",
-'collabText2'=> "Se sei appassionato di arte inviaci la tua candidatura.",
-'collabText3'=> "Cosa aspetti, clicca in basso per entrare nel nostro team.",
-'lavoraBtn' => 'Lavora con noi',
+    // Lavora con noi
+    'collabRev2' => 'Altre posizioni',
+    'collabTitolo'=>'Lavora con noi',
+    'collabRev'=> 'Diventa Revisore',
+    'collabText1'=> "Vuoi collaborare con il team The Artisan's Corner?",
+    'collabText2'=> "Se sei appassionato di arte inviaci la tua candidatura.",
+    'collabText3'=> "Cosa aspetti, clicca in basso per entrare nel nostro team.",
+    'lavoraBtn' => 'Lavora con noi',
 
-// FORM LOGIN E REGISTER
-'registerText1' => 'Non sei ancora iscritto?',
-'registerText2' => "Entra in The Artisan's Corner!",
-'accedi' => 'Accedi',
-'registrati' => 'Registrati',
-'tornaAlSito' => 'Torna al sito',
-'accessText1' => 'Sei già uno di noi?',
-'accessText2' => 'Entra subito e non perderti nemmeno un capolavoro!',
+    // FORM LOGIN E REGISTER
+    'registerText1' => 'Non sei ancora iscritto?',
+    'registerText2' => "Entra in The Artisan's Corner!",
+    'accedi' => 'Accedi',
+    'registrati' => 'Registrati',
+    'tornaAlSito' => 'Torna al sito',
+    'accessText1' => 'Sei già uno di noi?',
+    'accessText2' => 'Entra subito e non perderti nemmeno un capolavoro!',
 
 
 
