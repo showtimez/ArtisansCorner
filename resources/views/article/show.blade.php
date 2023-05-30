@@ -40,7 +40,11 @@
                     <p class="card-text">Condizioni: {{$article->state}}</p>
                     <p class="card-text">Descrizione: {{$article->description}}</p>
                     <p class="card-text">Prezzo: {{$article->price}}€</p>
-                    <a href="{{route('homepage')}}" class="btn btn-primary">Torna Indietro </a>
+                    @if(Auth::user()->is_revisor)
+                    <a href="{{route('revisor.index')}}" class="btn btn-primary">Torna alla dashboard </a>
+                    @else
+                    <a href="{{route('homepage')}}" class="btn btn-primary">Torna Indietro</a>
+                    @endif
                     <p><a href="#">Categoria: {{$article -> category->name}}</a></p>
 
                     <p >Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>

@@ -19,14 +19,15 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::where('is_accepted',true)->orderBy('created_at', 'desc')->get();
-        $articles = Article::query();
-        if(Auth::user()->is_revisor) {
-    $articles->where('is_accepted', null);
-    }else
-    {
-        $articles->where('is_accepted', true);
-    }
-        $articles =$articles->get();
+
+        // $articles = Article::query();
+        // if(Auth::user()->is_revisor) {
+        // $articles->where('is_accepted', null);
+        // }else
+        // {
+        // $articles->where('is_accepted', true);
+        // }
+        // $articles =$articles->get();
 
         return view('article.index', compact('articles'));
     }
