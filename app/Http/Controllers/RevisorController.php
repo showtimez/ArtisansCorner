@@ -52,4 +52,9 @@ class RevisorController extends Controller
 
             return view('/revisor/collabora');
     }
+
+    public function show(Article $article)
+    {
+        return view ('article.show', compact('article'));
+    }
 }

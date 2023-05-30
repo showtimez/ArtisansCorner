@@ -453,3 +453,12 @@ body, input{
   height: 300px;
   width: 300px;
 } 
+
+.btn-ok{
+  background-color: rgb(88, 155, 88);
+
+}
+
+.btn-no{
+  background-color: rgb(200, 99, 99);
+}
