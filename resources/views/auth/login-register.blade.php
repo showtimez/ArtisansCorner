@@ -17,18 +17,18 @@
                         </div>
                     @endif
                     <img class="logoMobile" src="/media/logoblack.png" alt="logo">
-                    <h2 class="title">Accedi</h2>
+                    <h2 class="title">{{ __('ui.accedi') }}</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
 
-                        <input type="text" name="email"id="email" placeholder="Email or Username" />
+                        <input type="text" name="email"id="email" placeholder="Email" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" name="password" id="password" placeholder="Password" /><br>
 
                     </div>
-                    <input type="submit" value="Accedi" class=" solid btn-accedi" />
+                    <input type="submit" value="{{ __('ui.accedi') }}" class=" solid btn-accedi" />
                     {{-- <p class="social-text">Oppure accedi attraverso i social</p>
             <div class="social-media">
                 <a href="#" class="social-icon">
@@ -44,7 +44,7 @@
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div> --}}
-                    <p class="social-text">Torna al sito</p>
+                    <p class="social-text">{{ __('ui.tornaAlSito') }}</p>
                     <a href="{{ route('homepage') }}" class="social-home">
                         <i class="fa fa-home  fa-2x"></i>
                     </a>
@@ -61,7 +61,7 @@
                         </div>
                     @endif
                     <img class="logoMobile" src="/media/logoblack.png" alt="logo">
-                    <h2  class="title ">Registrati</h2>
+                    <h2  class="title ">{{ __('ui.registrati') }}</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="name" placeholder="Username" />
@@ -76,9 +76,9 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="password_confirmation" placeholder="Conferma Password" />
+                        <input type="password" name="password_confirmation" placeholder="Confirm Password" />
                     </div>
-                    <input type="submit" class="btn" value="Registrati" />
+                    <input type="submit" class="btn" value="{{ __('ui.registrati') }}" />
                     {{-- <p class="social-text">Oppure accedi attraverso i social</p>
               <div class="social-media">
                   <a href="#" class="social-icon">
@@ -94,7 +94,7 @@
                       <i class="fab fa-linkedin-in"></i>
                   </a>
               </div> --}}
-                    <p class="social-text">Torna al sito</p>
+                    <p class="social-text">{{ __('ui.tornaAlSito') }}</p>
                     <a href="{{ route('homepage') }}" class="social-home">
                         <i class="fa fa-home  fa-2x"></i>
                     </a>
@@ -106,12 +106,12 @@
             <div class="panel left-panel">
                 <div class="content">
 
-                    <h3>Non sei ancora iscritto ?</h3>
+                    <h3>{{ __('ui.registerText1') }}</h3>
                     <p>
-                        Entra in The Artisan's Corner !
+                        {{ __('ui.registerText2') }}
                     </p>
                     <button class="btn transparent" id="sign-up-btn">
-                        REGISTRATI
+                        {{ __('ui.registrati') }}
                     </button>
                 </div>
 
@@ -119,12 +119,12 @@
             <div class="panel right-panel">
                 <div class="content">
 
-                    <h3>Sei già uno di noi ?</h3>
+                    <h3>{{ __('ui.accessText1') }}</h3>
                     <p>
-                        Entra subito e non perderti nemmeno un capolavoro !
+                        {{ __('ui.accessText2') }}
                     </p>
                     <button class="btn transparent" type="submit" id="sign-in-btn">
-                        ACCEDI
+                        {{ __('ui.accedi') }}
                     </button>
                 </div>
 

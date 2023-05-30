@@ -6,6 +6,8 @@ return [
     'navCiao' => 'Hola',
     'navLavConNoi' => 'Trabaja con nosotros',
     'navAreaRev'=> 'Área de Revisor',
+    'navAreariservata' => 'Área reservada',
+    'navAccess' => 'Inicia sesión o Regístrate',
     'subtitleWelcome' => "No hay arte sin estilo",
     'allArticles'=>'Aquí están todos los artículos',
     'categorieIcone1' => 'Música',
@@ -65,6 +67,15 @@ return [
 'collabText1' => '¿Quieres colaborar con el equipo de The Artisan\'s Corner?',
 'collabText2' => 'Si eres un apasionado del arte, envíanos tu candidatura.',
 'collabText3' => '¿Qué estás esperando? Haz clic abajo para unirte a nuestro equipo.',
-'lavoraBtn' => 'Trabaja con nosotros'
+'lavoraBtn' => 'Trabaja con nosotros',
+
+// FORM LOGIN E REGISTER
+'registerText1' => '¿Aún no estás registrado?',
+'registerText2' => "¡Únete a The Artisan's Corner!",
+'accedi' => 'Inicia sesión',
+'registrati' => 'Regístrate',
+'tornaAlSito' => 'Volver al sitio',
+'accessText1' => '¿Ya eres uno de nosotros?',
+'accessText2' => '¡Inicia sesión ahora y no te pierdas ni una sola obra maestra!',
 
 ];

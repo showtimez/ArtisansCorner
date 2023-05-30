@@ -6,6 +6,8 @@ return [
     'navCiao' => 'Hi, ',
     'navLavConNoi'=> 'Work with us',
     'navAreaRev'=> 'Reviewer Area',
+    'navAreariservata' => 'Reserved area',
+    'navAccess' => 'Login or Register',
     'subtitleWelcome' => 'There is no art without style',
     'allArticles'=>"Here is all our articles",
     'categorieIcone1' => 'Music',
@@ -64,7 +66,16 @@ return [
 'collabText1' => 'Do you want to collaborate with The Artisan\'s Corner team?',
 'collabText2' => 'If you are passionate about art, send us your application.',
 'collabText3' => 'What are you waiting for? Click below to join our team.',
-'lavoraBtn' => 'Work with us'
+'lavoraBtn' => 'Work with us',
+
+// FORM LOGIN E REGISTER
+'registerText1' => 'Not registered yet?',
+'registerText2' => "Join The Artisan's Corner!",
+'accedi' => 'Log in',
+'registrati' => 'Register',
+'tornaAlSito' => 'Return to site',
+'accessText1' => 'Already one of us?',
+'accessText2' => "Log in now and don't miss a single masterpiece!",
 
 
 

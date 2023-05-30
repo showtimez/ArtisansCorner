@@ -82,10 +82,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Area personale
+                    {{ __('ui.navAreariservata') }}
                     </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ route('autenticate') }}">Accedi o Registrati</a></li>
+                    <li><a class="dropdown-item" href="{{ route('autenticate') }}">{{ __('ui.navAccess') }}</a></li>
                     {{-- <hr> --}}
                     {{-- <li><a class="dropdown-item" href="{{ route('autenticate') }}">Registrati</a></li> --}}
 
