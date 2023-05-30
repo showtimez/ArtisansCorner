@@ -40,7 +40,23 @@ return [
     'ristrutturato'=> 'Refurbished',
     'nuovo'=>'New',
     'inserisci'=> 'Insert',
-    'indietro'=> 'Back'
+    'indietro'=> 'Back',
+
+
+    // Reviewer page
+
+'revTitolo'=>'Articles to review',
+'revAlert1'=>'Here are the articles to review',
+'revAlert2'=>'There are no articles to review',
+'accetta'=>'Accept',
+'accettati'=>'Accepted',
+'senToRev'=>'Send for review',
+'toBeRev'=>'To be reviewed',
+'rifiuta'=>'Reject',
+'rifiutati'=>'Rejected',
+
+
+
 
 
 

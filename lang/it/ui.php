@@ -41,6 +41,18 @@ return [
     'inserisci'=> 'Inserisci',
     'indietro'=> 'Indietro',
 
+// Pagina revisore
+
+'revTitolo'=>'Articoli da revisionare',
+'revAlert1'=>'Ecco gli articoli da revisionare',
+'revAlert2'=>'Non ci sono articoli da revisionare',
+'accetta'=>'Accetta',
+'accettati'=>'Accettati',
+'senToRev'=>'Manda in revisione',
+'toBeRev'=>'Da revisionare',
+'rifiuta'=>'Rifiuta',
+'rifiutati'=>'Rifiutati',
+
 
 
 

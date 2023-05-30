@@ -40,6 +40,19 @@ return [
     'ristrutturato'=> 'Reformado',
     'nuovo'=>'Nuevo',
     'inserisci'=> 'Insertar',
-    'indietro'=> 'Atrás'
+    'indietro'=> 'Atrás',
+
+    // Página del revisor
+
+'revTitolo'=>'Artículos para revisar',
+'revAlert1'=>'Aquí están los artículos para revisar',
+'revAlert2'=>'No hay artículos para revisar',
+'accetta'=>'Aceptar',
+'accettati'=>'Aceptados',
+'senToRev'=>'Enviar para revisión',
+'toBeRev'=>'Para ser revisado',
+'rifiuta'=>'Rechazar',
+'rifiutati'=>'Rechazados'
+
 
 ];
