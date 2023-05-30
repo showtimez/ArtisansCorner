@@ -64,6 +64,7 @@ class CreateForm extends Component
     {
         // Validate the input data
         $this->validate();
+        
 
         // Create a new Article instance
         $article = new Article;
@@ -87,9 +88,9 @@ class CreateForm extends Component
             foreach ($this->temporary_images as $temporary_image) {
                 // Create a new Image instance
                 $image = new Image;
-
+                $newPath = "articles/{$article->id}";
                 // Store the uploaded image and set the path attribute
-                $image->path = $temporary_image->store('images', 'public');
+                $image->path = $temporary_image->store($newPath, 'public');
 
                 // Associate the Image instance with the Article instance
                 $image->article()->associate($article);
