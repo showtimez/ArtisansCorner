@@ -19,24 +19,16 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.index') }}">Annunci</a>
+                    <a class="nav-link" href="{{ route('article.index') }}">{{ __('ui.navAnnunci') }}</a>
                 </li>
-                <li class="nav-item">
-                    <x-_locale lang='it' nation='it' />
-                </li>
-                <li class="nav-item">
-                    <x-_locale lang='en' nation='en' />
-                </li>
-                <li class="nav-item">
-                    <x-_locale lang='es' nation='es' />
-                </li>
+
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="{{route('autenticate')}}">Autenticazione</a>
                     </li> --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Categorie
+                    {{ __('ui.navCategorie') }}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
@@ -52,13 +44,13 @@
 
                     @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('article.create') }}">Crea Annuncio</a>
+                        <a class="nav-link" href="{{ route('article.create') }}">{{ __('ui.navCreaAnnuncio') }}</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Ciao {{ Auth::user()->name }}
+                        {{ __('ui.navCiao') }} {{ Auth::user()->name }}
 
                     </a>
                     <ul class="dropdown-menu">
@@ -114,8 +106,17 @@
             </li>
         </ul>
         @endauth
-    </ul>
 
+    </ul>
+    <li class="nav-item">
+        <x-_locale lang='it' nation='it' />
+    </li>
+    <li class="nav-item">
+        <x-_locale lang='en' nation='en' />
+    </li>
+    <li class="nav-item">
+        <x-_locale lang='es' nation='es' />
+    </li>
 </div>
 <form action="{{ route('articles.search') }}" method="GET" class="d-flex" role="search">
     <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">

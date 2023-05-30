@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Image;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class CreateForm extends Component
 {
     use WithFileUploads;
-    
+
     public $temporary_images;
     public $images = [];
     public $image;
@@ -29,65 +30,83 @@ class CreateForm extends Component
         'description' => 'required',
         'price' => 'required',
         'state' => 'required',
-        'user_id' => 'required',
+        // Remove this line if it's not needed
+        //'user_id' => 'required',
         'images.*' => 'image|max:1024',
         'temporary_images.*' => 'image|max:1024',
     ];
 
-    public function updatedTemporaryImages(){
-        if($this->validate([
-            'temporary_images.*'=>'image|max:1024',
-        ])){
-            foreach($this->temporary_images as $image){
-                $this->images[]=$image;
+    public function mount()
+    {
+        $this->images = [];
+        $this->temporary_images = [];
+    }
+
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
             }
         }
     }
 
-    public function removeImage($key){
-        if(in_array($key,array_keys($this->images))){
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
 
     public function store()
-    {   
-
-        $this->article->user()->associate(Auth::user());
-
-        $this->article->save();
-        
-        $this->user_id = Auth::user()->id;
+    {
+        // Validate the input data
         $this->validate();
-        // $category = Category::find($this->category);
-        // dd(Category::find($this->category)->articles);
-        Category::find($this->category)->articles()->create([
+
+        // Create a new Article instance
+        $article = new Article;
+
+        // Fill the Article instance with the input data
+        $article->fill([
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
             'state' => $this->state,
-            'user_id' => $this->user_id,
-            
+            'user_id' => Auth::id(),
+            'category_id' => $this->category,
         ]);
-        
-        if(count($this->images)){
-            foreach($this->images as $image){
-                $this->article->images()->create([
-                    'path'=>$image->store('images', 'public')
-                ]);
+
+        // Save the Article instance
+        $article->save();
+
+        // Check if temporary_images is not null
+        if ($this->temporary_images) {
+            // Loop through the temporary_images array
+            foreach ($this->temporary_images as $temporary_image) {
+                // Create a new Image instance
+                $image = new Image;
+
+                // Store the uploaded image and set the path attribute
+                $image->path = $temporary_image->store('images', 'public');
+
+                // Associate the Image instance with the Article instance
+                $image->article()->associate($article);
+
+                // Save the Image instance
+                $image->save();
             }
         }
-        // dd($category, $this->title, $this->description, $user, $this->price);
-        // $this->article = $category->articles()->create([
-        //     'title' => $this->title,
-        //     'description' => $this->description,
-        //     'price' => $this->price,
-        //     'state' => $this->state,
-        //     'user_id' => $user
-        // ]);
-        session()->flash('articleCreated', "Congratulazioni il tuo annuncio è stato inserito ed è in attesa di revisione");
-        $this->reset(); $this->cleanForm();
+
+        // Reset the input data
+        $this->reset();
     }
+
+
+
+
+
 
     public function cleanForm(){
         $this->image='';
