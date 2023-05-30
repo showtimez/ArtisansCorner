@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg bg-custom py-4 navbar-dark sticky-top ">
+<nav class="navbar navbar-expand-lg bg-custom navbar-dark sticky-top ">
     <div class="container-fluid ">
         <a class="navbar-brand" href="#">
             <img src="/public/media/Logo.png" alt="" >
         </a>
         <ul>
             <span class="navbar-brand brand-name mx-auto">
-                <a href="{{ route('homepage') }}"><img width="160" height="80"
+                <a href="{{ route('homepage') }}"><img width="100" height="55"
                     src="/media/logowhite.png"></a>
                 </span>
             </ul>

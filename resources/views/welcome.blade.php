@@ -10,12 +10,13 @@
         </div>
     @endif
     <x-header>
-        <div class="d-flex justify-content-center align-items-center">
-            <video class="vid" src="/media/TheArtisansCorner.mp4" autoplay muted loop></video>
-        </div>
-        <div class="content text-center ">
-            <h1 class="fontCustom display-1">The Artisan's Corner</h1>
-            <p class=" fontCustom text-center fs-3">{{ __('ui.subtitleWelcome') }}</p>
+        
+        <div class="miocontainer">
+            <video class="videomio" src="/media/TheArtisansCorner.mp4" autoplay muted loop></video>
+            <div class="content">
+                <h1 class="fontCustom display-1">The Artisan's Corner</h1>
+                <p class=" fontCustom text-center fs-3">{{ __('ui.subtitleWelcome') }}</p>
+            </div>
         </div>
     </x-header>
     <x-categorie>
