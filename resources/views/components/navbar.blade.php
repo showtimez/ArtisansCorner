@@ -96,9 +96,9 @@
                         Seleziona Lingua
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="#"><x-_locale lang='it' nation='it' />Italiano</a></li>
-                        <li><a class="dropdown-item" href="#"><x-_locale lang='en' nation='en' />English</a></li>
-                        <li><a class="dropdown-item" href="#"><x-_locale lang='es' nation='es' />Español</a></li>
+                        <li><a class="dropdown-item"><x-_locale lang='it' nation='it' />Italiano</a></li>
+                        <li><a class="dropdown-item"> <x-_locale lang='en' nation='en' />English</a></li>
+                        <li><a class="dropdown-item"> <x-_locale lang='es' nation='es' />Espanõl</a></li>
                     </ul>
                 </li>
             </li>
