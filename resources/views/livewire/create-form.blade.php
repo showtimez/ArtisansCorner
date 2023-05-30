@@ -34,7 +34,7 @@
                         </div>
                         <div class="mb-3">
                             <p for="temporary_images" class="form-label text-center">{{ __('ui.formArtImages') }} *</p>
-                            <input type="file" wire:model="temporary_images" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" />
+                            <input type="file" wire:model="temporary_images" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" required/>
                             @error('temporary_images.*')
                                 <p class="text-danger">{{$message}}</p>
                             @enderror

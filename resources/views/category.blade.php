@@ -11,15 +11,16 @@
 
 
     </x-header>
-    <div class="container-fluid ">
-        <div class="row ">
-            <div class="col-12 col-md-4 d-flex align-items-center colC">
+    <div class="container">
+        <div class="row justify-content-between">
+          {{-- dispositivi grandi --}}
+            <div class="col-4 d-none d-lg-block">
 
                 @forelse ($articles as $article)
 
-                    <div class="flip-card  m-5 ">
+                    <div class="flip-card m-5">
                         <div class="flip-card-inner ">
-                          <div class="flip-card-front d-flex justify-content-around rounded">
+                          <div class=" flip-card-front d-flex justify-content-around rounded">
                             <img class="imgC rounded"src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
                           </div>
                           <div class="flip-card-back rounded">
@@ -39,6 +40,36 @@
                           <h3>{{ __('ui.noArtInserted') }}</h3>
                       </div>
                       @endforelse
+
+
+            </div>
+            {{-- dispositivi piccoli --}}
+            <div class="col-12 d-flex flex-column d-block d-sm-none">
+
+              @forelse ($articles as $article)
+
+                  <div class="flip-card  m-3 ">
+                      <div class="flip-card-inner ">
+                        <div class="flip-card-front rounded">
+                          <img class="imgC rounded"src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
+                        </div>
+                        <div class="flip-card-back rounded">
+                          <h5 class="mt-5">{{ $article->title }}</h5>
+                          <p>{{ $article->description }}</p>
+                          <p>{{ __('ui.stato') }}: {{ $article->state }}</p>
+
+                          <h4>{{ __('ui.prezzo') }}: {{ $article->price }}</h4>
+                          <p class="mx-0">{{ __('ui.categoria') }} {{ $article->category->name }}</p>
+                          <a href="{{route('article.show', compact('article'))}}" class="btn linkcustomAccent  px-5 shadow">{{ __('ui.dettagli') }}</a>
+                        </div>
+                      </div>
+                  </div>
+
+                    @empty
+                    <div class="d-flex justify-content-center ">
+                        <h3>{{ __('ui.noArtInserted') }}</h3>
+                    </div>
+                    @endforelse
 
 
             </div>

@@ -37,11 +37,11 @@
                         @forelse ($articles as $article)
                             <div class="swiper-slide  flex-column">
 
-                                        <h5>{{ $article->title }}</h5>
+                                        {{-- <h5>{{ $article->title }}</h5>
                                         {{ $article->description }}</p>
                                         <p>{{ __('ui.stato') }}{{ $article->state }}</p>
                                         <p>{{ __('ui.categoria') }} {{ $article->category->name }}</p>
-                                        <h4>{{ __('ui.prezzo') }} {{ $article->price }}</h4>
+                                        <h4>{{ __('ui.prezzo') }} {{ $article->price }}</h4> --}}
                                         <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
 
                                         <a href="{{ route('article.show', compact('article')) }}"

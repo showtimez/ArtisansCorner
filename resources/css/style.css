@@ -402,6 +402,7 @@ body, input{
   .flip-card {
     background-color: transparent;
     
+    
     perspective: 1000px;
     height: 300px;
     width: 300px;
@@ -422,6 +423,7 @@ body, input{
   .colC{
     width: 100%;
     height: 100%;
+  
   }
   
   .flip-card:hover .flip-card-inner {
