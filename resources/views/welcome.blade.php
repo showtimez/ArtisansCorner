@@ -25,9 +25,9 @@
         <div id="inizio" class="row justify-content-center ">
             <div class="col-12 d-flex justify-content-center">
                 <div>
-                    <h2 class="text-center text-light pt-5 fontCustomannunci">Ultimi annunci</h2>
-                    <p class="text-center text-light pb-5 fontCustomannunci ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nam ipsa ea sint aliquid laborum</p>
+                    <h2 class="text-center text-light py-5 fontCustomannunci">{{ __('ui.ultimiAnnunci') }}</h2>
+                    {{-- <p class="text-center text-light pb-5 fontCustomannunci ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nam ipsa ea sint aliquid laborum</p> --}}
                 </div>
             </div>
             <div class="col-12 d-flex">
@@ -39,17 +39,17 @@
 
                                         <h5>{{ $article->title }}</h5>
                                         {{ $article->description }}</p>
-                                        <p>Stato: {{ $article->state }}</p>
-                                        <p>Categoria {{ $article->category->name }}</p>
-                                        <h4>Prezzo: {{ $article->price }}</h4>
+                                        <p>{{ __('ui.stato') }}{{ $article->state }}</p>
+                                        <p>{{ __('ui.categoria') }} {{ $article->category->name }}</p>
+                                        <h4>{{ __('ui.prezzo') }} {{ $article->price }}</h4>
 
 
                                         <a href="{{ route('article.show', compact('article')) }}"
-                                        class="mt-5"><button class="btn btn-outline-dark">Dettagli</button></a>
+                                        class="mt-5"><button class="btn btn-outline-dark">{{ __('ui.dettagli') }}</button></a>
                             </div>
                         @empty
-                            <div class="d-flex justify-content-center">
-                                <h3>Non sono ancora stati inseriti annunci.</h3>
+                            <div class=" col-12">
+                                <h3 class="text-center text-light">{{ __('ui.noArtInserted') }}</h3>
                             </div>
                         @endforelse
                     </div>
@@ -64,15 +64,15 @@
         <hr class="text-dark">
         <div class="col-12 col-md-4 text-center">
             <span id="clienti" class="increment-numbers ">0</span><span class=" mx-1 increment-numbers ">%</span>
-            <p class=" text-center fw-bold fs-1 ">Clienti Soddisfatti</p>
+            <p class=" text-center fw-bold fs-1 ">{{ __('ui.unPoDiNumeri1') }}</p>
         </div>
         <div class="col-12 col-md-4 text-center">
             <span id="articoli" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">+</span>
-            <p class=" text-center fw-bold fs-1">Articoli Venduti</p>
+            <p class=" text-center fw-bold fs-1">{{ __('ui.unPoDiNumeri2') }}</p>
         </div>
         <div class="col-12 col-md-4 text-center">
             <span id="recensioni" class="increment-numbers">0</span><span class=" mx-1 increment-numbers ">‟</span>
-            <p class=" text-center fw-bold fs-1">Recensioni</p>
+            <p class=" text-center fw-bold fs-1">{{ __('ui.unPoDiNumeri3') }}</p>
         </div>
         </div>
         <hr class="text-dark">

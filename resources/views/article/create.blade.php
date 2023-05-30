@@ -5,8 +5,8 @@
         </div>
 
             <script type="text/javascript">
-                // testo da mostrare    
-                var testo = "Inserisci un articolo";
+                // testo da mostrare
+                var testo = "{{ __('ui.createTitolo') }}";
                 // output
                 var output = "";
                 // incrementatore

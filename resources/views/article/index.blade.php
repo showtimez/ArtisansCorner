@@ -51,20 +51,20 @@
                         <a href="{{route('article.show', compact('article'))}}" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
                         <img id="open-content-image" src="" />
                         <div class="text" id="open-content-text">
-                            <p>Stato: {{$article->state}}</p>
+                            <p>{{ __('ui.Stato') }}: {{$article->state}}</p>
                             <p class="card-text">{{$article->description}}</p>
 
-                            <p class="text-muted">Categoria {{$article->category->name}}</p>
-                            <h4>Prezzo: {{$article->price}}</h4>
+                            <p class="text-muted">{{ __('ui.categoria') }}{{$article->category->name}}</p>
+                            <h4>{{ __('ui.prezzo') }}:{{$article->price}}</h4>
                         </div>
                     </div>
 
                 </div>
-                <div class="text-center mb-5"><a href="{{route('article.show', compact('article'))}}" class="btn linkcustomAccent mt-3 px-5 shadow">Dettagli</a></div>
+                <div class="text-center mb-5"><a href="{{route('article.show', compact('article'))}}" class="btn linkcustomAccent mt-3 px-5 shadow">{{ __('ui.dettagli') }}</a></div>
             </div>
             @empty
             <div class="d-flex justify-content-center">
-                <h3>Non sono ancora stati inseriti annunci.</h3>
+                <h3>{{ __('ui.noArtInserted') }}</h3>
             </div>
 
             @endforelse
