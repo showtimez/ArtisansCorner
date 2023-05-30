@@ -6,8 +6,10 @@ use App\Models\Image;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateForm extends Component
 {
@@ -32,8 +34,8 @@ class CreateForm extends Component
         'state' => 'required',
         // Remove this line if it's not needed
         //'user_id' => 'required',
-        'images.*' => 'image|max:1024',
-        'temporary_images.*' => 'image|max:1024',
+        'images.*' => 'image',
+        'temporary_images.*' => 'image',
     ];
 
     public function mount()
@@ -97,9 +99,13 @@ class CreateForm extends Component
 
                 // Save the Image instance
                 $image->save();
-            }
-        }
 
+                dispatch(new ResizeImage($image->path , 400 , 300));
+            }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
+        session()->flash('articleCreated', 'Articolo creato con successo!');
         // Reset the input data
         $this->reset();
     }

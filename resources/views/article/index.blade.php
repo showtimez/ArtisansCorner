@@ -39,7 +39,8 @@
             <div class="col-12 col-md-4">
                 <div class="card card-color-0 mt-4 ">
                     <div class="border "></div>
-                    <img src="/media/articoli.jpg" />
+                    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
+
 
                     {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
                     <a href="{{route('article.show', compact('article'))}}" class="text-white">

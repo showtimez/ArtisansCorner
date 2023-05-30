@@ -35,7 +35,6 @@
                 <div class="swiper mySwiper pb-5 ">
                     <div class="swiper-wrapper ">
                         @forelse ($articles as $article)
-                        {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
                             <div class="swiper-slide  flex-column">
 
                                         <h5>{{ $article->title }}</h5>
@@ -43,7 +42,7 @@
                                         <p>{{ __('ui.stato') }}{{ $article->state }}</p>
                                         <p>{{ __('ui.categoria') }} {{ $article->category->name }}</p>
                                         <h4>{{ __('ui.prezzo') }} {{ $article->price }}</h4>
-
+                                        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
 
                                         <a href="{{ route('article.show', compact('article')) }}"
                                         class="mt-5"><button class="btn btn-outline-dark">{{ __('ui.dettagli') }}</button></a>
