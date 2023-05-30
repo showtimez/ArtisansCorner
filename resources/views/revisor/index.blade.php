@@ -40,88 +40,125 @@
                     </div>
                 </div>
             </div>
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-4 ">
-                <h2 class="text-center">{{ __('ui.accettati') }}</h2>
-                @if($article_checked_ok)
-                @foreach ( $article_checked_ok as $element )
-                    <div class="card my-3">
-                        {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
-                        <div class="card-body p-5">
-                            <h5 class="card-title">{{$element->title}}</h5>
-                            <p class="card-text">{{$element->description}}</p>
-                            <h4>{{ __('ui.prezzo') }}: {{$element->price}}</h4>
-                            <p>{{ __('ui.stato') }}: {{$element->state}}</p>
-                            {{-- <p>Categoria {{$article_to_check->category->name}}</p> --}}
-                            <div class="container d-flex gap-5">
+
+            <h3>ACCETTATI</h3>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Stato</th>
+                    <th scope="col">Dettaglio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @if($article_checked_ok)
+                    @foreach ( $article_checked_ok as $element )
+                    <tr>
+                        <th scope="row">{{$element->title}}</th>
+                            <td>{{$element->description}}</td>
+                            <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
+                            <td>{{ __('ui.stato') }}: {{$element->state}}</td>
+                            <td>
                                 <form action="{{route('revisor.nullArticle', ['article'=>$element])}}"method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-success shadow">{{ __('ui.senToRev') }}</button>
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-success shadow">{{ __('ui.senToRev') }}</button>
                                 </form>
-
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                       
+                     </tr>
                     @endforeach
-                @endif
-            </div>
-            <div class="col-12 col-md-4 ">
-                <h2 class="text-center">{{ __('ui.toBeRev') }}</h2>
-                @if($article_to_check)
-                @foreach ( $article_to_check as $element )
-                    <div class="card my-3">
-                        {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
-                        <div class="card-body p-5">
-                            <h5 class="card-title">{{$element->title}}</h5>
-                            <p class="card-text">{{$element->description}}</p>
-                            <h4>{{ __('ui.prezzo') }}: {{$element->price}}</h4>
-                            <p>{{ __('ui.stato') }}: {{$element->state}}</p>
-                            {{-- <p>Categoria {{$article_to_check->category->name}}</p> --}}
-                            <div class="container d-flex gap-5">
-                                <form action="{{route('revisor.acceptArticle', ['article'=>$element])}}"method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-success shadow">{{ __('ui.accetta') }}</button>
-                                </form>
+                    @endif
+                    
+              
+                </tbody>
+              </table>  
+              
+              <h3>DA REVISIONARE</h3>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Stato</th>
+                    <th scope="col">Dettaglio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @if($article_to_check)
+                    @foreach ( $article_to_check as $element )
+                    <tr>
+                        <th scope="row">{{$element->title}}</th>
+                            <td>{{$element->description}}</td>
+                            <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
+                            <td>{{ __('ui.stato') }}: {{$element->state}}</td>
+                            <td>
+                                    <form action="{{route('revisor.acceptArticle', ['article'=>$element])}}"method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-success shadow">{{ __('ui.accetta') }}</button>
+                                    </form>
+                            </td>
 
+                            <td>
                                 <form action="{{route('revisor.rejectArticle', ['article'=>$element])}}"method="POST">
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-danger shadow">{{ __('ui.rifiuta') }}</button>
                                 </form>
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                       
+                     </tr>
                     @endforeach
-                @endif
-            </div>
-                <div class="col-12 col-md-4">
-                    <h2 class="text-center">{{ __('ui.rifiutati') }}</h2>
+                    @endif
+                    
+              
+                </tbody>
+              </table>    
+
+
+              <h3>RIFIUTATI</h3>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Stato</th>
+                    <th scope="col">Dettaglio</th>
+                  </tr>
+                </thead>
+                <tbody>
                     @if($article_checked_ko)
                     @foreach ( $article_checked_ko as $element )
-                        <div class="card my-3">
-                            {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
-                            <div class="card-body p-5">
-                                <h5 class="card-title">{{$element->title}}</h5>
-                                <p class="card-text">{{$element->description}}</p>
-                                <h4>{{ __('ui.prezzo') }}: {{$element->price}}</h4>
-                                <p>{{ __('ui.stato') }}: {{$element->state}}</p>
-                            </div>
-                            {{-- <p>Categoria {{$article_to_check->category->name}}</p> --}}
-                            <div class="container d-flex gap-5">
-                                    <form action="{{route('revisor.nullArticle', ['article'=>$element])}}"method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-success shadow">{{ __('ui.senToRev') }}</button>
-                                    </form>
+                    <tr>
+                        <th scope="row">{{$element->title}}</th>
+                            <td>{{$element->description}}</td>
+                            <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
+                            <td>{{ __('ui.stato') }}: {{$element->state}}</td>
+                            <td>
+                                <form action="{{route('revisor.nullArticle', ['article'=>$element])}}"method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-success shadow">{{ __('ui.senToRev') }}</button>
+                                </form>
+                            </td>
 
-                            </div>
-                        </div>
-                        @endforeach
-                        @endif
-                </div>
+            
+                       
+                     </tr>
+                    @endforeach
+                    @endif
+                    
+              
+                </tbody>
+              </table>    
+              
+              
+
 
             </div>
         </div>
