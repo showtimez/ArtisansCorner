@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -18,6 +19,14 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::where('is_accepted',true)->orderBy('created_at', 'desc')->get();
+        $articles = Article::query();
+        if(Auth::user()->is_revisor) {
+    $articles->where('is_accepted', null);
+    }else
+    {
+        $articles->where('is_accepted', true);
+    }
+        $articles =$articles->get();
 
         return view('article.index', compact('articles'));
     }
@@ -46,6 +55,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
+
         return view ('article.show', compact('article'));
     }
 

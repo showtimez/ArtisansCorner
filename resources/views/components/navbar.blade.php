@@ -35,7 +35,16 @@
                     </ul>
                 </li>
 
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seleziona Lingua
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#"><x-_locale lang='it' nation='it' />Italiano</a></li>
+                        <li><a class="dropdown-item" href="#"><x-_locale lang='en' nation='en' />English</a></li>
+                        <li><a class="dropdown-item" href="#"><x-_locale lang='es' nation='es' />Español</a></li>
+                    </ul>
+                </li>
 
 
                     @auth
@@ -90,22 +99,12 @@
                     {{-- <li><a class="dropdown-item" href="{{ route('autenticate') }}">Registrati</a></li> --}}
 
                 </ul>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Seleziona Lingua
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item"><x-_locale lang='it' nation='it' />Italiano</a></li>
-                        <li><a class="dropdown-item"> <x-_locale lang='en' nation='en' />English</a></li>
-                        <li><a class="dropdown-item"> <x-_locale lang='es' nation='es' />Espanõl</a></li>
-                    </ul>
-                </li>
             </li>
         </ul>
         @endauth
 
     </ul>
+
 </div>
 <form action="{{ route('articles.search') }}" method="GET" class="d-flex" role="search">
     <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">

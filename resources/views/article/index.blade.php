@@ -62,7 +62,9 @@
 
                 </div>
                 <div class="text-center mb-5"><a href="{{route('article.show', compact('article'))}}" class="btn linkcustomAccent mt-3 px-5 shadow">{{ __('ui.dettagli') }}</a></div>
+
             </div>
+
             @empty
             <div class="d-flex justify-content-center">
                 <h3>{{ __('ui.noArtInserted') }}</h3>

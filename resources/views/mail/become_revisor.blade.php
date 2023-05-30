@@ -28,9 +28,9 @@
                 <td bgcolor="#1e1e1e" style="padding: 30px 30px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
+                            <p style="color: #ffffff">Se vuoi renderlo revisore clicca quì:</p>
+                    <a href="{{ route('make.revisor', compact('user'))  }}" style="color: #f5efef">Rendi revisore</a>
                             <td align="center">
-                                <p style="color: #ffffff">Se vuoi renderlo revisore clicca quì:</p>
-                        <button bgcolor="#a57966"><a href="{{ route('make.revisor', compact('user'))  }}" style="color: #ffffff">Rendi revisore</a></button>
                             </td>
 
                         </tr>

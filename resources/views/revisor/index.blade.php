@@ -36,7 +36,7 @@
             <div class="container  my-5 py-5">
                 <div class="row justify-content-center ">
                     <div class="col-12 justify-content-center   ">
-                        
+
             <h3 class="text-center my-5 display-4">DA REVISIONARE</h3>
             <table class="table table-striped table-hover table-bordered">
               <thead>
@@ -70,22 +70,23 @@
                                   <button type="submit" class="btn btn-danger shadow btn-no">{{ __('ui.rifiuta') }}</button>
                               </form>
                           </td>
+                          <td><button class="btn" onclick="location.href='{{ route('article.show', $element) }}'">Visualizza dettagli</button></td>
 
                           {{-- <td>
-                            
-                           
+
+
                             <div class="text-center mb-5"><a href="{{route('article.show', compact('article'))}}" class="btn linkcustomAccent mt-3 px-5 shadow">{{ __('ui.dettagli') }}</a></div>
-                           
-                            
+
+
                           </td> --}}
-                     
+
                    </tr>
                   @endforeach
                   @endif
-                  
-            
+
+
               </tbody>
-            </table>  
+            </table>
 
             <h3 class="text-center my-5 display-4">ACCETTATI</h3>
             <table class="table table-striped table-hover table-bordered">
@@ -113,16 +114,16 @@
                                     <button type="submit" class="btn btn-success shadow">{{ __('ui.senToRev') }}</button>
                                 </form>
                             </td>
-                       
+
                      </tr>
                     @endforeach
                     @endif
-                    
-              
+
+
                 </tbody>
-              </table>  
-              
-  
+              </table>
+
+
 
 
               <h3 class="text-center my-5 display-4" >RIFIUTATI</h3>
@@ -152,22 +153,22 @@
                                 </form>
                             </td>
 
-            
-                       
+
+
                      </tr>
                     @endforeach
                     @endif
-                    
-              
+
+
                 </tbody>
-              </table> 
+              </table>
                     </div>
                 </div>
             </div>
 
-   
-              
-              
+
+
+
 
 
             </div>
