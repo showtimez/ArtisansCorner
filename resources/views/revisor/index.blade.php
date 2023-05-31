@@ -37,16 +37,16 @@
                 <div class="row justify-content-center ">
                     <div class="col-12 justify-content-center   ">
 
-            <h3 class="text-center my-5 display-4">DA REVISIONARE</h3>
+            <h3 class="text-center my-5 display-4">{{__('ui.toBeRev')}}</h3>
             <table class="table table-striped table-hover table-bordered">
               <thead>
                 <tr>
-                  <th scope="col">Titolo</th>
-                  <th scope="col">Descrizione</th>
-                  <th scope="col">Prezzo</th>
-                  <th scope="col">Stato</th>
-                  <th scope="col">Azioni</th>
-                  <th scope="col">Dettaglio</th>
+                  <th scope="col">{{__('ui.revTitolo')}}</th>
+                  <th scope="col">{{__('ui.descrizione')}}</th>
+                  <th scope="col">{{__('ui.prezzo')}}</th>
+                  <th scope="col">{{__('ui.stato')}}</th>
+                  <th scope="col">{{__('ui.azioni')}}</th>
+                  <th scope="col">{{__('ui.dettagli')}}</th>
                 </tr>
               </thead>
               <tbody>
@@ -70,15 +70,11 @@
                                   <button type="submit" class="btn btn-danger shadow btn-no">{{ __('ui.rifiuta') }}</button>
                               </form>
                           </td>
-                          <td><button class="btn" onclick="location.href='{{ route('article.show', $element) }}'">Visualizza dettagli</button></td>
+                          <td>
+                            <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
+                        </td>
 
-                          {{-- <td>
-
-
-                            <div class="text-center mb-5"><a href="{{route('article.show', compact('article'))}}" class="btn linkcustomAccent mt-3 px-5 shadow">{{ __('ui.dettagli') }}</a></div>
-
-
-                          </td> --}}
+                          
 
                    </tr>
                   @endforeach
@@ -88,15 +84,16 @@
               </tbody>
             </table>
 
-            <h3 class="text-center my-5 display-4">ACCETTATI</h3>
+            <h3 class="text-center my-5 display-4">{{__('ui.accettati')}}</h3>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col">Titolo</th>
-                    <th scope="col">Descrizione</th>
-                    <th scope="col">Prezzo</th>
-                    <th scope="col">Stato</th>
-                    <th scope="col">Dettaglio</th>
+                    <th scope="col">{{__('ui.revTitolo')}}</th>
+                    <th scope="col">{{__('ui.descrizione')}}</th>
+                    <th scope="col">{{__('ui.prezzo')}}</th>
+                    <th scope="col">{{__('ui.stato')}}</th>
+                    <th scope="col">{{__('ui.azioni')}}</th>
+                    <th scope="col">{{__('ui.dettagli')}}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -111,9 +108,15 @@
                                 <form action="{{route('revisor.nullArticle', ['article'=>$element])}}"method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn btn-success shadow">{{ __('ui.senToRev') }}</button>
+                                    <button type="submit" class="btn btn-success shadow">{{__('ui.senToRev')}}</button>
                                 </form>
                             </td>
+                          
+                            <td>
+                                <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
+                            </td>
+
+                            
 
                      </tr>
                     @endforeach
@@ -126,15 +129,17 @@
 
 
 
-              <h3 class="text-center my-5 display-4" >RIFIUTATI</h3>
+              <h3 class="text-center my-5 display-4" >{{__('ui.rifiutati')}}</h3>
               <table class="table table-striped table-hover table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col">Titolo</th>
-                    <th scope="col">Descrizione</th>
-                    <th scope="col">Prezzo</th>
-                    <th scope="col">Stato</th>
-                    <th scope="col">Dettaglio</th>
+                    <th scope="col">{{__('ui.revTitolo')}}</th>
+                    <th scope="col">{{__('ui.descrizione')}}</th>
+                    <th scope="col">{{__('ui.prezzo')}}</th>
+                    <th scope="col">{{__('ui.stato')}}</th>
+                    <th scope="col">{{__('ui.azioni')}}</th>
+                    <th scope="col">{{__('ui.dettagli')}}</th>
+
                   </tr>
                 </thead>
                 <tbody>
@@ -152,7 +157,11 @@
                                     <button type="submit" class="btn btn-success shadow">{{ __('ui.senToRev') }}</button>
                                 </form>
                             </td>
-
+                            <td>
+                                
+                                <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
+                               
+                            </td>
 
 
                      </tr>

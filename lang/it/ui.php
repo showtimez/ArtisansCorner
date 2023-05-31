@@ -6,6 +6,7 @@ return [
     'navCiao' => 'Ciao',
     'navLavConNoi'=> 'Lavora con noi',
     'navAreaRev'=> 'Area Revisore',
+    'navSelezionaLingua' => 'Seleziona lingua',
     'navAreariservata' => 'Area riservata',
     'navAccess' => 'Accedi o Registrati',
     'subtitleWelcome' => "Non c'è arte senza stile",
@@ -20,11 +21,14 @@ return [
     'unPoDiNumeri3' => 'Recensioni',
     // dettagli card
     // 'titolo'=>'titolo',
-    // 'descrizione'=>'titolo',
+    'descrizione'=>'Descrizione',
     'stato'=>'Stato',
     'categoria'=>'Categoria',
     'prezzo'=>'Prezzo',
     'dettagli'=>'Dettagli',
+
+    // barra di ricerca
+    'cerca'=>'cerca',
 
     // Form Create
 
@@ -57,6 +61,7 @@ return [
     'toBeRev'=>'Da revisionare',
     'rifiuta'=>'Rifiuta',
     'rifiutati'=>'Rifiutati',
+    'azioni'=>'azioni',
 
 
 

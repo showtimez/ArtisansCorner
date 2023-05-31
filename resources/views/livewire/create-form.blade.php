@@ -79,9 +79,9 @@
 
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-outline-dark ">{{ __('ui.inserisci') }}</button>
-                            <button class="btn btn-outline-dark" ><a href="{{ route('article.index') }}"></a>{{ __('ui.indietro') }}</button>
-
+                            <button type="submit" class="btn btn-ok ">{{ __('ui.inserisci') }}</button>
+                            
+                            <a class="btn btn-outline-dark" href="{{ route('article.index') }}">{{ __('ui.indietro') }}</a>
                         </div>
 
                     </form>
