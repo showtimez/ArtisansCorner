@@ -31,10 +31,9 @@
                         <li><a class="dropdown-item"
                         href="{{ route('category', compact('category')) }}">{{ trans('categories.' . $category->name) }}</a></li>
 
-@endforeach
+                        @endforeach
                     </ul>
                 </li>
-<hr>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.navSelezionaLingua') }}
