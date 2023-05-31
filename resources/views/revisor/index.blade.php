@@ -74,7 +74,7 @@
                             <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
                         </td>
 
-                          
+
 
                    </tr>
                   @endforeach
@@ -111,12 +111,12 @@
                                     <button type="submit" class="btn btn-success shadow">{{__('ui.senToRev')}}</button>
                                 </form>
                             </td>
-                          
+
                             <td>
                                 <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
                             </td>
 
-                            
+
 
                      </tr>
                     @endforeach
@@ -158,9 +158,9 @@
                                 </form>
                             </td>
                             <td>
-                                
+
                                 <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
-                               
+
                             </td>
 
 
