@@ -44,10 +44,10 @@
                         {{ __('ui.formArtPreview') }}<br>
                             <div class="container d-flex ">
                                 @foreach($images as $key => $image)
-
+<div class="container shadow rounded mx-2  ">
                                    <img class="image-preview" src="{{$image->temporaryUrl()}}" alt="preview">
                                         <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{ __('ui.formArtDelPrev') }}</button>
-
+</div>
                                  @endforeach
                                 </div>
                         @endif
@@ -80,7 +80,7 @@
                         </div>
                         <div>
                             <button type="submit" class="btn btn-ok ">{{ __('ui.inserisci') }}</button>
-                            
+
                             <a class="btn btn-outline-dark" href="{{ route('article.index') }}">{{ __('ui.indietro') }}</a>
                         </div>
 
