@@ -132,8 +132,7 @@ body, input{
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.806);
-  
+  background-color: rgba(255, 255, 255, 0.806);  
   height: 500px;
 
 }
@@ -158,8 +157,6 @@ body, input{
   color: whitesmoke !important;
   background-color: var(--accent1);
 }
-
-
 /* end card annunci home */
 
 /* contatore */
@@ -214,7 +211,22 @@ body, input{
   background-color: whitesmoke;
   border: solid var(--accent1);
   border-radius: 8px;
+}
 
+.linkcustomAccent2{
+  text-decoration: none;
+  color:var(--accent1) !important;
+  background-color: whitesmoke !important;
+  padding: 5px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.linkcustomAccent2:hover{
+  color: var(--accent1)!important;
+  background-color: whitesmoke;
+  border: solid var(--accent1);
+  border-radius: 8px;
 }
 
 .btn {
@@ -257,19 +269,19 @@ body, input{
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    background: var(--accent1);
+    background:  rgb(165, 121, 102);
     color: #fff;
     cursor: pointer;
     margin-bottom: 10px;
 
   }
 
-  .border {
+  .border1 {
     position: absolute;
     width: 100%;
     height: 100%;
     padding: 6px;
-    border: 5px solid #fff;
+    border: 2px solid #fff;
     opacity: 0.5;
     left: -6px;
     top: -6px;
@@ -420,8 +432,7 @@ body, input{
     
     perspective: 1000px;
     height: 300px;
-    width: 300px;
-   
+    width: 300px;   
   }
   
   .flip-card-inner {
@@ -442,8 +453,7 @@ body, input{
   }
   
   .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-   
+    transform: rotateY(180deg);   
   }
   
   .flip-card-front, .flip-card-back {
