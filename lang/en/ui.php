@@ -6,6 +6,7 @@ return [
     'navCiao' => 'Hi, ',
     'navLavConNoi'=> 'Work with us',
     'navAreaRev'=> 'Reviewer Area',
+    'navSelezionaLingua' => 'Select language',
     'navAreariservata' => 'Reserved area',
     'navAccess' => 'Login or Register',
     'subtitleWelcome' => 'There is no art without style',
@@ -21,11 +22,13 @@ return [
     'noArtInserted' => 'No sales listings have been added yet.',
     // dettagli card
     // 'titolo'=>'titolo',
-    // 'descrizione'=>'titolo',
+    'descrizione'=>'Description',
     'stato'=>'Condition',
     'categoria'=>'Category',
     'prezzo'=>'Price',
     'dettagli'=>'Details',
+    // barra di ricerca
+    'cerca' =>'search',
     // Form Create
 
     'createTitolo'=>'Insert an article',
@@ -58,6 +61,8 @@ return [
 'toBeRev'=>'To be reviewed',
 'rifiuta'=>'Reject',
 'rifiutati'=>'Rejected',
+'azioni'=>'Actions',
+
 
 // lavora con noi
 'collabRev2' => 'Other open positions',

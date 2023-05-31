@@ -16,7 +16,7 @@
           {{-- dispositivi grandi --}}
             <div class="col-4 d-none d-lg-block">
 
-                @forelse ($articles as $article)
+                @forelse ($article_checked_ok as $article)
 
                     <div class="flip-card m-5">
                         <div class="flip-card-inner ">
@@ -46,7 +46,7 @@
             {{-- dispositivi piccoli --}}
             <div class="col-12 d-flex flex-column d-block d-sm-none">
 
-              @forelse ($articles as $article)
+              @forelse ($article_checked_ok as $article)
 
                   <div class="flip-card  m-3 ">
                       <div class="flip-card-inner ">

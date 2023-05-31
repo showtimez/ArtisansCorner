@@ -14,9 +14,10 @@ class FrontController extends Controller
     }
 
     public function show(Category $category){
+        $article_checked_ok=Article::where('is_accepted', true)->get();
         $articles = $category->articles()->latest()->get();
 
-        return view('category', compact('articles', 'category'));
+        return view('category', compact('article_checked_ok', 'category'));
     }
     // public function autenticate(){
     //     return view('/auth/login-register');

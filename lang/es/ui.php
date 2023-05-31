@@ -6,6 +6,7 @@ return [
     'navCiao' => 'Hola',
     'navLavConNoi' => 'Trabaja con nosotros',
     'navAreaRev'=> 'Área de Revisor',
+    'navSelezionaLingua' => 'Seleccione el idioma',
     'navAreariservata' => 'Área reservada',
     'navAccess' => 'Inicia sesión o Regístrate',
     'subtitleWelcome' => "No hay arte sin estilo",
@@ -21,11 +22,16 @@ return [
     'noArtInserted' => 'No se han añadido anuncios de venta todavía.',
     // dettagli card
     // 'titolo'=>'titolo',
-    // 'descrizione'=>'titolo',
+    'descrizione'=>'Descripción',
     'stato'=>'Condición de venta',
     'categoria'=>'Categoria',
     'prezzo'=>'Precio',
     'dettagli'=>'Detalles',
+
+    // barra di ricerca
+
+    'cerca' =>'buscar',
+
     // Form Create
 
     'createTitolo'=>'Inserta un artículo',
@@ -57,6 +63,8 @@ return [
 'toBeRev'=>'Para ser revisado',
 'rifiuta'=>'Rechazar',
 'rifiutati'=>'Rechazados',
+'azioni'=>'Comportamiento',
+
 
 
 // lavora con noi

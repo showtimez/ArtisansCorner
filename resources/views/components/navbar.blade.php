@@ -37,7 +37,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Seleziona Lingua
+                        {{ __('ui.navSelezionaLingua') }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                         <li><a class="dropdown-item" href="#"><x-_locale lang='it' nation='it' />Italiano</a></li>
@@ -107,8 +107,8 @@
 
 </div>
 <form action="{{ route('articles.search') }}" method="GET" class="d-flex" role="search">
-    <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
-    <button class="px-3 btnCustom" type="submit">Search</button>
+    <input class="form-control me-2" name="searched" type="search" placeholder="{{__('ui.cerca')}}" aria-label="Search">
+    <button class="px-3 btnCustom" type="submit">{{__('ui.cerca')}}</button>
 </form>
 </div>
 </nav>
