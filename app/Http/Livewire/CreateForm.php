@@ -66,7 +66,7 @@ class CreateForm extends Component
     {
         // Validate the input data
         $this->validate();
-        
+
 
         // Create a new Article instance
         $article = new Article;

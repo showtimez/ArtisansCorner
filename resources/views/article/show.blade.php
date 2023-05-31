@@ -45,7 +45,8 @@
                     @else
                     <a href="{{route('homepage')}}" class="btn btn-primary">Torna Indietro</a>
                     @endif
-                    <p><a href="#">Categoria: {{$article -> category->name}}</a></p>
+
+                    <p><a href="{{route('category',['category'=>$article->category])}}">Categoria: {{$article -> category->name}}</a></p>
 
                     <p >Pubblicato il: {{$article->created_at->format('d/m/Y')}}</p>
 
