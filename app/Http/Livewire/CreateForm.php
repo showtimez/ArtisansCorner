@@ -6,6 +6,7 @@ use App\Models\Image;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
@@ -101,10 +102,10 @@ class CreateForm extends Component
 
                 // Save the Image instance
                 $image->save();
-
-                dispatch(new ResizeImage($image->path , 400 , 300));
-                dispatch(new GoogleVisionSafeSearch($image->id));
-                dispatch(new GoogleVisionLabelImage($image->id));
+                RemoveFaces::withChain([new ResizeImage($image->path , 400 , 300),
+                                        new GoogleVisionSafeSearch($image->id),
+                                        new GoogleVisionLabelImage($image->id)])->dispatch($image->id);
+                    
 
             }
 
