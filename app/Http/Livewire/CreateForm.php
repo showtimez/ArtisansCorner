@@ -8,6 +8,8 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -101,6 +103,9 @@ class CreateForm extends Component
                 $image->save();
 
                 dispatch(new ResizeImage($image->path , 400 , 300));
+                dispatch(new GoogleVisionSafeSearch($image->id));
+                dispatch(new GoogleVisionLabelImage($image->id));
+
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
