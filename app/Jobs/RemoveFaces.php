@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
 use Illuminate\Queue\SerializesModels;
 use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
@@ -19,7 +20,7 @@ class RemoveFaces implements ShouldQueue
     /**
      * Create a new job instance.
      */
-
+    private $article_image_id;
     public function __construct($article_image_id)
     {
         $this->article_image_id = $article_image_id;
