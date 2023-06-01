@@ -29,7 +29,7 @@ Route::get('/article/create',[ArticleController::class, 'create'])->name('articl
 Route::post('/article/store',[ArticleController::class, 'store'])->name('article.store');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
-
+Route::get('/revisor/show/{article}', [RevisorController::class, 'show'])->name('revisor.show');
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
 Route::patch('/accept/article/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.acceptArticle');
 Route::patch('/reject/article/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');

@@ -13,6 +13,8 @@ use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
+
 
 class CreateForm extends Component
 {
@@ -32,14 +34,18 @@ class CreateForm extends Component
     protected $rules = [
         'category' => 'required',
         'title' => 'required',
-        'description' => 'required',
+        'description' => 'required|max:250|max_lines:5',
         'price' => 'required',
         'state' => 'required',
         // Remove this line if it's not needed
         //'user_id' => 'required',
-        'images.*' => 'image',
+        'images' => 'max_files:3',
         'temporary_images.*' => 'image',
     ];
+
+
+
+
 
     public function mount()
     {
@@ -105,7 +111,7 @@ class CreateForm extends Component
                 RemoveFaces::withChain([new ResizeImage($image->path , 400 , 300),
                                         new GoogleVisionSafeSearch($image->id),
                                         new GoogleVisionLabelImage($image->id)])->dispatch($image->id);
-                    
+
 
             }
 

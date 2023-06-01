@@ -61,7 +61,7 @@ return [
     'toBeRev'=>'Da revisionare',
     'rifiuta'=>'Rifiuta',
     'rifiutati'=>'Rifiutati',
-    'azioni'=>'azioni',
+    'azioni'=>'Azioni',
 
 
 
