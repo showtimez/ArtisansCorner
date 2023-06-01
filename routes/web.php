@@ -25,15 +25,15 @@ Route::post('/lingua/{lang}', [FrontController::class, 'setLocale'])->name('setL
 
 
 Route::get('/article/index',[ArticleController::class, 'index'])->name('article.index');
-Route::get('/article/create',[ArticleController::class, 'create'])->name('article.create');
+Route::get('/article/create',[ArticleController::class, 'create'])->middleware('auth')->name('article.create');
 Route::post('/article/store',[ArticleController::class, 'store'])->name('article.store');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
-Route::get('/revisor/show/{article}', [RevisorController::class, 'show'])->name('revisor.show');
-Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
-Route::patch('/accept/article/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.acceptArticle');
-Route::patch('/reject/article/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
-Route::patch('/null/article/{article}', [RevisorController::class, 'nullArticle'])->name('revisor.nullArticle');
+Route::get('/revisor/show/{article}', [RevisorController::class, 'show'])->middleware('is_revisor')->name('revisor.show');
+Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('is_revisor')->name('revisor.index');
+Route::patch('/accept/article/{article}', [RevisorController::class, 'acceptArticle'])->middleware('is_revisor')->name('revisor.acceptArticle');
+Route::patch('/reject/article/{article}', [RevisorController::class, 'rejectArticle'])->middleware('is_revisor')->name('revisor.rejectArticle');
+Route::patch('/null/article/{article}', [RevisorController::class, 'nullArticle'])->middleware('is_revisor')->name('revisor.nullArticle');
 
 Route::get('/revisor/collabora', [RevisorController::class, 'collabora'])->name('revisor.collabora');
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class is_revisor
+class IsRevisor
 {
     /**
      * Handle an incoming request.
@@ -19,6 +19,6 @@ class is_revisor
         if(Auth::check() && Auth::user()->is_revisor){
             return $next($request);
         }
-        return redirect('/')->whith('access.denied', 'Attenzione, solo i revisori hanno accesso a quest\' area');
+        return redirect('/')->with('access.denied', 'Attenzione, solo i Revisori hanno accesso a quest\' area');
     }
 }
