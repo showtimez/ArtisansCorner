@@ -83,6 +83,12 @@ return [
 'accessText2' => "Log in now and don't miss a single masterpiece!",
 
 
+// google vision
+'Adulti' => 'Adults',
+'Satira' => 'Satire',
+'Medicina' => 'Medicine',
+'Violenza' => 'Violence',
+'Contenuto-Ammiccante' => 'Flirtatious Content',
 
 
 

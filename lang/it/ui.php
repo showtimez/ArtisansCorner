@@ -84,7 +84,13 @@ return [
     'accessText2' => 'Entra subito e non perderti nemmeno un capolavoro!',
 
 
+// google vision show revisor
 
+   'Adulti' => 'Adulti',
+   'Satira' => 'Satira',
+   'Medicina' => 'Medicina',
+   'Violenza' => 'Violenza',
+   'Contenuto-Ammiccante' => 'Contenuto Ammiccante',
 
 
 
