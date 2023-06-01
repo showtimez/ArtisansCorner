@@ -44,7 +44,9 @@ class ResizeImage implements ShouldQueue
         ->crop(Manipulations::CROP_CENTER, $w, $h)
         ->watermark(base_path('/public/media/logowhite.png'))
         ->watermarkPosition(Manipulations::POSITION_BOTTOM_RIGHT)
-        ->watermarkOpacity(50)
+        ->watermarkHeight(30, Manipulations::UNIT_PERCENT)   
+        ->watermarkWidth(70, Manipulations::UNIT_PERCENT)
+        ->watermarkOpacity(60)
         ->save($destPath);
 
     }
