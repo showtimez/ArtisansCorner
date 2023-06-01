@@ -34,35 +34,33 @@ class CreateForm extends Component
     protected $rules = [
         'category' => 'required',
         'title' => 'required',
-        'description' => 'required|max:250|max_lines:5',
+        'description' => 'required|max:250',
         'price' => 'required',
         'state' => 'required',
         // Remove this line if it's not needed
         //'user_id' => 'required',
-        'images' => 'max_files:3',
-        'temporary_images.*' => 'image',
+        'images' => 'max:3',
+
     ];
 
 
 
 
 
-    public function mount()
-    {
-        $this->images = [];
-        $this->temporary_images = [];
-    }
+
+
 
     public function updatedTemporaryImages()
-    {
-        if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
-        ])) {
-            foreach ($this->temporary_images as $image) {
-                $this->images[] = $image;
-            }
+{
+    if ($this->validate([
+        'temporary_images.*' => 'image|max:1024',
+    ])) {
+        for ($i = 0; $i < 3 ; $i++) {
+            $this->images[] = $this->temporary_images[$i];
         }
     }
+}
+
 
     public function removeImage($key)
     {
@@ -94,9 +92,9 @@ class CreateForm extends Component
         $article->save();
 
         // Check if temporary_images is not null
-        if ($this->temporary_images) {
+        if ($this->images) {
             // Loop through the temporary_images array
-            foreach ($this->temporary_images as $temporary_image) {
+            foreach ($this->images as $temporary_image) {
                 // Create a new Image instance
                 $image = new Image;
                 $newPath = "articles/{$article->id}";
