@@ -55,8 +55,8 @@ swiper-slide {
 
 swiper-slide img {
     /* display: sw </swiper-slidek; */
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
 }
 

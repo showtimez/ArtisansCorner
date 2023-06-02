@@ -19,7 +19,7 @@
                 <swiper-container class="mySwiper2 " loop="true" space-between="10" slides-per-view="4"
                     free-mode="true" watch-slides-progress="true">
                     @foreach ($article->images as $image)
-                        <swiper-slide class=" {{ $loop->first ? 'active' : '' }} mx-5 ">
+                        <swiper-slide class=" {{ $loop->first ? 'active' : '' }} mx-1 ">
 
                             <img class="img-fluid" src="{{ $image->getUrl(400, 300) }}" alt="Image">
 

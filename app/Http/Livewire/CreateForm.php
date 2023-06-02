@@ -60,7 +60,7 @@ class CreateForm extends Component
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'image',
         ])) {
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
