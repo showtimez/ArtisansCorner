@@ -13,12 +13,20 @@ class FrontController extends Controller
         return view('welcome', compact('articles'));
     }
 
-    public function show(Category $category){
-        $article_checked_ok=Article::where('is_accepted', true)->get();
-        $articles = $category->articles()->latest()->get();
+    // public function show(Category $category){
+    //     $article_checked_ok=Article::where('is_accepted', true)->get();
+    //     $articles = $category->articles()->latest()->get();
 
-        return view('category', compact('article_checked_ok', 'category'));
+    //     return view('category', compact('article_checked_ok', 'category'));
+    // }
+    public function show(Category $category){
+        $articles = Article::whereHas('category', function ($query) use ($category) {
+            $query->where('id', $category->id);
+        })->where('is_accepted', true)->latest()->get();
+
+        return view('category', compact('articles', 'category'));
     }
+
     // public function autenticate(){
     //     return view('/auth/login-register');
     // }
