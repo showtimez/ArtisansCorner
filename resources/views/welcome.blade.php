@@ -26,43 +26,47 @@
     </x-header>
     <x-categorie>
     </x-categorie>
-<section>
-    <div class="container-fluid bg-articles">
-        <div id="inizio" class="row justify-content-center ">
-            <div class="col-12 d-flex justify-content-center mb-5">
-                <div>
-                    <h2 class="text-center text-light py-5 fontCustomannunci">{{ __('ui.ultimiAnnunci') }}</h2>
-                    {{-- <p class="text-center text-light pb-5 fontCustomannunci ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nam ipsa ea sint aliquid laborum</p> --}}
+    <section id="swiperHome">
+        <div class="container-fluid bg-articles">
+            <div id="inizio" class="row justify-content-center ">
+                <div class="col-12 d-flex justify-content-center mb-5">
+                    <div>
+                        <h2 class="text-center text-light py-3 fontCustomannunci">{{ __('ui.ultimiAnnunci') }}</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 d-flex pb-4">
-                <div class="swiper mySwiper pb-5 ">
-                    <div class="swiper-wrapper ">
-                        @forelse ($articles as $article)
-                            <div class="swiper-slide  flex-column">
+                <div class="col-12 col-md-6 d-flex ">
+                    <div class="swiper mySwiper pb-5  ">
+                        <div class="swiper-wrapper ">
+                            @forelse ($articles as $article)
+                                <div class="swiper-slide flex-column ">
+                                    <div class="">
+                                        <div class="pb-2">
 
-                                        {{-- <h5>{{ $article->title }}</h5>
-                                        {{ $article->description }}</p>
-                                        <p>{{ __('ui.stato') }}{{ $article->state }}</p>
-                                        <p>{{ __('ui.categoria') }} {{ $article->category->name }}</p>
-                                        <h4>{{ __('ui.prezzo') }} {{ $article->price }}</h4> --}}
-                                        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
-
-                                        <a href="{{ route('article.show', compact('article')) }}"
-                                        class=""><button class="btn btn-outline-dark">{{ __('ui.dettagli') }}</button></a>
-                            </div>
-                        @empty
-                            <div class=" col-12">
-                                <h3 class="text-center text-light">{{ __('ui.noArtInserted') }}</h3>
-                            </div>
-                        @endforelse
+                                            <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" class="mx-3 rounded " alt="no img">
+                                        </div>
+                                        <div class=" px-4 two-columns">
+                                            <h5>{{ $article->title }}</h5><br>
+                                            <p>{{ __('ui.stato') }}: {{ trans('condizioni.' . $article->state) }}</p>
+                                            <p>{{ __('ui.categoria') }}: {{ trans('categories.' . $article->category->name) }}</p>
+                                            <p class="text-muted fs-italic">{{ __('ui.data') }} {{ $article->created_at }}</p>
+                                            <h4>{{ __('ui.prezzo') }}: {{ $article->price }} €</h4>
+                                        </div>
+                                    </div>
+                                    <a href="{{ route('article.show', compact('article')) }}"
+                                    class=""><button class="btn btn-outline-dark">{{ __('ui.dettagli') }}</button></a>
+                                </div>
+                            @empty
+                                <div class=" col-12">
+                                    <h3 class="text-center text-light">{{ __('ui.noArtInserted') }}</h3>
+                                </div>
+                            @endforelse
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     {{-- counter --}}
 <section class="container-fluid bgCount">
     <div class="row">

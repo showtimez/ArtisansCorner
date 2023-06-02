@@ -120,28 +120,37 @@ body, input{
 
 .swiper {
   width: 70%;
-  /* height: 70%; */
+  /* height: 80%; */
 }
 
 .swiper-slide {
   text-align: center;
   /* background-image:url(/public/media/musica.jpg); */
   background-size: cover;
-  color: #f1f1f1;
+  color: rgb(165, 121, 102);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.806);  
+  background-color: #ffffffc7  ;
   height: 500px;
+  /* overflow: auto; */
+  background-color: rgb(235, 230, 230);
+  border-radius: 12px;
+  border: 1px solid rgba(165, 121, 102, 0);
 
 }
 
-@media (max-width: 767px) {
-  .swiper-slide {
-    height: 16rem;
-  }
+
+
+
+
+@media (max-width: 1024px) {
+    #swiperHome {
+        display: none;
+    }
 }
+
 
 
 .linkcustom{
@@ -438,13 +447,13 @@ body, input{
   /* categorie singole */
   .flip-card {
     background-color: transparent;
-    
-    
+
+
     perspective: 1000px;
     height: 300px;
-    width: 300px;   
+    width: 300px;
   }
-  
+
   .flip-card-inner {
     position: relative;
     max-width: 300px;
@@ -459,13 +468,13 @@ body, input{
   .colC{
     width: 100%;
     height: 100%;
-  
+
   }
-  
+
   .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);   
+    transform: rotateY(180deg);
   }
-  
+
   .flip-card-front, .flip-card-back {
     position: absolute;
     /* width: 100%;
@@ -473,12 +482,12 @@ body, input{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  
+
   .flip-card-front {
     background-color: #bbb;
     color: black;
   }
-  
+
   .flip-card-back {
     background-color: var(--accent1);
     color: white;
@@ -489,7 +498,7 @@ body, input{
 .imgC{
   height: 300px;
   width: 300px;
-} 
+}
 
 .btn-ok{
   background-color: rgb(88, 155, 88);

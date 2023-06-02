@@ -36,9 +36,9 @@
 
 
             @forelse ($articles as $article)
-            <div class="col-12 col-md-4">
-                <div class="card card-color-0 mt-4 shadow">
-                    <div class="border1 rounded "></div>
+            <div class="col-12 col-md-8 col-lg-4 ">
+                <div class="card card-color-0 mt-4 shadow ">
+                    <div class="border1 rounded  "></div>
                     <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" alt="no img">
 
 

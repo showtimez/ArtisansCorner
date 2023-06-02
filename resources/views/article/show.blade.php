@@ -9,17 +9,17 @@
         <div class="row justify-content-center py-5">
             <div class="col-12 col-md-6">
                 <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                    class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
+                    class="mySwiper rounded" thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
                     @foreach ($article->images as $image)
                         <swiper-slide class=" {{ $loop->first ? 'active' : '' }}">
-                            <img src="{{ $image->getUrl(400, 300) }}" alt="Image">
+                            <img src="{{ $image->getUrl(400, 300) }}" class="rounded" alt="Image">
                         </swiper-slide>
                     @endforeach
                 </swiper-container>
                 <swiper-container class="mySwiper2 " loop="true" space-between="10" slides-per-view="4"
                     free-mode="true" watch-slides-progress="true">
                     @foreach ($article->images as $image)
-                        <swiper-slide class=" {{ $loop->first ? 'active' : '' }} mx-1 ">
+                        <swiper-slide class=" {{ $loop->first ? 'active' : '' }} mx-1 rounded">
 
                             <img class="img-fluid" src="{{ $image->getUrl(400, 300) }}" alt="Image">
 
@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-12 col-md-6 border rounded bg-white p-5 mb-2">
-                <h5 class="text-center display-5 tracking-in-expand-fwd fw-bold">{{ $article->title }}</h5>
+                <h3 class="text-center  tracking-in-expand-fwd fw-bold pb-4">{{ $article->title }}</h3>
                 <p>{{__('ui.stato')}}: {{ trans('condizioni.' . $article->state) }}</p>
                 <p>{{__('ui.descrizione')}}: <br>{{ $article->description }}</p>
                 <hr>

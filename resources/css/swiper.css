@@ -32,7 +32,7 @@ swiper-slide {
 }
 
 .mySwiper {
-    height: 80%;
+    height: 100%;
     width: 100%;
 }
 
@@ -42,6 +42,15 @@ swiper-slide {
     padding: 10px 0;
 
 }
+/* .vertical-line {
+    border-left: 1px solid #000;
+    height: 100%;
+} */
+.two-columns {
+    column-count: 3;
+}
+
+
 
 .mySwiper2 swiper-slide {
     width: 25%;

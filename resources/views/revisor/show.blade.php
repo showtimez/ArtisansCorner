@@ -5,13 +5,13 @@
         </div>
     </x-header>
 
-    <div class="container-fluid my-2 ">
-        <div class="row my-5">
-            <div class="col-12 col-md-6  text-center d-flex my-5">
+    <div class="container my-2 ">
+        <div class="row  my-5">
+            @foreach ($article->images as $image)
+            <div class="col-12 justify-content-center text-center d-flex my-5">
 
-                @foreach ($article->images as $image)
-                    <div class="container border rounded {{ $loop->first ? 'active' : '' }}">
-                        <img src="{{ $image->getUrl(400, 300) }}" alt="Image">
+                    <div class=" border rounded my-auto   {{ $loop->first ? 'active' : '' }}">
+                        <img src="{{ $image->getUrl(400, 300) }}" class="rounded mx-auto my-auto " alt="Image">
                     </div>
                     @if (Auth::user()->is_revisor)
                         <div class="col-md-3 border-end shadow border rounded">
@@ -23,20 +23,20 @@
                                     @endforeach
                                 @endif
                             </div>
-                            <div class="card-body">
+                            <div class="card-body ">
                                 <h5 class="tc-accent">{{ __('ui.imgRevisor') }}</h5>
-                                <p>{{ __('ui.Adulti') }}<span class="{{ $image->adult }}"></span></p>
-                                <p>{{ __('ui.Satira') }}<span class="{{ $image->spoof }}"></span></p>
-                                <p>{{ __('ui.Medicina') }}<span class="{{ $image->medical }}"></span></p>
-                                <p>{{ __('ui.Violenza') }}<span class="{{ $image->violence }}"></span></p>
-                                <p>{{ __('ui.Contenuto-Ammiccante') }}<span class="{{ $image->racy }}"></span></p>
+                                <p>{{ __('ui.Adulti') }}  <span class="{{ $image->adult }}"> </span></p>
+                                <p>{{ __('ui.Satira') }}  <span class="{{ $image->spoof }}"> </span></p>
+                                <p>{{ __('ui.Medicina') }}  <span class="{{ $image->medical }}"> </span></p>
+                                <p>{{ __('ui.Violenza') }}  <span class="{{ $image->violence }}"> </span></p>
+                                <p>{{ __('ui.Contenuto-Ammiccante') }}  <span class="{{ $image->racy }}"> </span></p>
                             </div>
                         </div>
                     @else
                         <a href="{{ route('homepage') }}" class="btn btn-primary">{{ __('ui.indietro') }}</a>
                     @endif
+                </div>
                 @endforeach
-            </div>
 
         </div>
     </div>
