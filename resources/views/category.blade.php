@@ -1,15 +1,16 @@
 <x-layout>
     <x-header>
         <div class="container-fluid bgCarta">
-          <hr class="text-dark">
-            <h2 id="categoria-nome" class="text-center py-5 my-5 testo display-3">{{ trans('categories.' . $category->name) }}</h2>
-          <hr class="text-dark">
+            <hr class="text-dark">
+            <h2 id="categoria-nome" class="text-center py-5 my-5 testo display-3">
+                {{ trans('categories.' . $category->name) }}</h2>
+            <hr class="text-dark">
         </div>
         <span id="testo"></span>
     </x-header>
     <div class="container-fluid ">
         <div class="row justify-content-center py-5 mb-5 ">
-          @forelse ($article_checked_ok as $article)
+            @forelse ($article_checked_ok as $article)
                 <div class="flip-card m-5">
                     <div class="flip-card-inner ">
                         <div class=" flip-card-front d-flex justify-content-around rounded">

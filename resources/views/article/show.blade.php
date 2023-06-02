@@ -37,7 +37,7 @@
                 <p>{{__('ui.prezzo')}}: {{ $article->price }}€</p>
             </div>
             <div class="col-12 col-md-4 d-flex justify-content-center">
-            <a href="{{route('homepage')}}" class="btn btn-primary">{{__('ui.indietro')}}</a></div>
+            <a href="{{route('article.index')}}" class="btn btn-primary">{{__('ui.indietro')}}</a></div>
         </div>
     </div>
 
