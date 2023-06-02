@@ -13,6 +13,8 @@ use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
+
 
 class CreateForm extends Component
 {
@@ -32,14 +34,20 @@ class CreateForm extends Component
     protected $rules = [
         'category' => 'required',
         'title' => 'required',
-        'description' => 'required',
+        'description' => 'required|max:250',
         'price' => 'required',
         'state' => 'required',
         // Remove this line if it's not needed
         //'user_id' => 'required',
+        // Remove this line
+        //'images' => 'image',
         'images.*' => 'image',
         'temporary_images.*' => 'image',
     ];
+
+
+
+
 
     public function mount()
     {
@@ -47,16 +55,25 @@ class CreateForm extends Component
         $this->temporary_images = [];
     }
 
+
+
     public function updatedTemporaryImages()
     {
-        if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
-        ])) {
-            foreach ($this->temporary_images as $image) {
-                $this->images[] = $image;
-            }
+    if ($this->validate([
+        'temporary_images.*' => 'image|max:1024',
+    ])) {
+        foreach ($this->temporary_images as $image) {
+            $this->images[] = $image;
         }
     }
+}
+
+        // se temp images ha una dimensione minore = a 3 fa il normale foreach, altrimenti fai scattare la regola di validazione
+        // for ($i = 0; $i < 3 ; $i++) {
+        //     $this->images[] = $this->temporary_images[$i];
+        // }
+
+
 
     public function removeImage($key)
     {
@@ -87,6 +104,7 @@ class CreateForm extends Component
         // Save the Article instance
         $article->save();
 
+
         // Check if temporary_images is not null
         if ($this->temporary_images) {
             // Loop through the temporary_images array
@@ -105,7 +123,7 @@ class CreateForm extends Component
                 RemoveFaces::withChain([new ResizeImage($image->path , 400 , 300),
                                         new GoogleVisionSafeSearch($image->id),
                                         new GoogleVisionLabelImage($image->id)])->dispatch($image->id);
-                    
+
 
             }
 

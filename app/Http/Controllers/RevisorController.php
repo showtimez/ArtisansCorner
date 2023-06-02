@@ -55,6 +55,6 @@ class RevisorController extends Controller
 
     public function show(Article $article)
     {
-        return view ('article.show', compact('article'));
+        return view ('revisor.show', compact('article'));
     }
 }

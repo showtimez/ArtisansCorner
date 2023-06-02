@@ -9,8 +9,13 @@
             {{ session('answerRevisor') }}
         </div>
     @endif
+    @if (session()->has('access.denied'))
+    <div class="alert alert-success text-center mb-0">
+        {{ session('access.denied') }}
+    </div>
+@endif
     <x-header>
-        
+
         <div class="miocontainer">
             <video class="videomio" src="/media/TheArtisansCorner.mp4" autoplay muted loop></video>
             <div class="content">

@@ -42,7 +42,7 @@
               <thead>
                 <tr>
                   <th scope="col">{{__('ui.revTitolo')}}</th>
-                  <th scope="col">{{__('ui.descrizione')}}</th>
+                  <th scope="col">Data di Inserimento</th>
                   <th scope="col">{{__('ui.prezzo')}}</th>
                   <th scope="col">{{__('ui.stato')}}</th>
                   <th scope="col">{{__('ui.azioni')}}</th>
@@ -54,7 +54,7 @@
                   @foreach ( $article_to_check as $element )
                   <tr>
                       <th scope="row">{{$element->title}}</th>
-                          <td>{{$element->description}}</td>
+                          <td>{{$element->created_at}}</td>
                           <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
                           <td>{{ __('ui.stato') }}: {{$element->state}}</td>
                           <td class="d-flex justify-content-around">
@@ -71,7 +71,7 @@
                               </form>
                           </td>
                           <td>
-                            <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
+                            <a href='{{ route('revisor.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
                         </td>
 
 
@@ -89,7 +89,7 @@
                 <thead>
                   <tr>
                     <th scope="col">{{__('ui.revTitolo')}}</th>
-                    <th scope="col">{{__('ui.descrizione')}}</th>
+                    <th scope="col">Data di Inserimento</th>
                     <th scope="col">{{__('ui.prezzo')}}</th>
                     <th scope="col">{{__('ui.stato')}}</th>
                     <th scope="col">{{__('ui.azioni')}}</th>
@@ -101,7 +101,7 @@
                     @foreach ( $article_checked_ok as $element )
                     <tr>
                         <th scope="row">{{$element->title}}</th>
-                            <td>{{$element->description}}</td>
+                            <td>{{$element->created_at}}</td>
                             <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
                             <td>{{ __('ui.stato') }}: {{$element->state}}</td>
                             <td>
@@ -113,7 +113,7 @@
                             </td>
 
                             <td>
-                                <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
+                                <a href='{{ route('revisor.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
                             </td>
 
 
@@ -134,7 +134,7 @@
                 <thead>
                   <tr>
                     <th scope="col">{{__('ui.revTitolo')}}</th>
-                    <th scope="col">{{__('ui.descrizione')}}</th>
+                    <th scope="col">Data di Inserimento</th>
                     <th scope="col">{{__('ui.prezzo')}}</th>
                     <th scope="col">{{__('ui.stato')}}</th>
                     <th scope="col">{{__('ui.azioni')}}</th>
@@ -147,7 +147,7 @@
                     @foreach ( $article_checked_ko as $element )
                     <tr>
                         <th scope="row">{{$element->title}}</th>
-                            <td>{{$element->description}}</td>
+                            <td>{{$element->created_at}}</td>
                             <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
                             <td>{{ __('ui.stato') }}: {{$element->state}}</td>
                             <td>
@@ -159,7 +159,7 @@
                             </td>
                             <td>
 
-                                <a  onclick="location.href='{{ route('article.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
+                                <a href='{{ route('revisor.show', $element) }}'"><i class="fa-regular fa-file fs-1 linkcustomAccent"></i></a>
 
                             </td>
 

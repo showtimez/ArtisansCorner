@@ -86,4 +86,14 @@ return [
 'accessText1' => '¿Ya eres uno de nosotros?',
 'accessText2' => '¡Inicia sesión ahora y no te pierdas ni una sola obra maestra!',
 
+
+
+// google vision show revisor
+
+'Adulti' => 'Adultos',
+'Satira' => 'Sátira',
+'Medicina' => 'Medicina',
+'Violenza' => 'Violencia',
+'Contenuto-Ammiccante' => 'Contenido Coqueto',
+
 ];
