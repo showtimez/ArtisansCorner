@@ -3,16 +3,12 @@
     "file": "assets/counterbg-dd8a1013.jpg",
     "src": "public/media/counterbg.jpg"
   },
-  "public/media/musica.jpg": {
-    "file": "assets/musica-4d0fe136.jpg",
-    "src": "public/media/musica.jpg"
-  },
   "public/media/sfondoCarta.jpg": {
     "file": "assets/sfondoCarta-65f006a2.jpg",
     "src": "public/media/sfondoCarta.jpg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-467a3955.css",
+    "file": "assets/app-91e53de5.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
