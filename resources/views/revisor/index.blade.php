@@ -56,7 +56,7 @@
                       <th scope="row">{{$element->title}}</th>
                           <td>{{$element->created_at}}</td>
                           <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
-                          <td>{{ __('ui.stato') }}: {{$element->state}}</td>
+                          <td>{{ __('ui.stato') }}: {{ trans('condizioni.' . $element->state) }}</td>
                           <td class="d-flex justify-content-around">
                                   <form action="{{route('revisor.acceptArticle', ['article'=>$element])}}"method="POST">
                                   @csrf
@@ -103,7 +103,7 @@
                         <th scope="row">{{$element->title}}</th>
                             <td>{{$element->created_at}}</td>
                             <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
-                            <td>{{ __('ui.stato') }}: {{$element->state}}</td>
+                            <td>{{ __('ui.stato') }}: {{ trans('condizioni.' . $element->state) }}</td>
                             <td>
                                 <form action="{{route('revisor.nullArticle', ['article'=>$element])}}"method="POST">
                                     @csrf
@@ -149,7 +149,7 @@
                         <th scope="row">{{$element->title}}</th>
                             <td>{{$element->created_at}}</td>
                             <td>{{ __('ui.prezzo') }}: {{$element->price}}</td>
-                            <td>{{ __('ui.stato') }}: {{$element->state}}</td>
+                            <td>{{ __('ui.stato') }}: {{ trans('condizioni.' . $element->state) }}</td>
                             <td>
                                 <form action="{{route('revisor.nullArticle', ['article'=>$element])}}"method="POST">
                                     @csrf
