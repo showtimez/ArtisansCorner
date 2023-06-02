@@ -19,9 +19,9 @@
                         <div class="flip-card-back rounded">
                             <h5 class="mt-5">{{ $article->title }}</h5>
                             <p>{{ $article->description }}</p>
-                            <p>{{ __('ui.stato') }}: {{ $article->state }}</p>
-                            <h4>{{ __('ui.prezzo') }}: {{ $article->price }}</h4>
-                            <p class="mx-0">{{ __('ui.categoria') }} {{ $article->category->name }}</p>
+                            <p>{{ __('ui.stato') }}: {{ trans('condizioni.' . $article->state) }}</p>
+                            <h4>{{ __('ui.prezzo') }}: {{ $article->price }}€</h4>
+                            <p class="mx-0">{{ __('ui.categoria') }} {{ trans('categories.' . $category->name) }}</p>
                             <a href="{{ route('article.show', compact('article')) }}"
                                 class="btn linkcustomAccent2  px-5 shadow">{{ __('ui.dettagli') }}</a>
                         </div>

@@ -51,7 +51,7 @@ return [
 
 
     // Reviewer page
-
+'backToDash'=> 'Return to Dashboard',
 'revTitolo'=>'Articles to review',
 'revAlert1'=>'Here are the articles to review',
 'revAlert2'=>'There are no articles to review',
@@ -62,6 +62,7 @@ return [
 'rifiuta'=>'Reject',
 'rifiutati'=>'Rejected',
 'azioni'=>'Actions',
+'data'=>'Date of Entry',
 
 
 // lavora con noi
@@ -84,6 +85,7 @@ return [
 
 
 // google vision
+'imgRevisor'=> 'Image Review',
 'Adulti' => 'Adults',
 'Satira' => 'Satire',
 'Medicina' => 'Medicine',

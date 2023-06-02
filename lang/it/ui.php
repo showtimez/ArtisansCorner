@@ -51,7 +51,7 @@ return [
     'indietro'=> 'Indietro',
 
 // Pagina revisore
-
+    'backToDash'=> 'Torna alla Dashboard',
     'revTitolo'=>'Articoli da revisionare',
     'revAlert1'=>'Ecco gli articoli da revisionare',
     'revAlert2'=>'Non ci sono articoli da revisionare',
@@ -62,6 +62,8 @@ return [
     'rifiuta'=>'Rifiuta',
     'rifiutati'=>'Rifiutati',
     'azioni'=>'Azioni',
+    'data'=>'Data di inserimento',
+
 
 
 
@@ -86,11 +88,15 @@ return [
 
 // google vision show revisor
 
+
+
+   'imgRevisor'=> 'Revisione Immagini',
    'Adulti' => 'Adulti',
    'Satira' => 'Satira',
    'Medicina' => 'Medicina',
    'Violenza' => 'Violenza',
    'Contenuto-Ammiccante' => 'Contenuto Ammiccante',
+
 
 
 

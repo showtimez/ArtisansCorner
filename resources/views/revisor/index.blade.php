@@ -42,7 +42,7 @@
               <thead>
                 <tr>
                   <th scope="col">{{__('ui.revTitolo')}}</th>
-                  <th scope="col">Data di Inserimento</th>
+                  <th scope="col">{{__('ui.data')}}</th>
                   <th scope="col">{{__('ui.prezzo')}}</th>
                   <th scope="col">{{__('ui.stato')}}</th>
                   <th scope="col">{{__('ui.azioni')}}</th>
@@ -89,7 +89,7 @@
                 <thead>
                   <tr>
                     <th scope="col">{{__('ui.revTitolo')}}</th>
-                    <th scope="col">Data di Inserimento</th>
+                    <th scope="col">{{__('ui.data')}}</th>
                     <th scope="col">{{__('ui.prezzo')}}</th>
                     <th scope="col">{{__('ui.stato')}}</th>
                     <th scope="col">{{__('ui.azioni')}}</th>
@@ -134,7 +134,7 @@
                 <thead>
                   <tr>
                     <th scope="col">{{__('ui.revTitolo')}}</th>
-                    <th scope="col">Data di Inserimento</th>
+                    <th scope="col">{{__('ui.data')}}</th>
                     <th scope="col">{{__('ui.prezzo')}}</th>
                     <th scope="col">{{__('ui.stato')}}</th>
                     <th scope="col">{{__('ui.azioni')}}</th>

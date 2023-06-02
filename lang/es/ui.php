@@ -53,7 +53,7 @@ return [
     'indietro'=> 'Atrás',
 
     // Página del revisor
-
+'backToDash'=> 'Volver al Panel de Control',
 'revTitolo'=>'Artículos para revisar',
 'revAlert1'=>'Aquí están los artículos para revisar',
 'revAlert2'=>'No hay artículos para revisar',
@@ -64,6 +64,7 @@ return [
 'rifiuta'=>'Rechazar',
 'rifiutati'=>'Rechazados',
 'azioni'=>'Comportamiento',
+'data'=>'Fecha de Ingreso',
 
 
 
@@ -89,7 +90,7 @@ return [
 
 
 // google vision show revisor
-
+'imgRevisor'=> 'Revisión de Imágenes',
 'Adulti' => 'Adultos',
 'Satira' => 'Sátira',
 'Medicina' => 'Medicina',

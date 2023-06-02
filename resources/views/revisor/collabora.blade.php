@@ -3,7 +3,7 @@
 
     <x-header>
         <div class="container-fluid bgCarta">
-        <h2 id="testo" class="text-center py-5 my-5 display-3 fw-bold">Lavora con noi</h2>
+        <h2 id="testo" class="text-center py-5 my-5 display-3 fw-bold">{{__('ui.navLavConNoi')}}</h2>
         </div>
 
 

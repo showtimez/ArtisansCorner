@@ -31,11 +31,13 @@
 
             <div class="col-12 col-md-6 border rounded bg-white p-5 mb-2">
                 <h5 class="text-center display-5 tracking-in-expand-fwd fw-bold">{{ $article->title }}</h5>
-                <p>Condizioni: {{ $article->state }}</p>
-                <p>Descrizione: <br>{{ $article->description }}</p>
+                <p>{{__('ui.stato')}}: {{ trans('condizioni.' . $article->state) }}</p>
+                <p>{{__('ui.descrizione')}}: <br>{{ $article->description }}</p>
                 <hr>
-                <p>Prezzo: {{ $article->price }}€</p>
+                <p>{{__('ui.prezzo')}}: {{ $article->price }}€</p>
             </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+            <a href="{{route('homepage')}}" class="btn btn-primary">{{__('ui.indietro')}}</a></div>
         </div>
     </div>
 
@@ -145,7 +147,7 @@
         @else
             <a href="{{ route('homepage') }}" class="btn btn-primary">Torna Indietro</a>
         @endif --}}
-    {{-- 
+    {{--
     </div>
     </div>
     </div>
