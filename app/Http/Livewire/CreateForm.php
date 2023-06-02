@@ -67,7 +67,6 @@ class CreateForm extends Component
             }
         }
     }
-}
 
         // se temp images ha una dimensione minore = a 3 fa il normale foreach, altrimenti fai scattare la regola di validazione
         // for ($i = 0; $i < 3 ; $i++) {
