@@ -5,7 +5,7 @@
         </div>
     </x-header>
 
-    <div class="container">
+    <div class="container vh-100">
         <div class="row justify-content-center py-5">
             <div class="col-12 col-md-6">
                 <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
@@ -35,11 +35,12 @@
                 <p>{{__('ui.descrizione')}}: <br>{{ $article->description }}</p>
                 <hr>
                 <p>{{__('ui.prezzo')}}: {{ $article->price }}€</p>
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="{{route('article.index')}}" class="btn btn-primary">{{__('ui.indietro')}}</a></div>
             </div>
-            <div class="col-12 col-md-4 d-flex justify-content-center">
-            <a href="{{route('article.index')}}" class="btn btn-primary">{{__('ui.indietro')}}</a></div>
         </div>
     </div>
+    
 
 
     {{-- <div class="container">
