@@ -19,6 +19,7 @@ return [
     'unPoDiNumeri1' => 'Clienti soddisfatti',
     'unPoDiNumeri2' => 'Articoli venduti',
     'unPoDiNumeri3' => 'Recensioni',
+    'noArtInserted' => 'Non sono presenti articoli al momento.',
     // dettagli card
     // 'titolo'=>'titolo',
     'descrizione'=>'Descrizione',

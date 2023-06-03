@@ -28,7 +28,7 @@
     </x-categorie>
     <section id="swiperHome">
         <div class="container-fluid bg-articles">
-            <div id="inizio" class="row justify-content-center ">
+            <div  class="row justify-content-center ">
                 <div class="col-12 d-flex justify-content-center mb-5">
                     <div>
                         <h2 class="text-center text-light py-3 fontCustomannunci">{{ __('ui.ultimiAnnunci') }}</h2>
@@ -68,7 +68,7 @@
     </section>
 
     {{-- counter --}}
-<section class="container-fluid bgCount">
+<section class="container-fluid bgCount" id="inizio">
     <div class="row">
         <hr class="text-dark">
         <div class="col-12 col-md-4 text-center">

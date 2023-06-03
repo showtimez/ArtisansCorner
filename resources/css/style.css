@@ -135,7 +135,7 @@ body, input{
   height: 500px;
   /* overflow: auto; */
   background-color: rgb(235, 230, 230);
-  
+
 
 }
 
@@ -260,9 +260,10 @@ body, input{
     border-radius: 49px;
     text-transform: uppercase;
     font-weight: 600;
-    margin: 10px 0;
+    margin-left: 4px;
     cursor: pointer;
     color: rgb(165, 121, 102);
+
 }
 /* fine bottoni */
 

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-custom navbar-dark sticky-top ">
     <div class="container-fluid ">
         <a class="navbar-brand" href="#">
-            <img src="/public/media/Logo.png" alt="" >
+            {{-- <img src="/public/media/Logo.png" alt="" > --}}
         </a>
         <ul>
             <span class="navbar-brand brand-name mx-auto">
@@ -34,14 +34,14 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.navSelezionaLingua') }}
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="#"><x-_locale lang='it' nation='it' />Italiano</a></li>
-                        <li><a class="dropdown-item" href="#"><x-_locale lang='en' nation='en' />English</a></li>
-                        <li><a class="dropdown-item" href="#"><x-_locale lang='es' nation='es' />Español</a></li>
+                    <ul class="dropdown-menu " aria-labelledby="languageDropdown">
+                        <x-_locale lang='it' nation='it'/>
+                        <x-_locale lang='en' nation='en'/>
+                        <x-_locale lang='es' nation='es'/>
                     </ul>
                 </li>
 
