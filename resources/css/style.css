@@ -131,13 +131,11 @@ body, input{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
   background-color: #ffffffc7  ;
   height: 500px;
   /* overflow: auto; */
   background-color: rgb(235, 230, 230);
-  border-radius: 12px;
-  border: 1px solid rgba(165, 121, 102, 0);
+  
 
 }
 

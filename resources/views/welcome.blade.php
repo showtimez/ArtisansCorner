@@ -34,9 +34,9 @@
                         <h2 class="text-center text-light py-3 fontCustomannunci">{{ __('ui.ultimiAnnunci') }}</h2>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex ">
+                <div class="col-12 d-flex ">
                     <div class="swiper mySwiper pb-5  ">
-                        <div class="swiper-wrapper ">
+                        <div class="swiper-wrapper">
                             @forelse ($articles as $article)
                                 <div class="swiper-slide flex-column ">
                                     <div class="">
@@ -44,13 +44,13 @@
 
                                             <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" class="mx-3 rounded " alt="no img">
                                         </div>
-                                        <div class=" px-4 two-columns">
+                                        {{-- <div class=" px-4 two-columns">
                                             <h5>{{ $article->title }}</h5><br>
                                             <p>{{ __('ui.stato') }}: {{ trans('condizioni.' . $article->state) }}</p>
                                             <p>{{ __('ui.categoria') }}: {{ trans('categories.' . $article->category->name) }}</p>
                                             <p class="text-muted fs-italic">{{ __('ui.data') }} {{ $article->created_at }}</p>
                                             <h4>{{ __('ui.prezzo') }}: {{ $article->price }} €</h4>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <a href="{{ route('article.show', compact('article')) }}"
                                     class=""><button class="btn btn-outline-dark">{{ __('ui.dettagli') }}</button></a>
