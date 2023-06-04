@@ -5,6 +5,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\CollaboratorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,9 @@ Route::get('/category/{category}', [FrontController::class, 'show'])->name('cate
 Route::get('/auth/login-register', [FrontController::class, 'autenticate'])->name('autenticate');
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchArticles'])->name('articles.search');
 Route::post('/lingua/{lang}', [FrontController::class, 'setLocale'])->name('setLocale');
+
+Route::get('/aboutUs',[CollaboratorController::class, 'index'])->name('about.us');
+
 
 
 Route::get('/article/index',[ArticleController::class, 'index'])->name('article.index');

@@ -19,6 +19,10 @@ class FrontController extends Controller
 
     //     return view('category', compact('article_checked_ok', 'category'));
     // }
+
+
+
+
     public function show(Category $category){
         $articles = Article::whereHas('category', function ($query) use ($category) {
             $query->where('id', $category->id);
