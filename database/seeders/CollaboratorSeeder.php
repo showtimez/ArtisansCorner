@@ -18,36 +18,42 @@ class CollaboratorSeeder extends Seeder
                 'name' => 'Andrea',
                 'surname' => 'Salaris',
                 'age' => 30,
-                'description' => "'hp artisan serve', quanto irritante!"
+                'description' => "'hp artisan serve', quanto irritante !",
+                'portrait' => '/chiSiamo/andrea.jpeg',
             ],
             [
                 'name' => 'Lucia',
                 'surname' => 'Pacciolla',
-                'age' => 26,
-                'description' => 'Una breve descrizione di Lucia'
+                'age' => 29,
+                'description' => 'Sono cresciuta a pane e ansia !',
+                'portrait' => '/chiSiamo/lucia.jpeg',
             ],
             [
                 'name' => 'Sara',
                 'surname' => 'Pileio',
-                'age' => 30,
-                'description' => 'Una breve descrizione di Sara'
+                'age' => 26,
+                'description' => 'Sono una devasta noccioline !',
+                'portrait' => '/chiSiamo/sara.jpeg',
             ],[
                 'name' => 'Giulio',
                 'surname' => 'Palese',
-                'age' => 37,
-                'description' => 'Una breve descrizione di Giulio'
+                'age' => 35,
+                'description' => 'Solitario come i lupi !',
+                'portrait' => '/chiSiamo/giulio.jpeg',
             ],
             [
                 'name' => 'Antonio',
                 'surname' => 'Russo',
-                'age' => 30,
-                'description' => 'Una breve descrizione di Antonio'
+                'age' => 31,
+                'description' => 'Mi piace mangiare !',
+                'portrait' => '/chiSiamo/antonio.jpeg',
             ],
             [
                 'name' => 'Francesco',
                 'surname' => 'Piccolo',
                 'age' => 24,
-                'description' => 'Una breve descrizione di Francesco'
+                'description' => 'Una tastiera e sono in paradiso !',
+                'portrait' => '/chiSiamo/francesco.jpeg',
             ],
         ]);
     }

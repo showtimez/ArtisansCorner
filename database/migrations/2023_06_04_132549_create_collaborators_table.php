@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('surname');
             $table->integer('age');
             $table->text('description');
+            $table->string('portrait');
             $table->timestamps();
         });
     }

@@ -63,7 +63,7 @@
                             <div class="swiper-slide flex-column  rounded swiperTeam" >
                                 <div class="col-12  py-5 text-center shadow rounded mx-2 my-2 ">
                                     <div class="d-flex justify-content-center  ">
-                                        <img class="img prova"  src="https://picsum.photos/300" class="" alt="...">
+                                        <img class="img prova"  src="{{ $collaborator->portrait }}" alt="...">
                                     </div>
                                     <div class="card-body  "width="350">
                                         <h5 class="card-title p-3">{{ $collaborator->name }} {{ $collaborator->surname }}</h5>
@@ -76,6 +76,16 @@
                         @endforeach
                     </div>
                 </div>
+            </div>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+            @if(Auth::user())
+                <a class="linkcustomAccent px-3" href="{{ route('become.revisor') }}">{{ __('ui.lavoraBtn') }}</a>
+                @endif
+                </div>
+            </div>
+
             </div>
         </div>
 

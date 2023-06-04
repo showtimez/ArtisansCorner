@@ -12,6 +12,7 @@ class Collaborator extends Model
         'name',
         'surname',
         'age',
-        'description'
+        'description',
+        'portrait',
     ];
 }
