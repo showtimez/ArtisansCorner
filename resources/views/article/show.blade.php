@@ -36,11 +36,16 @@
                 <hr>
                 <p>{{__('ui.prezzo')}}: {{ $article->price }}€</p>
                 <div class="col-12 d-flex justify-content-center">
-                    <a href="{{route('article.index')}}" class="btn btn-primary">{{__('ui.indietro')}}</a></div>
+                    <a href="{{route('article.index')}}" class="btn btn-primary">{{__('ui.indietro')}}</a>
+                    <a class="btn text-center"
+                            href="{{ route('category', ['category' => $article->category]) }}">{{ __('ui.categoria') }}:
+                            {{ trans('categories.' . $article->category->name) }}</a>
+
+                    </div><p>{{ __('ui.data') }}: {{ $article->created_at->format('d/m/Y') }}</p>
             </div>
         </div>
     </div>
-    
+
 
 
     {{-- <div class="container">
