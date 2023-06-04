@@ -81,7 +81,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-4 d-flex justify-content-center">
             @if(Auth::user())
-                <a class="linkcustomAccent px-3" href="{{ route('become.revisor') }}">{{ __('ui.lavoraBtn') }}</a>
+                <a class="linkcustomAccent px-3" href="{{ route('revisor.collabora') }}">{{ __('ui.lavoraBtn') }}</a>
                 @endif
                 </div>
             </div>
