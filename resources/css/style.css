@@ -251,7 +251,13 @@ body, input{
     transition: 0.5s;
     padding: 10px 20px;
   }
-
+.prova{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 .btnlingua {
     background-color: #fff;
     border: none;

@@ -40,14 +40,14 @@
     <main>
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <h1 class="text-center display-1 titoloMain">Lo Staff</h1>
+                {{-- <h1 class="text-center display-1 titoloMain">Lo Staff</h1> --}}
             </div>
         </div>
         <div class="container my-2 citContainer">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-9">
 
-                    <h6 class="fst-italic text-center text-dark text-muted ">“Siamo un team di sviluppatori appassionati e dedicati, impegnati a creare soluzioni innovative e a superare i limiti della tecnologia. Ogni membro del nostro team porta un’esperienza unica e una prospettiva fresca, consentendoci di affrontare le sfide con creatività e determinazione.”</h6>
+                    <h6 class="fst-italic text-center text-dark text-muted py-5 ">“Siamo un team di sviluppatori appassionati e dedicati, impegnati a creare soluzioni innovative e a superare i limiti della tecnologia. Ogni membro del nostro team porta un’esperienza unica e una prospettiva fresca, consentendoci di affrontare le sfide con creatività e determinazione.”</h6>
 
                 </div>
             </div>
@@ -57,13 +57,13 @@
     {{-- Inizio Card --}}
         <div class="container my-5 ">
             <div class="row justify-content-center">
-                <div class="swiper mySwiper   ">
-                    <div class="swiper-wrapper">
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper  ">
                         @foreach ($collaborators as $collaborator)
-                            <div class="swiper-slide flex-column  rounded">
+                            <div class="swiper-slide flex-column  rounded " >
                                 <div class="col-12 col-md-3 py-5 text-center shadow rounded mx-2 my-2 ">
                                     <div class="d-flex justify-content-center  ">
-                                        <img class="img"  src="https://picsum.photos/300" class="" alt="...">
+                                        <img class="img prova"  src="https://picsum.photos/300" class="" alt="...">
                                     </div>
                                     <div class="card-body ">
                                         <h5 class="card-title p-3">{{ $collaborator->name }} {{ $collaborator->surname }}</h5>
