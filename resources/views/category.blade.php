@@ -46,10 +46,11 @@
         </div>
         <span id="testo"></span>
     </x-header>
-    <div class="container-fluid ">
+    <div class="container ">
         <div class="row justify-content-center py-5 mb-5 ">
             @forelse ($articles as $article)
-                <div class="flip-card m-5">
+            <div class="col-12 col-md-4">
+                <div class="flip-card m-5 ">
                     <div class="flip-card-inner ">
                         <div class=" flip-card-front d-flex justify-content-around rounded">
                             <img class="imgC rounded"src="{{ !$article->images()->get()->isEmpty()? $article->images()->first()->getUrl(400, 300): url('./media/noImg.png') }}"
@@ -68,8 +69,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
             @empty
-                <div class="d-flex justify-content-center ">
+                <div class="d-flex justify-content-center min-vh-100 align-items-center">
                     <h3>{{ __('ui.noArtInserted') }}</h3>
                 </div>
             @endforelse
