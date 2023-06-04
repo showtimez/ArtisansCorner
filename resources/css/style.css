@@ -537,12 +537,12 @@ body, input{
 
     perspective: 1000px;
     height: 300px;
-    width: 300px;
+    width: 400px;
   }
 
   .flip-card-inner {
     position: relative;
-    max-width: 300px;
+    max-width: 400px;
     max-height: 300px;
     text-align: center;
     transition: transform 0.6s;
