@@ -4,7 +4,7 @@
             {{-- <img src="/public/media/Logo.png" alt="" > --}}
         </a>
         <ul>
-            <span class="navbar-brand brand-name mx-auto">
+            <span class="navbar-brand brand-name mx-auto ">
                 <a href="{{ route('homepage') }}"><img width="100" height="55"
                     src="/media/logowhite.png"></a>
                 </span>

@@ -41,7 +41,7 @@
                             href="{{ route('category', ['category' => $article->category]) }}">{{ __('ui.categoria') }}:
                             {{ trans('categories.' . $article->category->name) }}</a>
 
-                    </div><p>{{ __('ui.data') }}: {{ $article->created_at->format('d/m/Y') }}</p>
+                    </div><p class="pt-4">{{ __('ui.data') }}: {{ $article->created_at->format('d/m/Y') }}</p>
             </div>
         </div>
     </div>
