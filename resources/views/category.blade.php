@@ -61,8 +61,10 @@
                             <p>{{ __('ui.stato') }}: {{ trans('condizioni.' . $article->state) }}</p>
                             <h4>{{ __('ui.prezzo') }}: {{ $article->price }}€</h4>
                             <p class="mx-0">{{ __('ui.categoria') }} {{ trans('categories.' . $category->name) }}</p>
+                            <div>
                             <a href="{{ route('article.show', compact('article')) }}"
                                 class="btn linkcustomAccent2  px-5 shadow">{{ __('ui.dettagli') }}</a>
+                            </div>
                         </div>
                     </div>
                 </div>

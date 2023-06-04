@@ -101,6 +101,7 @@ return [
 
 
 // chi siamo
+'team' => 'Il Nostro Team',
 'citazione' => "Siamo un team di sviluppatori appassionati e dedicati, impegnati a creare soluzioni innovative e a superare i limiti della tecnologia. Ogni membro del nostro team porta un’esperienza unica e una prospettiva fresca, consentendoci di affrontare le sfide con creatività e determinazione.",
 'age' => "Età",
 

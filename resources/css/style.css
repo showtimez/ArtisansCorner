@@ -577,11 +577,11 @@ body, input{
     color: white;
     transform: rotateY(180deg);
     height: 300px;
-    width: 300px;
+    width: 400px;
   }
 .imgC{
   height: 300px;
-  width: 300px;
+  width: 400px;
 }
 
 .btn-ok{
