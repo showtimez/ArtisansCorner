@@ -7,7 +7,7 @@
 
     <div class="container vh-100">
         <div class="row justify-content-center py-5">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 pb-5">
                 <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                     class="mySwiper rounded" thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
                     @foreach ($article->images as $image)
@@ -30,8 +30,8 @@
             </div>
 
             <div class="col-12 col-md-6 border rounded bg-white p-5 mb-2">
-                <h3 class="text-center  tracking-in-expand-fwd fw-bold pb-4">{{ $article->title }}</h3>
-                <p>{{__('ui.stato')}}: {{ trans('condizioni.' . $article->state) }}</p>
+                <h3 class="text-center  tracking-in-expand-fwd fw-bold " id="articleTitleCard">{{ $article->title }}</h3>
+                <p class="pt-4">{{__('ui.stato')}}: {{ trans('condizioni.' . $article->state) }}</p>
                 <p>{{__('ui.descrizione')}}: <br>{{ $article->description }}</p>
                 <hr>
                 <p>{{__('ui.prezzo')}}: {{ $article->price }}€</p>

@@ -2,7 +2,7 @@
 <footer class="text-center text-lg-start bg-custom text-light ">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <div class="me-5 d-none d-lg-block">
-        <span>Social network:</span>
+        {{-- <span>Social network:</span>
       </div>
       <div>
         <a href="" class="me-4 text-light  link-secondary">
@@ -23,7 +23,7 @@
         <a href="" class="me-4 text-light link-secondary">
           <i class="fab fa-github"></i>
         </a>
-      </div>
+      </div> --}}
     </section>
     <section class="">
       <div class="container text-center text-md-start mt-5">
@@ -36,7 +36,7 @@
               Il nostro obbiettivo è avvicinare gli artisti al web.
             </p>
           </div>
-          <div class="col-md-4 col-lg-4 col-xl-2 mx-auto mb-4">
+          {{-- <div class="col-md-4 col-lg-4 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4">
               Social network
             </h6>
@@ -52,7 +52,7 @@
             <p>
               YouTube
             </p>
-          </div>
+          </div> --}}
           <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
             <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
             <p><i class="fas fa-home me-3 text-light text-secondary"></i> Milano, corso Como</p>
