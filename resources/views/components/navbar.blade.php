@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about.us') }}">Chi Siamo</a>
+                    <a class="nav-link" href="{{ route('about.us') }}">{{ __('ui.navChiSiamo') }}</a>
                 </li>
 
                     @auth

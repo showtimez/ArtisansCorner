@@ -9,7 +9,7 @@
 
     <script type="text/javascript">
         // testo da mostrare
-        var testo = "Il nostro team";
+        var testo = "{{ __('ui.team') }}";
         // output
         var output = "";
         // incrementatore
@@ -47,7 +47,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-9">
 
-                    <h6 class="fst-italic text-center text-dark text-muted py-5 ">“Siamo un team di sviluppatori appassionati e dedicati, impegnati a creare soluzioni innovative e a superare i limiti della tecnologia. Ogni membro del nostro team porta un’esperienza unica e una prospettiva fresca, consentendoci di affrontare le sfide con creatività e determinazione.”</h6>
+                    <h6 class="fst-italic text-center text-dark text-muted py-5 ">{{ __('ui.citazione') }}”</h6>
 
                 </div>
             </div>
@@ -57,17 +57,17 @@
     {{-- Inizio Card --}}
         <div class="container my-5 ">
             <div class="row justify-content-center">
-                <div class="swiper mySwiper ">
+                <div class="swiper mySwiper  mySwiperTeam">
                     <div class="swiper-wrapper  ">
                         @foreach ($collaborators as $collaborator)
-                            <div class="swiper-slide flex-column  rounded " >
-                                <div class="col-12 col-md-3 py-5 text-center shadow rounded mx-2 my-2 ">
+                            <div class="swiper-slide flex-column  rounded swiperTeam" >
+                                <div class="col-12  py-5 text-center shadow rounded mx-2 my-2 ">
                                     <div class="d-flex justify-content-center  ">
                                         <img class="img prova"  src="https://picsum.photos/300" class="" alt="...">
                                     </div>
-                                    <div class="card-body ">
+                                    <div class="card-body  "width="350">
                                         <h5 class="card-title p-3">{{ $collaborator->name }} {{ $collaborator->surname }}</h5>
-                                        <p class="small fst-italic text-muted">Età : {{ $collaborator->age }}</p>
+                                        <p class="small fst-italic text-muted">{{ __('ui.age') }} : {{ $collaborator->age }}</p>
 
                                     </div>
                                     <p class="card-text">{{ $collaborator->description }}</p>

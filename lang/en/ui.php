@@ -6,6 +6,7 @@ return [
     'navCiao' => 'Hi, ',
     'navLavConNoi'=> 'Work with us',
     'navAreaRev'=> 'Reviewer Area',
+    'navChiSiamo'=> 'About us',
     'navSelezionaLingua' => 'Select language',
     'navAreariservata' => 'Reserved area',
     'navAccess' => 'Login or Register',
@@ -93,7 +94,10 @@ return [
 'Contenuto-Ammiccante' => 'Flirtatious Content',
 
 
-
+// chi siamo
+'team' => 'Our Team',
+'citazione' => "We are a team of passionate and dedicated developers, committed to creating innovative solutions and pushing the boundaries of technology. Each member of our team brings unique experience and a fresh perspective, allowing us to tackle challenges with creativity and determination.",
+'age' => "Age",
 
 
 

@@ -26,7 +26,7 @@
     </x-header>
     <x-categorie>
     </x-categorie>
-    <section id="swiperHome">
+    <section id="swiperHome ">
         <div class="container-fluid bg-articles">
             <div  class="row justify-content-center ">
                 <div class="col-12 d-flex justify-content-center mb-5">
@@ -35,26 +35,26 @@
                     </div>
                 </div>
                 <div class="col-12 d-flex ">
-                    <div class="swiper mySwiper pb-5  ">
+                    <div class="swiper mySwiper mySwiperTeam pb-5  ">
                         <div class="swiper-wrapper">
                             @forelse ($articles as $article)
-                                <div class="swiper-slide flex-column ">
-                                    <div class="">
-                                        <div class="pb-2">
-
+                            <div class="swiper-slide flex-column  rounded swiperTeam" >
+                                <div class="col-12 col-md-8 py-5 text-center shadow rounded mx-2 my-2 ">
+                                    <div class="d-flex justify-content-center  ">
                                             <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : url('./media/noImg.png')}}" class="mx-3 rounded " alt="no img">
                                         </div>
-                                        <div class=" px-4 two-columns">
-                                            <h5>{{ $article->title }}</h5><br>
+                                        <div class="card-body px-4 ">
+                                            <h5 class="pt-4">{{ $article->title }}</h5><br>
                                             {{-- <p>{{ __('ui.descrizione') }}: {{$article->description}}</p> --}}
                                             {{-- <p>{{ __('ui.stato') }}: {{ trans('condizioni.' . $article->state) }}</p> --}}
                                             {{-- <p class="text-muted fs-italic">{{ __('ui.data') }} {{ $article->created_at }}</p> --}}
                                             {{-- <h4>{{ __('ui.prezzo') }}: {{ $article->price }} €</h4> --}}
                                         </div>
-                                    </div>
+
                                     <a href="{{ route('article.show', compact('article')) }}"
                                     class=""><button class="btn btn-outline-dark">{{ __('ui.dettagli') }}</button></a>
                                 </div>
+                            </div>
                             @empty
                                 <div class=" col-12">
                                     <h3 class="text-center text-light">{{ __('ui.noArtInserted') }}</h3>

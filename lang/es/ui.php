@@ -8,6 +8,7 @@ return [
     'navAreaRev'=> 'Área de Revisor',
     'navSelezionaLingua' => 'Seleccione el idioma',
     'navAreariservata' => 'Área reservada',
+    'navChiSiamo'=> 'Quiénes Somos',
     'navAccess' => 'Inicia sesión o Regístrate',
     'subtitleWelcome' => "No hay arte sin estilo",
     'allArticles'=>'Aquí están todos los artículos',
@@ -97,4 +98,9 @@ return [
 'Violenza' => 'Violencia',
 'Contenuto-Ammiccante' => 'Contenido Coqueto',
 
+
+// chi siamo
+'team' => 'Nuestro Equipo',
+'citazione' => "Somos un equipo de desarrolladores apasionados y dedicados, comprometidos en crear soluciones innovadoras y superar los límites de la tecnología. Cada miembro de nuestro equipo aporta una experiencia única y una perspectiva fresca, lo que nos permite enfrentar desafíos con creatividad y determinación.",
+'age' => "Edad",
 ];

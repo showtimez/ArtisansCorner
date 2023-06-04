@@ -44,7 +44,7 @@
 
                     {{-- <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="foto di {{$article->title}}"> --}}
                     <a href="{{route('article.show', compact('article'))}}" class=" text-card">
-                        <h3>{{$article->title}}</h3>
+                        <h5>{{$article->title}}</h5>
                     </a>
                     <div id="cover" class="cover"></div>
 
